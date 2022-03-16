@@ -28,7 +28,7 @@ struct WyrazenieZesp {
  *
  */
 
-bool WczytajWyrazenieZesp(WyrazenieZesp &rWyrZ, std::istream &rStrmWe);
+void WczytajWyrazenieZesp(WyrazenieZesp rWyrZ);
 void Wyswietl(WyrazenieZesp  WyrZ);
 LZespolona Oblicz(WyrazenieZesp  WyrZ);
 

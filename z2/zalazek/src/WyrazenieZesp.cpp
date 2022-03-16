@@ -11,7 +11,7 @@
 
 
 // Funkcja wczytujaca wyrazenie zespolone
-int WczytajWyrazenieZesp(WyrazenieZesp rWyrZ )
+void  WczytajWyrazenieZesp(WyrazenieZesp rWyrZ )
 {
   cout<<"Podaj czesc rzeczywista 1 liczby zespolonej"; //1 liczba zespolona
   cin>>rWyrZ.Arg1.re;
