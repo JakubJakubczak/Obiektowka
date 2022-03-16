@@ -11,20 +11,39 @@
 
 
 // Funkcja wczytujaca wyrazenie zespolone
-bool WczytajWyrazenieZesp(WyrazenieZesp &rWyrZ, std::istream &rStrmWe)
+int WczytajWyrazenieZesp(WyrazenieZesp rWyrZ )
 {
-  char pomin;
-  rStrmWe >> nawias;
-   rStrmWe >> rWyrZ.Arg1.re;
-   rStrmWe >> rWyrZ.Arg1.im;
-   rStrmWe >> pomin>>pomin;
-    rStrmWe >> rWyrZ.Op;
-    rStrmWe >> nawias;
-   rStrmWe >> rWyrZ.Arg2.re;
-   rStrmWe >> rWyrZ.Arg2.im;
-  
-  return rStrmWe.fail() == false;
+  cout<<"Podaj czesc rzeczywista 1 liczby zespolonej"; //1 liczba zespolona
+  cin>>rWyrZ.Arg1.re;
+  cout<<"Podaj czesc urojona 1 liczby zespolonej";
+  cin>>rWyrZ.Arg1.im;
+
+  cout<<"Wprowadz operator";
+  cin<<rWyrZ.Op;
+        if(rWyrZ.Op == '+')
+	{
+	  rWyrZ.Op=Op_Dodaj;
+	}
+	 if(rWyrZ.Op == '-')
+	{
+	  rWyrZ.Op=Op_Ddejmij;
+	}
+	  if(rWyrZ.Op == '*')
+	{
+	  rWyrZ.Op=Op_Mnoz;
+	}
+	   if(rWyrZ.Op == '/')
+	{
+	  rWyrZ.Op=Op_Dziel;
+	}
+
 }
+  
+  cout<<"Podaj czesc rzeczywista 2 liczby zespolonej"; //2 liczba zespolona
+  cin>>rWyrZ.Arg1.re;
+  cout<<"Podaj czesc urojona 2 liczby zespolonej";
+  cin>>rWyrZ.Arg1.im;
+} 
 
 bool WczytajLiczbeZespolona(WyrazenieZesp rWyrZ)
 {
@@ -45,26 +64,27 @@ void Wyswietl(WyrazenieZesp  WyrZ){
 
 
 //Funkcja obliczajaca wyrazenie zespolone
-LZespolona Oblicz(WyrazenieZesp  WyrZ){
-  int wynik;
-  switch(WyrZ.Op){
+LZespolona Oblicz(WyrazenieZesp WyrZ)
+{
+	LZespolona Wynik;
 
-  case +: Wynik =  WyrZ,Arg1 + WyrZ.Arg2;
-    return Wynik;
-    break;
-  case -: Wynik =  WyrZ.Arg1 - WyrZ.Arg2;
-    return Wynik;
-    break;
-  case *: Wynik =  WyrZ.Arg1 * WyrZ.Arg2;
-    return Wynik;
-    break;
-  case /: Wynik =  WyrZ.Arg1 / WyrZ.Arg2;
-    return Wynik;
-    break;
-
-  default: cout<<"blad";
-
-  }
-
+	if(WyrZ.Op == Op_Dodaj)
+	{
+		Wynik= WyrZ.Arg1 + WyrZ.Arg2;
+	}
+	if(WyrZ.Op == Op_Odejmij)
+	{
+		Wynik= WyrZ.Arg1 - WyrZ.Arg2;
+	}
+	if(WyrZ.Op == Op_Mnoz)
+	{
+		Wynik= WyrZ.Arg1 * WyrZ.Arg2;
+	}
+	if(WyrZ.Op == Op_Dziel)
+	{		
+	      	Wynik= WyrZ.Arg1 / WyrZ.Arg2;
+        
+	}
+	return Wynik;
 }
 
