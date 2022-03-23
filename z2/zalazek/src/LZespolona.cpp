@@ -1,6 +1,8 @@
+#include <iostream>
 #include "LZespolona.hh"
 
 
+using namespace std;
 
 /*!
  * Realizuje dodanie dwoch liczb zespolonych.
@@ -36,18 +38,75 @@ LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2)
   Wynik.im = (Skl1.re*Skl2.im)+(Skl1.im*Skl2.re);
   return Wynik;
 }
+
+
+
 LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2)
 {
   LZespolona  Wynik;
+
+  if((Skl2.re*Skl2.re)+(Skl2.im*Skl2.im)==0){
+    cerr<<"Blad. Dzielenie przez zero";
+    return Wynik;  
+  }
   
-  Wynik.re = ((Skl1.re*Skl2.re)+(Skl1.im*Skl2.im))/((Skl2.re)*(Skl2.re)+(Skl2.im)(Skl2.im));
-  Wynik.im = ((-Skl2.im*Skl1.re)+(Skl1.im*Skl2.re))/((Skl2.re)*(Skl2.re)+(Skl2.im)(Skl2.im));
+  else{
+  Wynik.re = ((Skl1.re*Skl2.re)+(Skl1.im*Skl2.im))/((Skl2.re*Skl2.re)+(Skl2.im*Skl2.im));
+  Wynik.im = ((-Skl2.im*Skl1.re)+(Skl1.im*Skl2.re))/((Skl2.re*Skl2.re)+(Skl2.im*Skl2.im));
+  }
   return Wynik;
 }
 
-void Wyswietl(Lzespolona Lzesp){
-  std::cout.precision(2);
-  std::cout << std::fixed << "(" << Lzesp.re << std::showpos << Lzesp.im << std::noshowpos << "i)";
+ostream& operator << (ostream& wyjs, LZespolona& lzesp)
+{
+	wyjs <<"("<<lzesp.re << showpos << lzesp.im <<noshowpos <<"i)";
+
+	return wyjs;
 }
 
+istream& operator >> (istream& wejs, LZespolona& lzesp)
+{
+	char nawias1, nawias2, litera;
 
+	wejs >> nawias1;
+	if ( wejs.fail() )
+		return wejs;
+
+	if( nawias1!= '(' )
+	{
+		wejs.setstate(ios::failbit);
+		return wejs;
+	}
+
+	wejs >> lzesp.re;
+	if (wejs.fail())
+		return wejs;
+
+	wejs >> lzesp.im;
+	if (wejs.fail())
+		return wejs;
+       
+       	wejs >> litera;
+	if (wejs.fail())
+		return wejs;
+
+	if(litera != 'i')
+	{
+		wejs.setstate(ios::failbit);
+		return wejs;
+	}
+	wejs >> nawias2;
+        if (wejs.fail())
+		return wejs;
+	if(nawias2!= ')')
+	{
+		wejs.setstate(ios::failbit);
+		return wejs;
+	}
+	return wejs;
+}
+
+bool operator == (LZespolona Arg1, LZespolona Arg2)
+{
+	return (Arg1.re == Arg2.re && Arg1.im == Arg2.im);
+}

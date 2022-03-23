@@ -1,65 +1,72 @@
 #include <iostream>
 #include "WyrazenieZesp.hh"
+#include <string>
 
+using namespace std;
 
 /*
- * Tu nalezy zdefiniowac funkcje, ktorych zapowiedzi znajduja sie
- * w pliku naglowkowym.
- */
+   Przeciazenie operatora >>, które pozwala wykonac wczytywanie typu wyliczeniowego Operator.
+*/
+  istream& operator >> (istream &StrmWe, Operator &Op){
+  char Znak;
+  const string TabZnakowOp = "+-*/";
+  Operator TabOper[] = {Op_Dodaj, Op_Odejmij, Op_Mnoz, Op_Dziel};
 
+  StrmWe >> Znak;
 
+  const size_t idxZnakOp = TabZnakowOp.find_first_of(Znak);
 
+    if (idxZnakOp == string::npos){
+    StrmWe.setstate(ios::failbit);
+    return StrmWe;
+  }
 
-// Funkcja wczytujaca wyrazenie zespolone
-void  WczytajWyrazenieZesp(WyrazenieZesp rWyrZ )
-{
-  cout<<"Podaj czesc rzeczywista 1 liczby zespolonej"; //1 liczba zespolona
-  cin>>rWyrZ.Arg1.re;
-  cout<<"Podaj czesc urojona 1 liczby zespolonej";
-  cin>>rWyrZ.Arg1.im;
-
-  cout<<"Wprowadz operator";
-  cin<<rWyrZ.Op;
-        if(rWyrZ.Op == '+')
-	{
-	  rWyrZ.Op=Op_Dodaj;
-	}
-	 if(rWyrZ.Op == '-')
-	{
-	  rWyrZ.Op=Op_Ddejmij;
-	}
-	  if(rWyrZ.Op == '*')
-	{
-	  rWyrZ.Op=Op_Mnoz;
-	}
-	   if(rWyrZ.Op == '/')
-	{
-	  rWyrZ.Op=Op_Dziel;
-	}
-
-}
-  
-  cout<<"Podaj czesc rzeczywista 2 liczby zespolonej"; //2 liczba zespolona
-  cin>>rWyrZ.Arg1.re;
-  cout<<"Podaj czesc urojona 2 liczby zespolonej";
-  cin>>rWyrZ.Arg1.im;
-} 
-
-bool WczytajLiczbeZespolona(WyrazenieZesp rWyrZ)
-{
-  cout<<"Podaj czesc rzeczywista liczby zespolonej";
-  cin>>rWyrZ.Arg1.re;
-  cout<<"Podaj czesc urojona liczby zespolonej";
-  cin>>rWyrZ.Arg1.im;
     
+  Op = TabOper[idxZnakOp];
+  return StrmWe;
+}
+
+// wyswietlanie operatora
+ostream& operator << ( Operator &Op, ostream &StrmWe){
+            switch(Op)
+	{
+		case Op_Dodaj:
+		        StrmWe << "+";
+			break;
+		case Op_Odejmij:
+		        StrmWe << "-";
+			break;
+		case Op_Mnoz:
+			StrmWe << "*";
+			break;
+		case Op_Dziel:
+			StrmWe << "/";
+			break;
+	}  
 }
 
 
-// Funkcja wyswietlajaca wyrazenie zespolone
-void Wyswietl(WyrazenieZesp  WyrZ){
-  std::cout.precision(2);
-  std::cout << std::fixed << "(" << WyrZ.Arg1.re << std::showpos << WyrZ.Arg1.im << std::noshowpos << "i)"<<WyrZ.Op
-	                  << "(" << WyrZ.Arg2.re << std::showpos << WyrZ.Arg2.im << std::noshowpos << "i);
+
+
+//Wczytywanie wyrazenia zespolonego
+
+istream &operator>>(istream &wejs, WyrazenieZesp& WyrZ)
+{
+        wejs >> WyrZ.Arg1;
+	wejs >> WyrZ.Op;
+	wejs >> WyrZ.Arg2;
+	return wejs;
+}
+
+
+// przeciazenie operatora wyswietlania dla wyrazenia zespolonego
+
+ostream &operator<<( WyrazenieZesp& WyrZ, ostream &wyjs)
+{
+        wyjs << WyrZ.Arg1;
+	wyjs << WyrZ.Op;
+	wyjs << WyrZ.Arg2;
+	return wyjs;
 }
 
 
