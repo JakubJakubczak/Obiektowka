@@ -7,24 +7,24 @@ using namespace std;
 
 
 
-void Wyswietl()
+void Wyswietl(Statystyka *stat)
 {
-     cout<<"Ilosc dobrych odpowiedzi: "<<poprawne<<endl;
-     cout<<"Ilosc zlych odpowiedzi: "<<niepoprawne<<endl;
-     cout<<"Wynik procentowy poprawnych odpowiedzi: "<<Oblicz()<<"%"<<endl;
+     cout<<"Ilosc dobrych odpowiedzi: "<<stat->poprawne<<endl;
+     cout<<"Ilosc zlych odpowiedzi: "<<stat->niepoprawne<<endl;
+     cout<<"Wynik procentowy poprawnych odpowiedzi: "<<Oblicz(stat)<<"%"<<endl;
 }
 
-void DodajPoprawna()
+void DodajPoprawna(Statystyka *stat)
 {
-        poprawne++;
+        stat->poprawne++;
 }
-void DodajNiepoprawna()
+void DodajNiepoprawna(Statystyka *stat)
 {
-	niepoprawne++;
-}x
+	stat->niepoprawne++;
+}
 
-double Oblicz()
+double Oblicz(Statystyka *stat)
 {
         
-	return (poprawne/(poprawne+niepoprawne))*100;
+	return (stat->poprawne/(stat->poprawne+stat->niepoprawne))*100;
 }

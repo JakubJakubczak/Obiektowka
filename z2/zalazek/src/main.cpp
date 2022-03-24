@@ -11,9 +11,9 @@ using namespace std;
 int main(int argc, char **argv)
 {
   WyrazenieZesp  WyrZ;
-  Operator Op;
   LZespolona wynik, odp;
   int bledy=0;
+  Statystyka stat;
   
   if (argc < 2) {
     cerr << endl;
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
   
 
 
-  while (!PlikTestu.eof()) 
+  while (!PlikTestu.eof())  // dopoki plik sie nie skonczy
   {
   PlikTestu>>WyrZ;   // wczytanie  wyrazenia
   cout<<"Podaj wynik operacji: ";
@@ -57,17 +57,17 @@ int main(int argc, char **argv)
   if(bledy==3)
   {
 	  cout<<"Za duzo nieudanych prob. Odpowiedz jest bledna"<<endl;
-   DodajNiepoprawna();
+   DodajNiepoprawna(&stat);
   }
   else if (wynik==odp)
   {
 	  cout<<"Odpowiedz poprawna"<<endl;
-	  DodajPoprawna();
+	  DodajPoprawna(&stat);
   }
   else
   {
 	  cout<<"Blad. Prawidlowym wynikiem jest: "<<wynik<<endl;
-	  DodajNiepoprawna();
+	  DodajNiepoprawna(&stat);
   }
   bledy=0;
   cin.clear();
@@ -75,7 +75,7 @@ int main(int argc, char **argv)
   }
    
 
-   
+  Wyswietl(&stat);
   
   PlikTestu.close();
   

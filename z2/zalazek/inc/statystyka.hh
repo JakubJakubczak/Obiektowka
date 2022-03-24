@@ -12,10 +12,10 @@ double niepoprawne;
 };
 
 
-void Wyswietl();
-void DodajPoprawna();
-void DodajNiepoprawna();
-double Oblicz();
+void Wyswietl(Statystyka *stat);
+void DodajPoprawna(Statystyka *stat);
+void DodajNiepoprawna(Statystyka *stat);
+double Oblicz(Statystyka *stat);
 
 
 #endif

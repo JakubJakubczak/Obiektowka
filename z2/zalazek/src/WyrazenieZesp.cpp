@@ -27,7 +27,7 @@ using namespace std;
 }
 
 // wyswietlanie operatora
-ostream& operator << ( Operator &Op, ostream &StrmWe){
+ostream& operator << ( ostream &StrmWe, Operator &Op){
             switch(Op)
 	{
 		case Op_Dodaj:
@@ -42,7 +42,8 @@ ostream& operator << ( Operator &Op, ostream &StrmWe){
 		case Op_Dziel:
 			StrmWe << "/";
 			break;
-	}  
+	}
+	    return StrmWe;
 }
 
 
@@ -52,6 +53,7 @@ ostream& operator << ( Operator &Op, ostream &StrmWe){
 
 istream &operator>>(istream &wejs, WyrazenieZesp& WyrZ)
 {
+  //   Operator Op;
         wejs >> WyrZ.Arg1;
 	wejs >> WyrZ.Op;
 	wejs >> WyrZ.Arg2;
@@ -61,8 +63,9 @@ istream &operator>>(istream &wejs, WyrazenieZesp& WyrZ)
 
 // przeciazenie operatora wyswietlania dla wyrazenia zespolonego
 
-ostream &operator<<( WyrazenieZesp& WyrZ, ostream &wyjs)
+ostream &operator<<(ostream &wyjs, WyrazenieZesp& WyrZ)
 {
+  // Operator Op;
         wyjs << WyrZ.Arg1;
 	wyjs << WyrZ.Op;
 	wyjs << WyrZ.Arg2;
