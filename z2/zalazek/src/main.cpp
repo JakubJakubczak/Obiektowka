@@ -36,14 +36,15 @@ int main(int argc, char **argv)
 
 
   
-
+  inicjalizuj(&stat);      // poprawna i niepoprawna = 0 
 
   while (!PlikTestu.eof())  // dopoki plik sie nie skonczy
   {
   PlikTestu>>WyrZ;   // wczytanie  wyrazenia
+  if(PlikTestu.eof()) continue;      // warunek potrzebny, by ostatnie wyrazenie nie wczytywalo sie dwa razy 
   cout<<"Podaj wynik operacji: ";
   cout<<WyrZ<<endl; // wyswietlanie wyrazenia
-  cout<<"Twoja odpowiedz :";	  
+  cout<<"Twoja odpowiedz :";
   wynik=Oblicz(WyrZ);                  // obliczanie wyniku
   cin>>odp;       // wprowadzanie odpoweidzi
   while(cin.fail() && bledy!=3) // jesli strumien jest w bledzie i bledy =!3
@@ -71,7 +72,7 @@ int main(int argc, char **argv)
   }
   bledy=0;
   cin.clear();
-  cin.ignore(1000, '\n');   // nastepna linia
+  cin.ignore(10000, '\n');   // nastepna linia
   }
    
 

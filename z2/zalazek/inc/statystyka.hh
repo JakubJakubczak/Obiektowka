@@ -11,7 +11,7 @@ double niepoprawne;
 
 };
 
-
+void inicjalizuj(Statystyka *stat);
 void Wyswietl(Statystyka *stat);
 void DodajPoprawna(Statystyka *stat);
 void DodajNiepoprawna(Statystyka *stat);

@@ -6,7 +6,11 @@
 using namespace std;
 
 
-
+void inicjalizuj(Statystyka *stat)
+{
+  stat->poprawne=0;
+  stat->niepoprawne=0;
+}
 void Wyswietl(Statystyka *stat)
 {
      cout<<"Ilosc dobrych odpowiedzi: "<<stat->poprawne<<endl;

@@ -17,15 +17,17 @@ struct  LZespolona {
 };
 
 
+
 /*
  * Dalej powinny pojawic sie zapowiedzi definicji przeciazen operatorow
  */
 
-
+//double modul2();
 LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
+//LZespolona  operator / (LZespolona Skl2, double modul);
 bool operator == (LZespolona Arg1, LZespolona Arg2);
 std::istream& operator >> (std::istream& wejs, LZespolona& lzesp);
 std::ostream& operator << (std::ostream& wyjs, LZespolona& lzesp);
