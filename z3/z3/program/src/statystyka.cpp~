@@ -1,0 +1,34 @@
+#include "statystyka.hh"
+
+
+#include <iostream>
+
+using namespace std;
+//konstruktor
+Statystyka::Statystyka(double p, double n)
+{
+  poprawne=p;
+  niepoprawne=n;
+}
+
+void Statystyka::Wyswietl(Statystyka *stat)
+{
+     cout<<"Ilosc dobrych odpowiedzi: "<<stat->poprawne<<endl;
+     cout<<"Ilosc zlych odpowiedzi: "<<stat->niepoprawne<<endl;
+     cout<<"Wynik procentowy poprawnych odpowiedzi: "<<Oblicz(stat)<<"%"<<endl;
+}
+
+void Statystyka::DodajPoprawna(Statystyka *stat)
+{
+        stat->poprawne++;
+}
+void Statystyka::DodajNiepoprawna(Statystyka *stat)
+{
+	stat->niepoprawne++;
+}
+
+double Statystyka::Oblicz(Statystyka *stat)
+{
+        
+	return (stat->poprawne/(stat->poprawne+stat->niepoprawne))*100;
+}
