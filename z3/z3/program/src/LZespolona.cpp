@@ -38,45 +38,50 @@ LZespolona LZespolona::operator * ( LZespolona  Skl2) const
   Wynik.im = ((this->re)*Skl2.im)+((this->im)*Skl2.re);
   return Wynik;
 }
+LZespolona LZespolona::sprzezenie()
+{
+  LZespolona wynik;
+  wynik.re=re;
+  wynik.im=-im;
+
+  return wynik;
+}
 
 
-/*
-double modul2(){             // Modul do kwadratu liczby zespolonej
-  double modul=(Skl2.re*Skl2.re)+(Skl2.im*Skl2.im);
+double LZespolona::modul2(){             // Modul do kwadratu liczby zespolonej
+  double modul=(LZespolona::re*LZespolona::re)+(LZespolona::im*LZespolona::im);
     return modul;
     }
 
-LZespolona operator / (LZespolona Skl2, double modul)
+LZespolona LZespolona::operator / (double modul) const
 { 
 
    LZespolona Wynik;
 
-   if(modul2()=0.0){
+   if(modul==0){
     cerr<<"Blad. Dzielenie przez zero";
-    return Wynik;  
   }
    else
    {
-    Wynik.re = ((Skl1.re*Skl2.re)+(Skl1.im*Skl2.im))/modul2();
-    Wynik.im = ((-Skl2.im*Skl1.re)+(Skl1.im*Skl2.re))/modul2();
+    Wynik.re = LZespolona::re/modul;
+    Wynik.im = LZespolona::im/modul;
    }
 
 
    return Wynik;
 
 }
-*/
+
 LZespolona LZespolona::operator / ( LZespolona  Skl2) const
 {
   LZespolona  Wynik;
 
-  if((Skl2.re*Skl2.re)+(Skl2.im*Skl2.im)==0){
+  if(Skl2.modul2()==0){
     cerr<<"Blad. Dzielenie przez zero";
   }
   
   else{
-    Wynik.re = (((this->re)*Skl2.re)+((this->im)*Skl2.im))/((Skl2.re*Skl2.re)+(Skl2.im*Skl2.im));
-    Wynik.im = ((-Skl2.im*(this->re))+((this->im)*Skl2.re))/((Skl2.re*Skl2.re)+(Skl2.im*Skl2.im));
+    Wynik = (*this)*Skl2.sprzezenie()/Skl2.modul2();
   }
   return Wynik;
 }

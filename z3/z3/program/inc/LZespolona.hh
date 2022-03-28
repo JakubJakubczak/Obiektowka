@@ -24,9 +24,9 @@ class  LZespolona {
   LZespolona  operator * ( LZespolona  Skl2) const;
   LZespolona  operator / ( LZespolona  Skl2) const;
   bool operator == ( LZespolona Arg2) const;
-
-  //double modul2();
-  //LZespolona  operator / (LZespolona Skl2, double modul);
+  LZespolona sprzezenie();
+  double modul2();
+  LZespolona  operator / ( double modul) const;
   
 };
 
