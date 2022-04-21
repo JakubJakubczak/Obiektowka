@@ -18,15 +18,18 @@ using namespace std;
 int main()
 {
   //  UkladRownanLiniowych   UklRown;   // To tylko przykladowe definicje zmiennej
-  Wektor wek1,wynik;
-  double mnoznik;
+  Macierz M; /*Wektor wek1,wek2,wynik; */
+  double wyznacznik;
   
 
   
   cout << endl << " Start programu " << endl << endl;
 
-  cin>>wek1>>mnoznik;
-  wynik=wek1/mnoznik;
-  cout<<wynik;
+  cin>>M;
+  cout<<endl<<M;
+  wyznacznik=M.wyznacznik();
+  cout<<wyznacznik;
+  cout<<M;
+  
 
 }

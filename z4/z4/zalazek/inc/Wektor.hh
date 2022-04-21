@@ -4,6 +4,7 @@
 #include "rozmiar.h"
 #include <iostream>
 
+#define ROZMIAR 3
 
 /*
  *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
@@ -11,9 +12,7 @@
  */
 class Wektor {
   //wspolrzedne wektora
- double  x;
- double  y;
- double  z;
+  double Wsp[ROZMIAR];
 public:  
 
   //metody
@@ -30,7 +29,7 @@ public:
    */
   Wektor operator - (  Wektor  W2) const;
    /*
-     Przeciazenie operatora odejmowania dla wektorow
+      Przeciazenie operatora odejmowania dla wektorow
 
      Dane wejsciowe:
      Wektor W1 
@@ -85,6 +84,15 @@ public:
      Zwraca wynik dzielenia wektora przez liczbe
    */
 
+  double  operator [](int i) const;
+  /*przeciazenie operatora [] pomocne do wygodnego uzytkowania
+   zwraca kopie    
+ */
+
+  double& operator [](int i);
+  /*jak wyzej, z zastrzezeniem ze zwraca oryginal */
+
+  
   //zaprzyjaznienie klasy wektor z funkcjami operujacymi na strumieniach
  friend std::istream& operator >> (std::istream &Strm, Wektor &Wek);
  friend std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
@@ -93,7 +101,7 @@ public:
 
 
 /*
- Ta funkcja to przeciazenie strumienia wejsciowego dla wektorow trzywymiarowych.
+ Ta funkcja to przeciazenie strumienia wejsciowego dla wektorow.
  
  Dane wejsciowe:
  Strm - strumien wejsciowy
@@ -107,7 +115,7 @@ std::istream& operator >> (std::istream &Strm, Wektor &Wek);
 
 
 /*
- Ta funkcja to przeciazenie strumienia wejsciowego dla wektorow trzywymiarowych.
+ Ta funkcja to przeciazenie strumienia wejsciowego dla wektorow.
  
  Dane wejsciowe:
  Strm - strumien wejsciowy

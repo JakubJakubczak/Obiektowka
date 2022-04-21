@@ -1,5 +1,5 @@
 #include "Wektor.hh"
-
+#define ROZMIAR 3
 using namespace std;
 
 /*
@@ -11,13 +11,16 @@ using namespace std;
 
 
 
+
+
 Wektor Wektor::operator + (  Wektor  W2) const
 {
   Wektor wynik;
-
-  wynik.x = this->x + W2.x;
-  wynik.y = this->y + W2.y;
-  wynik.z = this->z + W2.z;
+  int i;
+  for(i=0; i<ROZMIAR; i++)
+    {
+      wynik.Wsp[i] = this->Wsp[i] + W2.Wsp[i];
+    }
 
   return wynik;
 
@@ -26,10 +29,11 @@ Wektor Wektor::operator + (  Wektor  W2) const
 Wektor Wektor::operator - (  Wektor  W2) const
 {
   Wektor wynik;
-
-  wynik.x = this->x - W2.x;
-  wynik.y = this->y - W2.y;
-  wynik.z = this->z - W2.z;
+  int i;
+  for(i=0; i<ROZMIAR; i++)
+    {
+      wynik.Wsp[i] = this->Wsp[i] - W2.Wsp[i];
+    }
 
   return wynik;
 
@@ -37,25 +41,28 @@ Wektor Wektor::operator - (  Wektor  W2) const
 Wektor Wektor::operator / (  Wektor  W2) const
 {
   Wektor wynik;
+  int i;
 
   // jesli ktorys argument wektora jest rowny zero to wyswietl komunikat o bledzie
-  if(W2.x==0 || W2.y==0 || W2.z==0)  cerr<<"Blad. dzielenie przez zero";
+  if(W2.Wsp[0]==0 || W2.Wsp[1]==0 || W2.Wsp[2]==0)  cerr<<"Blad. dzielenie przez zero";
   
-  wynik.x = this->x / W2.x;
-  wynik.y = this->y / W2.y;
-  wynik.z = this->z / W2.z;
+  for(i=0; i<ROZMIAR; i++)
+    {
+      wynik.Wsp[i] = this->Wsp[i] / W2.Wsp[i];
+    }
 
   return wynik;
-
 }
 
 Wektor Wektor::operator * (  Wektor  W2) const
 {
-  Wektor wynik;
+ Wektor wynik;
+  int i;
+  for(i=0; i<ROZMIAR; i++)
+    {
+      wynik.Wsp[i] = this->Wsp[i] * W2.Wsp[i];
+    }
 
-  wynik.x = this->x * W2.x;
-  wynik.y = this->y * W2.y;
-  wynik.z = this->z * W2.z;
   return wynik;
 
 }
@@ -63,37 +70,56 @@ Wektor Wektor::operator * (  Wektor  W2) const
 Wektor Wektor::operator * (double mnoznik) const
 {
   Wektor wynik;
+  int i;
+  for(i=0; i<ROZMIAR; i++)
+    {
+      wynik.Wsp[i] = this->Wsp[i] * mnoznik;
+    }
 
-  wynik.x = this->x * mnoznik;
-  wynik.y = this->y * mnoznik;
-  wynik.z = this->z * mnoznik;
-
-    return wynik;
+  return wynik;;
 
 }
 
 Wektor Wektor::operator / (double dzielnik) const
 {
   Wektor wynik;
+  int i;
 
   // jesli dzielnik jest rowny zero to wyswietl komunikat o bledzie
   if(dzielnik==0)
     {
     cerr<<"Blad. Dzielenie przez zero";
     }
-  wynik.x = this->x / dzielnik;
-  wynik.y = this->y / dzielnik;
-  wynik.z = this->z / dzielnik;
-  
+
+  for(i=0; i<ROZMIAR; i++)
+    {
+      wynik.Wsp[i] = this->Wsp[i] / dzielnik;
+    }
+
   return wynik;
+
   
+}
+ 
+ 
+double  &Wektor::operator [](int i) 
+{
+  return Wsp[i];
+}
+
+
+double  Wektor::operator [](int i) const
+{
+  return Wsp[i];
 }
 
 istream& operator >> (istream &Strm, Wektor &Wek)
 {
-  cin >> Wek.x;
-  cin >> Wek.y;
-  cin >> Wek.z;
+  int i;
+ for(i=0; i<ROZMIAR; i++)
+    {
+      Strm>>Wek[i];
+    }
 
   return Strm;
 
@@ -101,8 +127,12 @@ istream& operator >> (istream &Strm, Wektor &Wek)
 
 ostream& operator << (ostream&Strm, const Wektor& Wek)
 {
-  Strm<<Wek.x<<" "<<Wek.y<<" "<<Wek.z;
-
+  int i;
+  for(i=0; i<ROZMIAR; i++)
+    {
+      Strm<<Wek[i]<<' ';
+    }
   return Strm;
 
 }
+
