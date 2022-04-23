@@ -5,13 +5,6 @@
 
 
 
-/*
- *  Tutaj nalezy zdefiniowac odpowiednie metody
- *  klasy Macierz, ktore zawieraja wiecej kodu
- *  niz dwie linijki.
- *  Mniejsze metody mozna definiwac w ciele klasy.
- */
-
 /*!
  * Oblicza wyznacznik macierzy. Najpierw sprowadza macierz do postaci macierzy 
  * górnej trójkątnej metodą eliminacji Gaussa, a następnie wyznacza iloczyn 
@@ -20,6 +13,7 @@
  *
  * \return Wyznacznik macierzy
  */
+
 double Macierz::wyznacznikEliminacjaGaussa(){
   int parzystosc;
   if (!macierzTrojkatna(parzystosc)) return 0;
@@ -33,18 +27,19 @@ double Macierz::wyznacznikEliminacjaGaussa(){
  * W przeciwnym razie zwraca sukces.
  * UWAGA: Modyfikuje obiekt, dla którego jest wywołana.
  *
- * \param[in] Parzystosc - referencja do zmiennej przechowującej o parzystości *                          liczby wykonanych zmian kolumn
+ * \param[in] Parzystosc - referencja do zmiennej przechowującej o parzystości * liczby wykonanych zmian kolumn
  *
  * \return Informacja o powodzeniu operacji
  */
+
 bool Macierz::macierzTrojkatna(int &Parzystosc) {
   Parzystosc = 1;
-  for(int i = 0; i<ROZMIAR; i++){
-    if (_Kolumna[i][i]==0){
-      if(!zamienKolumny(i)) return false;
+  for(int i = 0; i<ROZMIAR-1; i++){
+    if (_Wiersz[i][i]==0){
+      if(!zamienWiersze(i)) return false;
       Parzystosc = -Parzystosc;
     }
-    zerujWiersz(i);    
+    zerujKolumne(i);    
   }
   return true;
 }
@@ -54,76 +49,103 @@ bool Macierz::macierzTrojkatna(int &Parzystosc) {
  *
  * \return Wyznacznik macierzy
  */
+
 double Macierz::wyznacznik () const {
   Macierz temp = *this;
 
   return temp.wyznacznikEliminacjaGaussa();
 }
 
+/*const Macierz transpozycja () const
+{
+}
+*/
+/*
+ * funkcja wymnaza elementy na diagonali
+ *
+ *  Dane wejsciowe:
+ *    brak
+ *
+ *  Dane wyjsciowe:
+ *     wynik - wynik wymnozenia elementow na diagonali
+ *
+*/
 
 double Macierz::wymnozElementyDiagonali() const
 {
   int i;
-  double k = 1;
+  double wynik = 1;
   for(i=0; i<ROZMIAR; i++)
     {
-      k= k * _Kolumna[i][i];
+      wynik= wynik * _Wiersz[i][i];
     }
-  return k;
+  return wynik;
 }
 
-bool Macierz::zamienKolumny (unsigned int biezacaKolumna)
+/*
+ * funkcja zamienia wiersze miejscem
+ *
+ *  Dane wejsciowe:
+ *    biezacyWiersz
+ *
+ *  Dane wyjsciowe:
+ *     false - gdy nie zostanie znaleziony element zerowy do zamiany
+ *     true - gdy zostanie znaleziony -||-
+ *
+*/
+
+bool Macierz::zamienWiersze (unsigned int biezacyWiersz)
 {
-  unsigned int nastepnaKolumna=biezacaKolumna+1; // nastepna kolumna ktora nie ma zera na diagonali
+  unsigned int nastepnyWiersz=biezacyWiersz+1; // nastepna kolumna ktora nie ma zera na diagonali
 
-
-  
-  while(_Kolumna[biezacaKolumna][nastepnaKolumna]==0)
+  while(_Wiersz[biezacyWiersz][nastepnyWiersz]==0) // jesli element na diagonali = 0
       {
-	if(nastepnaKolumna<ROZMIAR){
+	if(nastepnyWiersz<ROZMIAR){ // warunek potrzebny zeby nie wyjsc poza zakres tablicy
 	  std::cout<<"Nie znaleziono elemntu zerowego do zamiany";
 	  return false;
 	}
 
-        ++nastepnaKolumna;
+        ++nastepnyWiersz;
       }
     
-  std::swap(_Kolumna[biezacaKolumna],_Kolumna[nastepnaKolumna]);
+  std::swap(_Wiersz[biezacyWiersz],_Wiersz[nastepnyWiersz]);
           return true;
 }
+/*
+ * funkcja zeruje kolumne macierzy
+ *
+ *  Dane wejsciowe:
+ *    biezacyWiersz
+ *
+ *  Dane wyjsciowe:
+ *     brak - funkcja void
+ *
+*/
 
-void Macierz::zerujWiersz(unsigned int biezacaKolumna)
+void Macierz::zerujKolumne(unsigned int biezacyWiersz)
 {
- unsigned int nastepnaKolumna=biezacaKolumna+1;
+ unsigned int nastepnyWiersz=biezacyWiersz+1;
 
- while(nastepnaKolumna<ROZMIAR)
+ while(nastepnyWiersz<ROZMIAR)  // warunek potrzebny by nie wyjsc poza zakres tablicy
    {
-     _Kolumna[nastepnaKolumna] = (_Kolumna[nastepnaKolumna]) - ( _Kolumna[biezacaKolumna] * _Kolumna[biezacaKolumna][nastepnaKolumna] /
-								 _Kolumna[biezacaKolumna][biezacaKolumna] );
-	 ++nastepnaKolumna;
+     _Wiersz[nastepnyWiersz] = (_Wiersz[nastepnyWiersz]) - ( _Wiersz[biezacyWiersz] * _Wiersz[nastepnyWiersz][biezacyWiersz] /
+							     _Wiersz[biezacyWiersz][biezacyWiersz] );
+	 ++nastepnyWiersz;
    }
 }
 
-/*double& Macierz::operator () (const int w, const int k)
-{
-  
-}
+/* przeciazenie operatora dla wczytywania macierzy
+ *
+ * Dane wejsciowe:
+ *   Strm - strumien
+ *   Mac - macierz
+ *  
+ * Dane wyjsciowe:
+ *   Strm
+ *
+ */
 
-double Macierz::operator () (const int w, const int k) const
-{
-  
-}
 
-Wektor& Macierz::operator [] (const int k)
-{
-  
-}
-
-Wektor Macierz::operator [] (const int k) const
-{
-
-}
-*/
 
 std::istream& operator >> (std::istream &Strm, Macierz &Mac)
 {
@@ -137,6 +159,17 @@ std::istream& operator >> (std::istream &Strm, Macierz &Mac)
 
 
 }
+
+/* przeciazenie operatora dla wyswietlania macierzy
+ *
+ * Dane wejsciowe:
+ *   Strm - strumien
+ *   Mac - macierz
+ *   
+ * Dane wyjsciowe:
+ *   Strm
+ *
+ */
 
 std::ostream& operator << (std::ostream &Strm, const Macierz &Mac)
 {

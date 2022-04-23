@@ -6,54 +6,44 @@
 #include <iostream>
 
 
-/*
- *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
- *  i jakie ma glowne cechy.
- */
+/******************************************************************************************
+ *  Klasa macierz jest klasą sluzaca do przechowywania macierzy i operacji na nich.
+ *  Klasa zawiera w sobie tablice obiektow klasy Wektor o rozmiarze ROZMIAR, funkcje 
+ *  potrzebne do wyznaczania wyznacznika macierzy, mozliwosc transpozycji macierz y 
+ *  oraz funkcjonalnosc mnozenia macierzy przez wektor. W klasie zostały przeciazane
+ *  operatory () i [] dla ulatwienia poslugiwania sie obiektami.
+ *
+ *  Z klasą zostały zaprzyjaznione funkcje wczytywania i wyswietlanai macierzy
+ *
+ *****************************************************************************************/
+
 class Macierz {
   // Atrybuty prywante
-  Wektor _Kolumna[ROZMIAR];
+  Wektor _Wiersz[ROZMIAR];
   // Metody prywatne - przyklad
   double wyznacznikEliminacjaGaussa();
   double wymnozElementyDiagonali() const;
   bool macierzTrojkatna(int &Parzystosc);
-  bool zamienKolumny (unsigned int biezacaKolumna);
-  void zerujWiersz(unsigned int biezacaKolumna);
+  bool zamienWiersze (unsigned int biezacyWiersz);
+  void zerujKolumne(unsigned int biezacyWiersz);
 public:
   // Metody publiczne - przyklad
-  const Wektor& operator[ ] (int Kol) const { return _Kolumna[Kol]; }
-  Wektor& operator[ ] (int Kol) { return _Kolumna[Kol]; }
-  const double operator( ) (int Wi, int Ko) const {return _Kolumna[Ko][Wi];}
-  double& operator( ) (int Wi, int Ko) {return _Kolumna[Ko][Wi];}
+  const Wektor& operator[ ] (int Wi) const { return _Wiersz[Wi]; }
+  Wektor& operator[ ] (int Wi) { return _Wiersz[Wi]; }
+  const double operator( ) (int Wi, int Ko) const {return _Wiersz[Wi][Ko];}
+  double& operator( ) (int Wi, int Ko) {return _Wiersz[Wi][Ko];}
 
+  double wyznacznik () const;
   
-  /*  double& operator () (const int w, const int k);
-  double operator () (const int w, const int k) const;
-  Wektor& operator [] (const int k);
-  Wektor operator [] (const int k) const;*/
-   double wyznacznik () const;
-
   friend std::istream& operator >> (std::istream &Strm, Macierz &Mac);
   friend std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
+  //  friend Macierz transpozycja();
 };
 
+//const Macierz transpoyzcja() const;
 
-/*
- * To przeciazenie trzeba opisac. Co ono robi. Jaki format
- * danych akceptuje. Jakie jest znaczenie parametrow itd.
- * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt 
- */
 std::istream& operator >> (std::istream &Strm, Macierz &Mac);
 
-/*
- * To przeciazenie trzeba opisac. Co ono robi. Jaki format
- * danych akceptuje. Jakie jest znaczenie parametrow itd.
- * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt 
- */
 std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
 
 

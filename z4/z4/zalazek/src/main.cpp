@@ -19,17 +19,33 @@ int main()
 {
   //  UkladRownanLiniowych   UklRown;   // To tylko przykladowe definicje zmiennej
   Macierz M; /*Wektor wek1,wek2,wynik; */
-  double wyznacznik;
+  // double wyznacznik;
   
 
   
-  cout << endl << " Start programu " << endl << endl;
+
+
+  cout  << endl << " Start programu " << endl << endl;
 
   cin>>M;
-  cout<<endl<<M;
-  wyznacznik=M.wyznacznik();
-  cout<<wyznacznik;
-  cout<<M;
+  cout     <<endl<<M;
+  
+  cout<<"Wiersz 1: "<<M[0]<<endl;
+  cout<<"Wiersz 2: "<<M[1]<<endl;
+  cout<<"Liczba 1 wiersz 2 kolumna: "<<M(0,1)<<endl;
+  cout<<"Liczba 2 wiersz 3 kolumna: "<<M(1,2)<<endl;
+  
+  cout<<M.wyznacznik()<<endl;
+ 
+  cout<<"Wiersz 1: "<<M[0]<<endl;
+  cout<<"Wiersz 2: "<<M[1]<<endl;
+  cout<<"Liczba 1 wiersz 2 kolumna: "<<M(0,1)<<endl;
+  cout<<"Liczba 2 wiersz 3 kolumna: "<<M(1,2)<<endl;
+  
+ 
+  // wyznacznik=M.wyznacznik();
+  // dwa<<wyznacznik;
+  
   
 
 }
