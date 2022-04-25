@@ -56,10 +56,53 @@ double Macierz::wyznacznik () const {
   return temp.wyznacznikEliminacjaGaussa();
 }
 
-/*const Macierz transpozycja () const
+/* Funkcja transponujaca macierz
+ *  
+ *  Dane wejsciowe:
+ *    brak
+ *
+ *  Dane wyjsciowe:
+ *    temp1 - transponowana macierz
+ */
+
+Macierz Macierz::transpozycja () const
 {
+  int i,k;
+  Macierz temp1 = *this;   // macierz tymczasowa, ktora bedzie zmieniana i zwracana
+  Macierz temp2 = *this;   // macierz tymczasowa nie zmieniana
+
+  for(i=0; i<ROZMIAR; i++){
+    for(k=0; k<ROZMIAR; k++){
+      temp1(i,k)=temp2(k,i);
+    }}
+
+  return  temp1;
 }
-*/
+/* Jest to przeciazenie operatora mnozace macierz ROZMIARxROZMIAR * kolumne o wy *  miarze ROZMIAR. 
+ *    
+ *    Dane wejsciowe:
+ *       W - kolumna przez ktora bedziemy mnozyli
+ *       Macierz - niejawnie poslugujemy sie macierza w przeciazeniu
+ *
+ *    Dane wyjsciowe:
+ *       Wynik - wynik mnozenia macierzy przez wektor
+ */
+Wektor operator*(Macierz M, Wektor W)
+{
+  int i,k;
+  Wektor Wynik;
+  Wynik=0;
+  
+  for(i=0; i<ROZMIAR; i++){
+    for(k=0; k<ROZMIAR; k++){
+      Wynik[i]=Wynik[i]+M(i,k)*W[k];
+    }}
+      
+  return Wynik;
+}
+
+
+
 /*
  * funkcja wymnaza elementy na diagonali
  *
@@ -133,6 +176,7 @@ void Macierz::zerujKolumne(unsigned int biezacyWiersz)
 	 ++nastepnyWiersz;
    }
 }
+
 
 /* przeciazenie operatora dla wczytywania macierzy
  *

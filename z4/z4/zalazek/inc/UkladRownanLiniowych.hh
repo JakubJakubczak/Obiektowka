@@ -2,6 +2,7 @@
 #define UKLADROWNANLINIOWYCH_HH
 
 #include <iostream>
+#include "Macierz.hh"
 
 
 /*
@@ -9,13 +10,18 @@
  *  i jakie ma glowne cechy.
  */
 class UkladRownanLiniowych {
+  Macierz Mac;   
+  Wektor Wek;   // wektor wyrazow wolnych
   /*
    *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
    */
-  public:
-  /*
-   *  Tutaj trzeba wstawic definicje odpowiednich metod publicznych
-   */    
+  // Macierz zamianaKolumny(int kolumna) const;
+  Macierz zamianaKolumny(int kolumna) const;
+public:
+  UkladRownanLiniowych transpozycja () const;
+  // Wektor RozwUklRow();
+  friend std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);
+  friend std::ostream& operator << (std::ostream &Strm, const UkladRownanLiniowych &UklRown);
 };
 
 
@@ -23,10 +29,13 @@ class UkladRownanLiniowych {
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
  * danych akceptuje. Jakie jest znaczenie parametrow itd.
  * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:
+ * znalezc w pliku:x
  *    ~bk/edu/kpo/zalecenia.txt 
  */
 std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);
+
+
+
 
 /*
  * To przeciazenie trzeba opisac. Co ono robi. Jaki format
@@ -35,9 +44,9 @@ std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);
  * znalezc w pliku:
  *    ~bk/edu/kpo/zalecenia.txt 
  */
-std::ostream& operator << ( std::ostream                  &Strm, 
-                            const UkladRownanLiniowych    &UklRown
-                          );
+std::ostream& operator << ( std::ostream &Strm,  const UkladRownanLiniowych  &UklRown);
+
+
 
 
 #endif

@@ -100,8 +100,15 @@ Wektor Wektor::operator / (double dzielnik) const
 
   
 }
- 
- 
+
+Wektor Wektor::operator = (double liczba){
+  int i;
+  for(i=0; i<ROZMIAR; i++){
+   this->Wsp[i]=liczba;
+  }
+  return *this;
+}
+
 double  &Wektor::operator [](int i) 
 {
   return Wsp[i];

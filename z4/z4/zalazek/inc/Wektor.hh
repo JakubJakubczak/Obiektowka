@@ -84,6 +84,21 @@ public:
      Zwraca wynik dzielenia wektora przez liczbe
    */
 
+   Wektor operator = (double liczba);
+
+  /*
+     Przeciazenie operatora rowna sie dla wektora i typu double
+
+     Dane wejsciowe:
+     Wektor W
+     double liczba
+
+     Dane wyjsciowe:
+     Wynik - wypelnia wektor liczba
+   */
+
+ 
+  
   double  operator [](int i) const;
   /*przeciazenie operatora [] pomocne do wygodnego uzytkowania
    zwraca kopie    

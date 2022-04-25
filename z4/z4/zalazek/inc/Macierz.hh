@@ -28,20 +28,24 @@ class Macierz {
   void zerujKolumne(unsigned int biezacyWiersz);
 public:
   // Metody publiczne - przyklad
+  // przeciazenie operatorow () i [] dla wygodnego korzystania
   const Wektor& operator[ ] (int Wi) const { return _Wiersz[Wi]; }
   Wektor& operator[ ] (int Wi) { return _Wiersz[Wi]; }
   const double operator( ) (int Wi, int Ko) const {return _Wiersz[Wi][Ko];}
   double& operator( ) (int Wi, int Ko) {return _Wiersz[Wi][Ko];}
+  
 
   double wyznacznik () const;
-  
+  Macierz transpozycja() const;
+
+  friend class UkladRownanLiniowych;
   friend std::istream& operator >> (std::istream &Strm, Macierz &Mac);
   friend std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
   //  friend Macierz transpozycja();
 };
 
-//const Macierz transpoyzcja() const;
 
+Wektor operator*(Macierz M, Wektor W);
 std::istream& operator >> (std::istream &Strm, Macierz &Mac);
 
 std::ostream& operator << (std::ostream &Strm, const Macierz &Mac);
