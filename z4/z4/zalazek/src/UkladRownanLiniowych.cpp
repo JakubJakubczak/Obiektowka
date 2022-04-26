@@ -6,12 +6,7 @@
 #define ROZMIAR 3
 
 using namespace std;
-/*
- *  Tutaj nalezy zdefiniowac odpowiednie metody
- *  klasy UkladRownanLiniowych, ktore zawieraja 
- *  wiecej kodu niz dwie linijki.
- *  Mniejsze metody mozna definiwac w ciele klasy.
- */
+
 Macierz UkladRownanLiniowych::zamianaKolumny(int kolumna) const{
   int i;
   Macierz temp=Mac;
@@ -22,9 +17,12 @@ Macierz UkladRownanLiniowych::zamianaKolumny(int kolumna) const{
   return temp;
 }
 
-/*Wektor UkladRownanLiniowych::RozwUklRow(){
+Wektor UkladRownanLiniowych::RozwUklRow(){
   int i;
-  UkladRownanLiniowych Ukl=*this;
+  UkladRownanLiniowych Ukl=*this;    // uklad rownan
+  UkladRownanLiniowych trans;   // uklad rownan transponowany
+
+  trans=Ukl.transpozycja();
   
   Macierz Glow;  // macierz glowna juz transponowana;
   Macierz Zam[ROZMIAR]; // tablica macierzy dla odpowiednich podstawien
@@ -43,17 +41,18 @@ Macierz UkladRownanLiniowych::zamianaKolumny(int kolumna) const{
   }
 
   for(i=0; i<ROZMIAR; i++){  // znajdowanie rozwiazan po kolei w petli
-    Zam[i]=Glow.zamianaKolumny(i);  // zamienianie odpowiedniej kolumny z wyrazani wolnymi
+    Zam[i]=trans.zamianaKolumny(i);  // zamienianie odpowiedniej kolumny z wyrazani wolnymi
     WyznacznikZam[i] = Zam[i].wyznacznik();  // obliczanie wyznacznika
-    wyniki[i] = WyznacznikZam[i] / WyznacznikGlow; // obliczanie x[i]
+    wyniki[i] = WyznacznikZam[i] / WyznacznikGlow; // obliczanie rozwiazania x[i]
   }
 
   for(i=0;i<ROZMIAR;i++){
-    cout<<"x"<<i<<"="<<wyniki[i]; 
+    cout<<"x"<<i+1<<"="<<wyniki[i];
+    cout<<endl;
   }
 
   return wyniki;
-  }*/
+  }
 
 UkladRownanLiniowych UkladRownanLiniowych::transpozycja () const
 {
@@ -67,6 +66,23 @@ UkladRownanLiniowych UkladRownanLiniowych::transpozycja () const
     }}
 
   return  temp1;
+}
+
+Wektor UkladRownanLiniowych::BladObl(Wektor &Wyn)
+{
+  UkladRownanLiniowych temp=*this;
+  UkladRownanLiniowych trans=temp.transpozycja();
+  Wektor Blad;
+
+  Blad = trans.Mac * Wyn - trans.Wek;    // obliczanie bledu
+
+  cout<<"Wektor bledu: ( ";
+  for(int i=0; i<ROZMIAR; i++)    // wypisywanie wektora bledu
+    {
+      cout<<Blad[i]<<" ";
+    }
+  cout<<")";
+  return Blad;
 }
 
 std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown){

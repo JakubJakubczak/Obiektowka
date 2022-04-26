@@ -17,7 +17,7 @@ using namespace std;
 
 int main()
 {
-  UkladRownanLiniowych   UklRown,wynik;   
+  UkladRownanLiniowych   UklRown;   
    
    Wektor wyniki; 
     
@@ -27,28 +27,9 @@ int main()
   
   
   cin>>UklRown;
-  wynik=UklRown.transpozycja();
-  cout<<wynik;
-  
-  /* cin>>W;
-  cout     <<endl<<M<<endl<<W;;
-  
-  cout<<"Wiersz 1: "<<M[0]<<endl;
-  cout<<"Wiersz 2: "<<M[1]<<endl;
-  cout<<"Liczba 1 wiersz 2 kolumna: "<<M(0,1)<<endl;
-  cout<<"Liczba 2 wiersz 3 kolumna: "<<M(1,2)<<endl;
-  
-  cout<<M*W<<endl;
- 
-  cout<<"Wiersz 1: "<<M[0]<<endl;
-  cout<<"Wiersz 2: "<<M[1]<<endl;
-  cout<<"Liczba 1 wiersz 2 kolumna: "<<M(0,1)<<endl;
-  cout<<"Liczba 2 wiersz 3 kolumna: "<<M(1,2)<<endl;
-  
-  */
-  // wyznacznik=M.wyznacznik();
-  // dwa<<wyznacznik;
-  
+  wyniki=UklRown.RozwUklRow();
+  UklRown.BladObl(wyniki);
+    
   
 
 }

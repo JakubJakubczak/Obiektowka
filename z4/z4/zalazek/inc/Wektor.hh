@@ -6,10 +6,18 @@
 
 #define ROZMIAR 3
 
-/*
- *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
- *  i jakie ma glowne cechy.
- */
+/***********************************************************************************************
+ *   Jest to klasa Wektor sluzaca do poslugiwania sie wektorem jako tablica o 
+ *   rozmiarze ROZMIAR i dokonywania na nim operacji. Klasa zawiera przeciazenia 
+ *   podstawowych operatorow matematycznych, mnozenie wektora przez liczbe, dzielenie
+ *   go przez liczbe. Zawiera ona rowniez przeciazenie operatora = dla wektora ktorego 
+ *   chcemy przyrownac do liczby. Dla wygody poslugiwania sie klasa stworzony 
+ *   zostal interfejs poslugiwania sie wspolrzednymi wektora. Posluzyly do tego 
+ *   przeciazenia operatora [], jedno zwraca oryginal a drugie kopie.
+ *
+ *   Do klasy zostaly zaprzyjaznione przeciazenia >> i << by strumienie in/output w prosty 
+ *   sposob mogly sie laczyc z wektorem.
+ ***********************************************************************************************/
 class Wektor {
   //wspolrzedne wektora
   double Wsp[ROZMIAR];
@@ -100,15 +108,17 @@ public:
  
   
   double  operator [](int i) const;
-  /*przeciazenie operatora [] pomocne do wygodnego uzytkowania
-   zwraca kopie    
+  /*przeciazenie operatora [] pomocne do wygodnego uzytkowania,
+    dziala na kopi.
+   
+    /return Wsp[i]
  */
 
   double& operator [](int i);
-  /*jak wyzej, z zastrzezeniem ze zwraca oryginal */
+  /*jak wyzej, z zastrzezeniem ze dziala na oryginale */
 
   
-  //zaprzyjaznienie klasy wektor z funkcjami operujacymi na strumieniach
+  //zaprzyjaznienie klasy wektor z przeciazeniami operujacymi na strumieniach
  friend std::istream& operator >> (std::istream &Strm, Wektor &Wek);
  friend std::ostream& operator << (std::ostream &Strm, const Wektor &Wek);
  

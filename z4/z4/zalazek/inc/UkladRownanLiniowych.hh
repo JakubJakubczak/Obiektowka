@@ -5,45 +5,82 @@
 #include "Macierz.hh"
 
 
-/*
- *  Tutaj trzeba opisac klase. Jakie pojecie modeluje ta klasa
- *  i jakie ma glowne cechy.
- */
+/*****************************************************************************************
+ *   Klasa UkladRownanLiniowych zawiera obiekt klasy Macierz oraz obiekt klasy Wektor.
+ *   Klasa umozliwia zamiane wybranej kolumny macierzy z wektorem wyrazow wolnych,
+ *   transponowanie macierzy w ukladzie rownan, oraz wyswietlanie i wczytywanie ukladu
+ *   rownan.    
+ ****************************************************************************************/
 class UkladRownanLiniowych {
   Macierz Mac;   
   Wektor Wek;   // wektor wyrazow wolnych
-  /*
-   *  Tutaj trzeba wstawic definicje odpowiednich pol i metod prywatnych
+
+  /*  Funkcja zamianaKolumny zamienia kolumne macierzy na wektor wyrazow wolnych
+   *  
+   *  Dane wejsciowe:
+   *  kolumna - kolumna ktora chcemy zamienic
+   *
+   *  Dane wyjsciowe:
+   *  temp - macierz z zamieniona kolumna na wektor wyrazu wolnego 
    */
-  // Macierz zamianaKolumny(int kolumna) const;
+  
   Macierz zamianaKolumny(int kolumna) const;
+  // metody ubliczne
 public:
+  /*  Funkcja transponuje (tylko!)macierz w klasie UkladRownanLiniowych
+   *  
+   *  Dane wejsciowe:
+   *  brak
+   *
+   *  Dane wyjsciowe:
+   *  temp1 - UkladRownanLiniowych z transponowana macierza
+   */
   UkladRownanLiniowych transpozycja () const;
-  // Wektor RozwUklRow();
+   /*  Funkcja RozwUklRow rozwiazuje uklad rownan metoda Cramera i wypisuje rozwiazania
+   *  
+   *  Dane wejsciowe:
+   *  brak
+   *
+   *  Dane wyjsciowe:
+   *  wyniki - wektor zawierajacy rozwiazania ukladu
+   */
+  Wektor RozwUklRow();
+  Wektor BladObl(Wektor &Wyn);
+  // zaprzyjaznienie przeciazenia strumieni 
   friend std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);
   friend std::ostream& operator << (std::ostream &Strm, const UkladRownanLiniowych &UklRown);
 };
 
 
 /*
- * To przeciazenie trzeba opisac. Co ono robi. Jaki format
- * danych akceptuje. Jakie jest znaczenie parametrow itd.
- * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:x
- *    ~bk/edu/kpo/zalecenia.txt 
+ *  Przeciazenie input dla klasy UkladRownanLiniowych, po lewej stronie strumien, po prawej obiekt.
+ *  Wczytuje elementy klasy.
+ *
+ *  Dane wejsciowe:
+ *
+ *  Strm - strumien
+ *  UklRown - obiekt klasy UkladRownanLiniowych
+ *
+ *  Dane wyjsciowe:
+ *  Strm - zwraca strumien
  */
 std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);
 
 
 
-
 /*
- * To przeciazenie trzeba opisac. Co ono robi. Jaki format
- * danych akceptuje. Jakie jest znaczenie parametrow itd.
- * Szczegoly dotyczace zalecen realizacji opisow mozna
- * znalezc w pliku:
- *    ~bk/edu/kpo/zalecenia.txt 
+ *  Przeciazenie output dla klasy UkladRownanLiniowych, po lewej stronie strumien, po prawej obiekt.
+ *  Wyswietla elementy klasy.
+ *
+ *  Dane wejsciowe:
+ *
+ *  Strm - strumien
+ *  UklRown - obiekt klasy UkladRownanLiniowych
+ *
+ *  Dane wyjsciowe:
+ *  Strm - zwraca strumien
  */
+
 std::ostream& operator << ( std::ostream &Strm,  const UkladRownanLiniowych  &UklRown);
 
 
