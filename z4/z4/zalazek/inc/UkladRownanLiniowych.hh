@@ -45,6 +45,15 @@ public:
    *  wyniki - wektor zawierajacy rozwiazania ukladu
    */
   Wektor RozwUklRow();
+  /*  Funkcja BladObl wyznacza blad obliczen macierzy w postaci Wektora i jego dlugosci
+   *  Funkcja wypisuje wektor bledu i dlugosc tego wektora.   
+   *  
+   *  Dane wejsciowe:
+   *  Wyn - Wynik obliczonej macierzy w postaci wektora
+   *
+   *  Dane wyjsciowe:
+   *  Blad - Blad obliczen zapisany w postaci wektora
+   */
   Wektor BladObl(Wektor &Wyn);
   // zaprzyjaznienie przeciazenia strumieni 
   friend std::istream& operator >> (std::istream &Strm, UkladRownanLiniowych &UklRown);

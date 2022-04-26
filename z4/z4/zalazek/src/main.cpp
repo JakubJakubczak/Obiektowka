@@ -21,15 +21,12 @@ int main()
    
    Wektor wyniki; 
     
-
-
   cout  << endl << " Start programu " << endl << endl;
   
   
   cin>>UklRown;
+  cout<<UklRown;
   wyniki=UklRown.RozwUklRow();
   UklRown.BladObl(wyniki);
     
-  
-
 }
