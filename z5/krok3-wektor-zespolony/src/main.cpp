@@ -1,6 +1,7 @@
 #include "SWektor.hh"
 #include "rozmiar.h"
 #include "LZespolona.hh"
+#include "SMacierz.hh"
 
 using namespace std;
 
@@ -41,10 +42,10 @@ void Test_SzablonWektor_double()
        << "        " << W_wynik << endl
        << endl;
 
-  cout << "  Wczytaj wektor " << endl;
+  /* cout << "  Wczytaj wektor " << endl;
   cin >> W_wynik;
   cout << " Wczytany wektor " << endl
-       << W_wynik << endl;
+  << W_wynik << endl;*/
 }
 
 
@@ -86,10 +87,10 @@ void Test_SzablonWektor_LZespolona()
        << "        " << W_wynik << endl
        << endl;
 
-  cout << "  Wczytaj wektor " << endl;
+  /* cout << "  Wczytaj wektor " << endl;
   cin >> W_wynik;
   cout << " Wczytany wektor " << endl
-       << W_wynik << endl;
+  << W_wynik << endl;*/
 
 }
 
