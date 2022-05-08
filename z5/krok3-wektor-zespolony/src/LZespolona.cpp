@@ -11,13 +11,13 @@ using namespace std;
  */
 LZespolona &LZespolona::operator = (double  Liczba)
 {
-  this->re = Liczba; this->im = 0;
+  this->re = Liczba; this->im = Liczba;
   return *this;
 }
 
-bool &LZespolona::operator ==(double  Liczba)
+bool LZespolona::operator ==(double  Liczba)
 {
-  if(this->re == liczba && this->im == liczba) return true;
+  if(this->re == Liczba && this->im == Liczba) return true;
   else return false;
   
 }

@@ -18,7 +18,7 @@ struct  LZespolona {
   double   im;    /*! Pole repezentuje czesc urojona. */
 
   LZespolona &operator = (double  Liczba);
-  bool &operator ==(double  Liczba);
+  bool operator ==(double  Liczba);
   LZespolona  operator + ( LZespolona  Skl2) const;
   LZespolona  operator - ( LZespolona  Skl2) const;
   LZespolona  operator * ( LZespolona  Skl2) const;

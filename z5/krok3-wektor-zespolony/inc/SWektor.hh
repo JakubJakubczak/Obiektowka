@@ -3,7 +3,7 @@
 
 
 #include <iostream>
-
+#include "LZespolona.hh"
 // szablon klasy wektor
 
 template <typename STyp, int SWymiar>
@@ -17,8 +17,11 @@ class SWektor {
 
     SWektor<STyp,SWymiar> operator + (const SWektor<STyp,SWymiar> &Dodajnik) const;
     SWektor<STyp,SWymiar> operator - (const SWektor<STyp,SWymiar> &Odjemnik) const;
+    SWektor<STyp,SWymiar> operator * (LZespolona Mnoznik) const;
     SWektor<STyp,SWymiar> operator * (double Mnoznik) const;
+  SWektor<STyp,SWymiar> operator / (STyp dzielnik) const;
 
+  // SWektor<STyp, SWymiar>  operator = (const STyp liczba);
     SWektor<STyp, SWymiar>  operator = (const double liczba);
 };
 
@@ -44,7 +47,18 @@ SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator - (const SWektor<STyp,SWym
   return Wynik;
 }
 
-// mnozenie wektora przez liczbe jako szablon
+// mnozenie wektora przez STyp jako szablon
+
+template <typename STyp, int SWymiar>
+SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator * (LZespolona Mnoznik) const
+{
+  SWektor<STyp,SWymiar>  Wynik;
+
+  for (unsigned int Ind = 0; Ind < SWymiar; ++Ind) Wynik[Ind] = (*this)[Ind]*Mnoznik;
+  return Wynik;  
+}
+
+// mnozenie wektora przez liczbe
 
 template <typename STyp, int SWymiar>
 SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator * (double Mnoznik) const
@@ -54,6 +68,28 @@ SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator * (double Mnoznik) const
   for (unsigned int Ind = 0; Ind < SWymiar; ++Ind) Wynik[Ind] = (*this)[Ind]*Mnoznik;
   return Wynik;  
 }
+// dzielenie wektora przez STyp
+template<typename STyp, int SWymiar>
+SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator / (STyp dzielnik) const
+{
+  SWektor<STyp,SWymiar> wynik;
+  int i;
+
+  // jesli dzielnik jest rowny zero to wyswietl komunikat o bledzie
+  if(dzielnik==0)
+    {
+      std::cerr<<"Blad. Dzielenie przez zero";
+    }
+
+  for(i=0; i<SWymiar; i++)
+    {
+      wynik._Wsp[i] = this->_Wsp[i] / dzielnik;
+    }
+
+  return wynik;
+
+}
+
 
 // przyrownanie wektora do liczby
 

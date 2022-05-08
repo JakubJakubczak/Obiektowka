@@ -1,6 +1,7 @@
 #ifndef MACIERZ_HH
 #define MACIERZ_HH
 
+#include<cstdlib>
 #include "SWektor.hh"
 
 
@@ -47,7 +48,7 @@ public:
 template <typename STyp, int SWymiar>
 STyp SMacierz<STyp,SWymiar>::wyznacznikEliminacjaGaussa(){
   int parzystosc;
-  if (!macierzTrojkatna(parzystosc)) return 0;
+  if (!macierzTrojkatna(parzystosc)) exit(0);
   return wymnozElementyDiagonali()*parzystosc;
 }
 
@@ -125,7 +126,8 @@ template <typename STyp, int SWymiar>
 STyp SMacierz<STyp,SWymiar>::wymnozElementyDiagonali() const
 {
   int i;
-  STyp wynik = 1;
+  STyp wynik;
+  wynik=1;
   for(i=0; i<ROZMIAR; i++)
     {
       wynik= wynik * _Wiersz[i][i];
