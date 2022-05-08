@@ -2,6 +2,7 @@
 #include "rozmiar.h"
 #include "LZespolona.hh"
 #include "SMacierz.hh"
+#include "SUkladRownanLiniowych.hh"
 
 using namespace std;
 
@@ -98,6 +99,18 @@ void Test_SzablonWektor_LZespolona()
 
 int main()
 {
-  Test_SzablonWektor_double();
-  Test_SzablonWektor_LZespolona();
+  // Test_SzablonWektor_double();
+  // Test_SzablonWektor_LZespolona();
+
+  /*SMacierz<LZespolona,ROZMIAR> M;
+  cin>>M;
+  cout<<M;*/
+  SUkladRownanLiniowych<LZespolona,ROZMIAR> UklRown;
+  
+  cout<<endl<<" Start programu " <<endl<<endl;
+  cin>>UklRown;
+  cout<<UklRown;
+  UklRown.RozwUklRow();
+
+  return 0;
 }

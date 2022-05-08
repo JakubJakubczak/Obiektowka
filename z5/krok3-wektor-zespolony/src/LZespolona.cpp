@@ -15,6 +15,13 @@ LZespolona &LZespolona::operator = (double  Liczba)
   return *this;
 }
 
+bool &LZespolona::operator ==(double  Liczba)
+{
+  if(this->re == liczba && this->im == liczba) return true;
+  else return false;
+  
+}
+
 /*!
  * Realizuje mnozenie liczby zespolonej przez liczbę rzeczywistą (typ double)
  * Argumenty:
