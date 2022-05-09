@@ -11,7 +11,7 @@ using namespace std;
 
 
 
-
+// szablon klasy SUkladRownanLiniowych
 /*****************************************************************************************
  *   Klasa UkladRownanLiniowych zawiera obiekt klasy Macierz oraz obiekt klasy Wektor.
  *   Klasa umozliwia zamiane wybranej kolumny macierzy z wektorem wyrazow wolnych,
@@ -72,10 +72,12 @@ public:
   //  friend istream& operator >> (istream &Strm, SUkladRownanLiniowych<STyp,SWymiar> &UklRown);
   //  friend ostream& operator << (ostream &Strm, const SUkladRownanLiniowych<STyp,SWymiar> UklRown);
 
-  SMacierz<STyp,SWymiar>& setMac();
-  SMacierz<STyp, SWymiar> getMac() const;
-  SWektor<STyp,SWymiar>& setWek();
-  SWektor<STyp,SWymiar> getWek() const;
+
+  // interfejs do klasy
+  SMacierz<STyp,SWymiar>& setMac(); // zwraca referencje do macierzy Mac
+  SMacierz<STyp, SWymiar> getMac() const; // zwraca macierz Mac
+  SWektor<STyp,SWymiar>& setWek();  // zwraca referencje do wektora Wek
+  SWektor<STyp,SWymiar> getWek() const; // zwraca wektor Wek
 };
 template<typename STyp, int SWymiar>
 SMacierz<STyp,SWymiar> SUkladRownanLiniowych<STyp, SWymiar>::zamianaKolumny(int kolumna) const{

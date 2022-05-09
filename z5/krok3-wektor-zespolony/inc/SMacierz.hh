@@ -5,7 +5,17 @@
 #include "SWektor.hh"
 
 
-//  szablon klasy macierz
+//  szablon klasy SMacierz
+/******************************************************************************************
+ *  Klasa macierz jest klasą sluzaca do przechowywania macierzy i operacji na nich.
+ *  Klasa zawiera w sobie tablice obiektow klasy Wektor o rozmiarze SWymiar, funkcje 
+ *  potrzebne do wyznaczania wyznacznika macierzy, mozliwosc transpozycji macierz y 
+ *  oraz funkcjonalnosc mnozenia macierzy przez wektor. W klasie zostały przeciazane
+ *  operatory () i [] dla ulatwienia poslugiwania sie obiektami.
+ *
+ *   
+ *****************************************************************************************/
+
 
 template <typename STyp, int SWymiar>
 class SMacierz {

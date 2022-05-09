@@ -15,6 +15,11 @@ LZespolona &LZespolona::operator = (double  Liczba)
   return *this;
 }
 
+/*
+ * Sprawdza czy liczba zespolona jest rowna 0.
+ * Jesli tak to zwraca prawde, jesli nie to false
+ */
+
 bool LZespolona::operator ==(double  Liczba)
 {
   if(this->re == Liczba && this->im == Liczba) return true;
@@ -59,6 +64,14 @@ LZespolona LZespolona::operator + (  LZespolona  Skl2) const
   return Wynik;
 }
 
+/*!
+ * Realizuje odejmowanie dwoch liczb zespolonych.
+ * Argumenty:
+ *    Skl1 - pierwszy skladnik odejmowania,
+ *    Skl2 - drugi skladnik odejmowania.
+ * Zwraca:
+ *    Roznica dwoch skladnikow przekazanych jako parametry.
+ */
 LZespolona LZespolona::operator - ( LZespolona  Skl2) const
 {
   LZespolona  Wynik;
@@ -67,7 +80,14 @@ LZespolona LZespolona::operator - ( LZespolona  Skl2) const
   Wynik.im = this->im - Skl2.im;
   return Wynik;
 }
-
+/*!
+ * Realizuje mnozenia dwoch liczb zespolonych.
+ * Argumenty:
+ *    Skl1 - pierwszy skladnik mnozenia,
+ *    Skl2 - drugi skladnik mnozenia.
+ * Zwraca:
+ *    Iloczyn dwoch skladnikow przekazanych jako parametry.
+ */
 LZespolona LZespolona::operator * ( LZespolona  Skl2) const
 {
   LZespolona  Wynik;
@@ -76,6 +96,9 @@ LZespolona LZespolona::operator * ( LZespolona  Skl2) const
   Wynik.im = ((this->re)*Skl2.im)+((this->im)*Skl2.re);
   return Wynik;
 }
+/*
+ * Zwraca sprzezenie do liczby zespolonej
+ */
 LZespolona LZespolona::sprzezenie()
 {
   LZespolona wynik;
@@ -84,13 +107,22 @@ LZespolona LZespolona::sprzezenie()
 
   return wynik;
 }
-
+/*
+ * Zwraca modul liczby zespolonej podniesiony do kwadratu
+ */
 
 double LZespolona::modul2(){             // Modul do kwadratu liczby zespolonej
   double modul=(LZespolona::re*LZespolona::re)+(LZespolona::im*LZespolona::im);
     return modul;
     }
-
+/*!
+ * Realizuje dzielenie liczy zespolonej przez liczbe.
+ * Argumenty:
+ *    Skl1 - pierwszy skladnik dzielenie - LZespolona,
+ *    modul - dzielnik.
+ * Zwraca:
+ *    Iloraz dwoch skladnikow przekazanych jako parametry.
+ */
 LZespolona LZespolona::operator / (double modul) const
 { 
 
@@ -109,7 +141,14 @@ LZespolona LZespolona::operator / (double modul) const
    return Wynik;
 
 }
-
+/*!
+ * Realizuje dzielenie liczy zespolonej przez liczbe zespolona.
+ * Argumenty:
+ *    Skl1 - pierwszy skladnik dzielenie - LZespolona,
+ *    Skl2 - drugi skladnik dzielenia - LZespolona.
+ * Zwraca:
+ *    Iloraz dwoch skladnikow przekazanych jako parametry.
+ */
 LZespolona LZespolona::operator / ( LZespolona  Skl2) const
 {
   LZespolona  Wynik;
@@ -124,6 +163,15 @@ LZespolona LZespolona::operator / ( LZespolona  Skl2) const
   return Wynik;
 }
 
+/*
+ * Przeciazenie operatora wyswietlania LZespolonej
+ * Argumenty:
+ *    wyjs - strumien wyjsciowy,
+ *    lzesp 
+ * Zwraca:
+ *    wyjs
+ */
+
 ostream& operator << (ostream& wyjs, LZespolona lzesp)     // przeciazenie operatora dla wyswietlania liczby zespolonej
 {
 	wyjs <<"("<<lzesp.re << showpos << lzesp.im <<noshowpos <<"i)";
@@ -131,17 +179,26 @@ ostream& operator << (ostream& wyjs, LZespolona lzesp)     // przeciazenie opera
 	return wyjs;
 }
 
+/*
+ * Przeciazenie operatora wczytywania LZespolonej
+ * Argumenty:
+ *    wejs - strumien wyjsciowy,
+ *    lzesp 
+ * Zwraca:
+ *    wyjs
+ */
+
 istream& operator >> (istream& wejs, LZespolona& lzesp)      // przeciazenie operatora dla wczytywania liczby zespolonej
 {
 	char nawias1, nawias2, litera;
 
 	wejs >> nawias1;
-	if ( wejs.fail() )
+	if ( wejs.fail() )   // jesli pobranie znaku sie nie powiodlo
 		return wejs;
 
 	if( nawias1!= '(' )
 	{
-		wejs.setstate(ios::failbit);
+	  wejs.setstate(ios::failbit); // ustaw failbit
 		return wejs;
 	}
 
@@ -173,7 +230,12 @@ istream& operator >> (istream& wejs, LZespolona& lzesp)      // przeciazenie ope
 	return wejs;
 }
 
-bool LZespolona::operator == ( LZespolona Arg2) const        // przeciazenie operatora dla przyrownywania liczb zespolonych
+/*
+ * Przeciazenie operatora porownujace dwie liczby zespolone,
+ * zwraca 0 gdy liczby sie nie zgadzaja i 1 gdy sie zgadzaja
+ */
+
+bool LZespolona::operator == ( LZespolona Arg2) const        
 {
 	return (this->re == Arg2.re && this->im == Arg2.im);
 }

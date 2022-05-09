@@ -1,3 +1,17 @@
+
+
+/*
+   Program wczytuje znak, na podstawie ktorego okresla czy uklad row
+   nan jest rzeczywisty czy zespolony, dostosowuje odpowiednio szablony,
+   pozniej wprowadza macierz transponowana oraz wektor wyrazow wolnych
+   i na podstawie wczytanych danych wyswietla uklad rownan. Wyswietla 
+   napis mowiacy czy uklad jest oznaczony czy nie jest. Jesli jest to
+   wyswietla rozwiazania ukladu, blad obliczen jako wektor i dlugosc tego
+   wektora.
+ */
+
+
+
 #include "SWektor.hh"
 #include "rozmiar.h"
 #include "LZespolona.hh"
@@ -8,6 +22,7 @@ using namespace std;
 
 
 
+// test szablonu wektora dla double
 void Test_SzablonWektor_double()
 {
   cout << endl
@@ -50,7 +65,7 @@ void Test_SzablonWektor_double()
 }
 
 
-
+// test dla lzespolonej
 
 void Test_SzablonWektor_LZespolona()
 {
@@ -102,9 +117,7 @@ int main()
   // Test_SzablonWektor_double();
   // Test_SzablonWektor_LZespolona();
 
-  /*SMacierz<LZespolona,ROZMIAR> M;
-  cin>>M;
-  cout<<M;*/
+  
   SUkladRownanLiniowych<LZespolona,ROZMIAR> UklRown;
   
   cout<<endl<<" Start programu " <<endl<<endl;

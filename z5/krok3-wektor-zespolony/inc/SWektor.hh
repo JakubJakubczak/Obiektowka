@@ -4,7 +4,18 @@
 
 #include <iostream>
 #include "LZespolona.hh"
-// szablon klasy wektor
+/***********************************************************************************************
+ *   Jest to szablon klasy Wektor sluzacy do poslugiwania sie wektorem jako tablica o 
+ *   rozmiarze SWymiar i dokonywania na nim operacji. Klasa zawiera przeciazenia 
+ *   podstawowych operatorow matematycznych, mnozenie wektora przez liczbe, dzielenie
+ *   go przez liczbe. Zawiera ona rowniez przeciazenie operatora = dla wektora ktorego 
+ *   chcemy przyrownac do liczby. Dla wygody poslugiwania sie klasa stworzony 
+ *   zostal interfejs poslugiwania sie wspolrzednymi wektora. Posluzyly do tego 
+ *   przeciazenia operatora [], jedno zwraca oryginal a drugie kopie.
+ *
+ *   typename STyp - typ zmiennych ktorymi bedziemy sie poslugiwali
+ *   int SWymiar - wymiar wektora
+ ***********************************************************************************************/
 
 template <typename STyp, int SWymiar>
 class SWektor {
@@ -26,6 +37,14 @@ class SWektor {
 };
 
 // dodawanie wektorow jako szablon
+/*
+     Przeciazenie operatora dodawnia dla wektorow
+     Dane wejsciowe:
+     SWektor  
+     SWektor 
+     Dane wyjsciowe:
+     Zwraca wynik dodawania wektorow
+   */
 
 template <typename STyp, int SWymiar>
 SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator + (const SWektor<STyp,SWymiar> &Dodajnik) const
@@ -37,7 +56,14 @@ SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator + (const SWektor<STyp,SWym
 }
 
 // odejmowanie wektorow jako szablon
-
+/*
+     Przeciazenie operatora odejmowania dla wektorow
+     Dane wejsciowe:
+     SWektor  
+     SWektor 
+     Dane wyjsciowe:
+     Zwraca wynik odejmowania wektorow
+   */
 template <typename STyp, int SWymiar>
 SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator - (const SWektor<STyp,SWymiar> &Odjemnik) const
 {
@@ -47,7 +73,15 @@ SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator - (const SWektor<STyp,SWym
   return Wynik;
 }
 
-// mnozenie wektora przez STyp jako szablon
+// mnozenie wektora przez LZespolona jako szablon
+/*
+     Przeciazenie operatora mnozenia wektora przez LZespolona
+     Dane wejsciowe:
+     SWektor  
+     LZespolona
+     Dane wyjsciowe:
+     Zwraca wynik mnozenia 
+   */
 
 template <typename STyp, int SWymiar>
 SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator * (LZespolona Mnoznik) const
@@ -59,6 +93,14 @@ SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator * (LZespolona Mnoznik) con
 }
 
 // mnozenie wektora przez liczbe
+/*
+     Przeciazenie operatora mnozenia wektora przez liczbe
+     Dane wejsciowe:
+     SWektor  
+     double 
+     Dane wyjsciowe:
+     Zwraca wynik mnozenia wektora przez liczbe
+   */
 
 template <typename STyp, int SWymiar>
 SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator * (double Mnoznik) const
@@ -69,6 +111,14 @@ SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator * (double Mnoznik) const
   return Wynik;  
 }
 // dzielenie wektora przez STyp
+  /*
+     Przeciazenie operatora dzielenia wektora przez STyp
+     Dane wejsciowe:
+     SWektor  
+     STyp 
+     Dane wyjsciowe:
+     Zwraca wynik dzielenia wektora przez STyp
+   */
 template<typename STyp, int SWymiar>
 SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator / (STyp dzielnik) const
 {
@@ -92,7 +142,14 @@ SWektor<STyp,SWymiar> SWektor<STyp,SWymiar>::operator / (STyp dzielnik) const
 
 
 // przyrownanie wektora do liczby
-
+/*
+     Przeciazenie operatora rowna sie dla wektora i typu double
+     Dane wejsciowe:
+     SWektor 
+     double 
+     Dane wyjsciowe:
+     Wynik - wypelnia wektor liczba
+   */
 template <typename STyp, int SWymiar>
 SWektor<STyp, SWymiar> SWektor<STyp,SWymiar>::operator = ( const double liczba)
 {
@@ -104,6 +161,16 @@ int i;
 }
 
 // wyswietlanie wspolrzednych wektora jako szablon
+/*
+ Ta funkcja to przeciazenie strumienia wyjsciowego dla wektorow.
+ 
+ Dane wejsciowe:
+ StrmWej 
+ SWektor 
+ Dane wyjsciowe:
+ Zwraca strumien StrmWej;
+ 
+ */
 
 template <typename STyp, int SWymiar>
 std::ostream& operator << (std::ostream &StrmWyj, const SWektor<STyp,SWymiar>& W)
@@ -113,7 +180,17 @@ std::ostream& operator << (std::ostream &StrmWyj, const SWektor<STyp,SWymiar>& W
   }  
   return StrmWyj;
 }
-
+// wczytywanie wspolrzednych wektora jako szablon
+/*
+ Ta funkcja to przeciazenie strumienia wejsciowego dla wektorow.
+ 
+ Dane wejsciowe:
+ StrmWej 
+ SWektor 
+ Dane wyjsciowe:
+ Zwraca strumien StrmWej;
+ 
+ */
 template <typename STyp, int SWymiar>
 std::istream& operator >> (std::istream &StrmWej,  SWektor<STyp,SWymiar>& W)
 {
