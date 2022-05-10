@@ -11,7 +11,7 @@
  */
 
 
-
+#include <string>
 #include "SWektor.hh"
 #include "rozmiar.h"
 #include "LZespolona.hh"
@@ -116,14 +116,33 @@ int main()
 {
   // Test_SzablonWektor_double();
   // Test_SzablonWektor_LZespolona();
+  char znak;
+  
 
-  
-  SUkladRownanLiniowych<LZespolona,ROZMIAR> UklRown;
-  
   cout<<endl<<" Start programu " <<endl<<endl;
-  cin>>UklRown;
-  cout<<UklRown;
-  UklRown.RozwUklRow();
+  
+  cin>>znak;   // pobranie znaku
+  if(znak=='r')
+    {
+      SUkladRownanLiniowych<double,ROZMIAR> UklRown;
 
+      cin>>UklRown;
+      cout<<UklRown;
+      UklRown.RozwUklRow();
+    }
+  else if(znak=='z')
+    {
+      SUkladRownanLiniowych<LZespolona,ROZMIAR> UklRown;
+
+      cin>>UklRown;
+      cout<<UklRown;
+      UklRown.RozwUklRow();
+    }  
+  else
+    {
+      cout<<"Wartosc podana to nie r ani z";
+      return 0;
+    }
+   
   return 0;
 }
