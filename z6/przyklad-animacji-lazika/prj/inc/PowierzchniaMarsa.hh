@@ -9,7 +9,7 @@
 
 class Scena{
   std::shared_ptr<Lazik> AktywnyLazik;
-  std::list<std::shared_ptr<ObiektGeom>>;
+  std::list<std::shared_ptr<ObiektGeom>> ObiektySceny;
 
 
 

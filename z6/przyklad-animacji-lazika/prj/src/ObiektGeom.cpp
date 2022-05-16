@@ -32,8 +32,8 @@ ObiektGeom::ObiektGeom( const char*  sNazwaPliku_BrylaWzorcowa,
 
 
 
-void const ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
-{/*
+bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
+{
   ifstream  StrmWe(_NazwaPliku_BrylaWzorcowa);
   ofstream  StrmWy(_NazwaPliku_BrylaRysowana);
 
@@ -48,7 +48,7 @@ void const ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
   Wektor3D  Wsp;
   int Indeks_Wiersza = 0;
   
-  StrmWe >> Wsp;
+  StrmWe >> Wsp[0] >> Wsp[1] >> Wsp[2];
 
   if (StrmWe.fail())return false;
   
@@ -57,7 +57,7 @@ void const ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
       {
 	Wsp[i]=Wsp[i]*Skala[i]+Polozenie[i];
       }
-    StrmWy << Wsp << endl;
+    StrmWy << Wsp[0] << " " << Wsp[1] << " " << Wsp[2] << endl;
     ++Indeks_Wiersza;
     
     if (Indeks_Wiersza >= 4) {
@@ -65,16 +65,16 @@ void const ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
       Indeks_Wiersza = 0;
     }
     
-    StrmWe >> Wsp;
+    StrmWe >> Wsp[0] >> Wsp[1] >> Wsp[2];
     
   } while (!StrmWe.fail());
 
   if (!StrmWe.eof()) return false;
   
   return Indeks_Wiersza == 0 && !StrmWy.fail();
- */
+ 
 }
 
-void const ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy)
-{}
+/*void const ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy)
+  {} */
 	

@@ -36,7 +36,7 @@ obj/ObiektGeom.o: src/ObiektGeom.cpp inc/ObiektGeom.hh inc/lacze_do_gnuplota.hh
 
 
 clean:
-	rm -f obj/* ./${APP} core.* core liki_do_rysowania/*
+	rm -f obj/* ./${APP} core.* core pliki_do_rysowania/*
 
 
 

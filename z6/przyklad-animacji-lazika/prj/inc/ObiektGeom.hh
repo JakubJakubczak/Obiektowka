@@ -9,6 +9,7 @@
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
 
 class ObiektGeom {
+public:
   Wektor3D Polozenie;
   Wektor3D Skala;
   Macierz3D MacRotacji;
@@ -28,8 +29,8 @@ class ObiektGeom {
     const std::string & WezNazwePliku_BrylaRysowana() const
                  { return _NazwaPliku_BrylaRysowana; }
 
-  void const Przelicz_i_Zapisz_Wierzcholki( );
-  void const Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy);
+  bool  Przelicz_i_Zapisz_Wierzcholki( );
+  /* void const Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy);*/
 				     
 };
 
