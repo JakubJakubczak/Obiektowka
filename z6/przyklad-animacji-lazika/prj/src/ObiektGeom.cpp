@@ -20,11 +20,11 @@ ObiektGeom::ObiektGeom( const char*  sNazwaPliku_BrylaWzorcowa,
   _NazwaPliku_BrylaRysowana += "/";
   _NazwaPliku_BrylaRysowana += sNazwaObiektu;
   _NazwaPliku_BrylaRysowana += ".dat";
-
+  
   Polozenie[0]=polozenieX;
   Polozenie[1]=polozenieY;
   Polozenie[2]=polozenieZ;
-
+  
   Skala[0]=20;
   Skala[1]=20;
   Skala[2]=10;
@@ -48,7 +48,7 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
   Wektor3D  Wsp;
   int Indeks_Wiersza = 0;
   
-  StrmWe >> Wsp[0] >> Wsp[1] >> Wsp[2];
+  StrmWe >> Wsp;
 
   if (StrmWe.fail())return false;
   
@@ -57,7 +57,7 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
       {
 	Wsp[i]=Wsp[i]*Skala[i]+Polozenie[i];
       }
-    StrmWy << Wsp[0] << " " << Wsp[1] << " " << Wsp[2] << endl;
+    StrmWy << Wsp<< endl;
     ++Indeks_Wiersza;
     
     if (Indeks_Wiersza >= 4) {
@@ -65,7 +65,7 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
       Indeks_Wiersza = 0;
     }
     
-    StrmWe >> Wsp[0] >> Wsp[1] >> Wsp[2];
+    StrmWe >> Wsp;
     
   } while (!StrmWe.fail());
 

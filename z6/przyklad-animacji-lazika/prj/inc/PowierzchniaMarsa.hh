@@ -8,7 +8,7 @@
 #include "lacze_do_gnuplota.hh"
 
 class Scena{
-  std::shared_ptr<Lazik> AktywnyLazik;
+   std::shared_ptr<Lazik> AktywnyLazik;
   std::list<std::shared_ptr<ObiektGeom>> ObiektySceny;
 
 

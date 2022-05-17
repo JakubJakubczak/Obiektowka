@@ -1,0 +1,16 @@
+#include "ObiektGeom.hh"
+
+
+Lazik::Lazik( const char*  sNazwaPliku_BrylaWzorcowa,
+		        const char*  sNazwaObiektu,
+		        int          KolorID,
+			double       polozenieX,
+			double       polozenieY,
+		        double       polozenieZ 
+		       ):
+  ObiektGeom(sNazwaPliku_BrylaWzorcowa, sNazwaObiektu, KolorID, polozenieX, polozenieY,polozenieZ)
+{
+  KatOrientacji_st=0;
+  Szybkosc=0;
+  OdlegloscDoPrzejechania=0;
+}

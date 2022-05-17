@@ -20,9 +20,14 @@
 
 template <typename STyp, int SWymiar>
 class SWektor {
+  static int AktualnaIloscObiektow;
+  static int LacznaIloscObiektow;
     STyp  _Wsp[SWymiar];
   public:
-    SWektor() { for (STyp &Wsp: _Wsp) Wsp = 0; }
+  SWektor<STyp,SWymiar>() { for (STyp &Wsp: _Wsp) Wsp = 0; AktualnaIloscObiektow++; LacznaIloscObiektow++;}
+  ~SWektor<STyp,SWymiar>(){AktualnaIloscObiektow--;}
+
+  static void WyswietlLiczbeObiektow();
   /*SWektor(double x, double y, double z)
     : ( _Wsp[0] )(x), ( _Wsp[1] )(y), ( _Wsp[2] )(z){}*/
   
@@ -38,6 +43,21 @@ class SWektor {
   // SWektor<STyp, SWymiar>  operator = (const STyp liczba);
     SWektor<STyp, SWymiar>  operator = (const double liczba);
 };
+
+typedef SWektor<double,3> Wektor3D;
+
+template <typename STyp, int SWymiar>
+int SWektor<STyp,SWymiar>::AktualnaIloscObiektow=0;  // inicjalizacja zmiennej  statycznej
+template <typename STyp, int SWymiar>
+int SWektor<STyp,SWymiar>::LacznaIloscObiektow=0;
+
+template <typename STyp, int SWymiar>      // wyswietlanie zmiennych statycznych
+void SWektor<STyp,SWymiar>::WyswietlLiczbeObiektow()
+{
+  std::cout<<"Aktualna ilosc obiektow Wektor3D: " << AktualnaIloscObiektow <<std::endl;
+  std::cout<<"Laczna ilosc obiektow Wektor3D: "   << LacznaIloscObiektow   <<std::endl;
+  
+}
 
 // dodawanie wektorow jako szablon
 /*
@@ -238,6 +258,6 @@ std::istream& operator >> (std::istream &StrmWej,  SWektor<STyp,SWymiar>& W)
   return StrmWej;
 }
 
-typedef SWektor<double,3> Wektor3D;
+
 
 #endif

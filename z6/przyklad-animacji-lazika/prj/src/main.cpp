@@ -47,16 +47,14 @@ void DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb)
 
 int main()
 {
-  Wektor3D W;
-  
   PzG::LaczeDoGNUPlota  Lacze;
   
   Inicjalizuj_Lacze(Lacze);
   if (!Inicjalizuj_PowierzchnieMarsa(Lacze)) return 1;
 
-  ObiektGeom  Ob1("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski, 0, 0, 0);
-  ObiektGeom  Ob2("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, 60, 60, 0);
-  ObiektGeom  Ob3("bryly_wzorcowe/szescian3.dat","Curiosity",Kolor_Czerwony, -20, 70, 0);  
+  Lazik  Ob1("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski, 0, 0, 0);
+  Lazik  Ob2("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, 60, 60, 0);
+  Lazik  Ob3("bryly_wzorcowe/szescian3.dat","Curiosity",Kolor_Czerwony, -20, 70, 0);  
 
 
   DodajDoListyRysowania(Lacze,Ob1);
@@ -68,10 +66,13 @@ int main()
   Ob2.Przelicz_i_Zapisz_Wierzcholki();
   Ob3.Przelicz_i_Zapisz_Wierzcholki();  
 
+  Wektor3D::WyswietlLiczbeObiektow();
   
   cout << endl << "Start programu gnuplot" << endl << endl;
   Lacze.Rysuj();
     cin.ignore(100,'\n');
+
+   
     /*
   Ob1.Przelicz_i_Zapisz_Wierzcholki(20,20,10,20,0,0);
   Lacze.Rysuj();
