@@ -1,7 +1,6 @@
 #ifndef SWEKTOR_HH
 #define SWEKTOR_HH
 
-
 #include <iostream>
 //#include "LZespolona.hh"
 /***********************************************************************************************

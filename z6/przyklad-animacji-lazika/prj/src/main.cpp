@@ -1,3 +1,5 @@
+
+
 #include <iostream>
 #include <fstream>
 #include "lacze_do_gnuplota.hh"
@@ -5,8 +7,8 @@
 #include "ObiektGeom.hh"
 #include "Kolory.hh"
 #include "Lazik.hh"
-
-#include "SWektor.hh"
+#include "MacierzRotacji.hh"
+//#include "SWektor.hh"
 
 
 using namespace std;
@@ -47,6 +49,7 @@ void DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb)
 
 int main()
 {
+  MacRotacji MacRot;
   PzG::LaczeDoGNUPlota  Lacze;
   
   Inicjalizuj_Lacze(Lacze);
@@ -56,7 +59,9 @@ int main()
   Lazik  Ob2("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, 60, 60, 0);
   Lazik  Ob3("bryly_wzorcowe/szescian3.dat","Curiosity",Kolor_Czerwony, -20, 70, 0);  
 
-
+  Ob2.Polozenie= MacRot.RotacjaZ(90) * 20 + Ob2.Polozenie;
+  cout<<Ob2.Polozenie;
+  
   DodajDoListyRysowania(Lacze,Ob1);
   DodajDoListyRysowania(Lacze,Ob2);
   DodajDoListyRysowania(Lacze,Ob3);

@@ -1,0 +1,18 @@
+#include "MacierzRotacji.hh"
+
+MacRotacji MacRotacji::RotacjaZ(double kat) {
+  MacRotacji MacRot;
+  
+  MacRot(0,0)=cos(kat);
+  MacRot(0,1)=-sin(kat);
+  MacRot(0,2)=0;
+  MacRot(1,0)=sin(kat);
+  MacRot(1,1)=cos(kat);
+  MacRot(1,2)=0;
+  MacRot(2,0)=0;
+  MacRot(2,1)=0;
+  MacRot(2,2)=1;
+
+       return MacRot;
+}
+

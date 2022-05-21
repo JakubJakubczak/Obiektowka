@@ -4,6 +4,8 @@
 #include<cstdlib>
 #include "SWektor.hh"
 
+//#include "MacierzRotacji.hh"
+
 
 //  szablon klasy SMacierz
 /******************************************************************************************
@@ -16,9 +18,9 @@
  *   
  *****************************************************************************************/
 
-
 template <typename STyp, int SWymiar>
 class SMacierz {
+  
   // Atrybuty prywante
   SWektor<STyp, SWymiar> _Wiersz[SWymiar];
   // Metody prywatne - przyklad
@@ -42,6 +44,8 @@ public:
 
   
 };
+
+typedef SMacierz<double,3> Macierz3D;
 
 /*!
  * Oblicza wyznacznik macierzy. Najpierw sprowadza macierz do postaci macierzy 
@@ -260,7 +264,7 @@ std::ostream& operator << (std::ostream &Strm, const SMacierz<STyp, SWymiar>Mac)
 
 
 
-typedef SMacierz<double,3> Macierz3D;
+
 
 
 

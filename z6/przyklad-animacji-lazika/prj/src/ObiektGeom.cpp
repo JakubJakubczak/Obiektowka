@@ -4,6 +4,8 @@
 
 
 
+
+
 using namespace std;
 
 ObiektGeom::ObiektGeom( const char*  sNazwaPliku_BrylaWzorcowa,
@@ -74,6 +76,7 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
   return Indeks_Wiersza == 0 && !StrmWy.fail();
  
 }
+
 
 /*void const ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy)
   {} */

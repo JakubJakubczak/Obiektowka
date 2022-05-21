@@ -1,5 +1,5 @@
 #include "Lazik.hh"
-#include "ObiektGeom.hh"
+//#include "ObiektGeom.hh"
 
 
 Lazik::Lazik( const char*  SNazwaPliku_BrylaWzorcowa,
