@@ -2,7 +2,7 @@
 #define POWIERZCHNIAMARSA_HH
 
 #include <memory>
-#include "ObiektGeom.hh"
+//#include "ObiektGeom.hh"
 #include "Lazik.hh"
 
 #include "lacze_do_gnuplota.hh"

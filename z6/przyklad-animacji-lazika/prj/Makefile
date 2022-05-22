@@ -1,4 +1,4 @@
-:APP=sterowanie-lazikiem
+APP=sterowanie-lazikiem
 
 
 __start__: obj dat  pliki_do_rysowania ./${APP}
@@ -21,23 +21,23 @@ pliki_do_rysowania:
                         obj/ObiektGeom.o obj/Lazik.o obj/MacierzRotacji.o
 
 
-obj/main.o: src/main.cpp inc/lacze_do_gnuplota.hh inc/ObiektGeom.hh inc/PowierzchniaMarsa.hh\
-            inc/Kolory.hh inc/SWektor.hh inc/SMacierz.hh inc/Lazik.hh inc/MacierzRotacji.hh
+obj/main.o: src/main.cpp inc/lacze_do_gnuplota.hh  inc/PowierzchniaMarsa.hh\
+            inc/Kolory.hh 
 	g++  -Iinc -W -Wall -pedantic -c -o obj/main.o src/main.cpp
 
 obj/lacze_do_gnuplota.o: src/lacze_do_gnuplota.cpp inc/lacze_do_gnuplota.hh
 	g++  -Iinc -W -Wall -pedantic -c -o obj/lacze_do_gnuplota.o src/lacze_do_gnuplota.cpp
 
-obj/PowierzchniaMarsa.o: src/PowierzchniaMarsa.cpp inc/PowierzchniaMarsa.hh inc/lacze_do_gnuplota.hh
+obj/PowierzchniaMarsa.o: src/PowierzchniaMarsa.cpp inc/PowierzchniaMarsa.hh 
 	g++  -Iinc -W -Wall -pedantic -c -o obj/PowierzchniaMarsa.o src/PowierzchniaMarsa.cpp
 
-obj/ObiektGeom.o: src/ObiektGeom.cpp inc/ObiektGeom.hh inc/lacze_do_gnuplota.hh 
+obj/ObiektGeom.o: src/ObiektGeom.cpp inc/ObiektGeom.hh 
 	g++  -Iinc -W -Wall -pedantic -c -o obj/ObiektGeom.o src/ObiektGeom.cpp 
 
-obj/Lazik.o: src/Lazik.cpp inc/Lazik.hh inc/lacze_do_gnuplota.hh inc/ObiektGeom.hh
+obj/Lazik.o: src/Lazik.cpp inc/Lazik.hh 
 	g++  -Iinc -W -Wall -pedantic -c -o obj/Lazik.o src/Lazik.cpp
 
-obj/MacierzRotacji.o: src/MacierzRotacji.cpp inc/MacierzRotacji.hh inc/lacze_do_gnuplota.hh inc/SMacierz.hh
+obj/MacierzRotacji.o: src/MacierzRotacji.cpp inc/MacierzRotacji.hh 
 	g++  -Iinc -W -Wall -pedantic -c -o obj/MacierzRotacji.o src/MacierzRotacji.cpp
 
 

@@ -1,9 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "ObiektGeom.hh"
-
-
-
+//#include "MacierzRotacji.hh"
 
 
 using namespace std;
@@ -32,9 +30,7 @@ ObiektGeom::ObiektGeom( const char*  sNazwaPliku_BrylaWzorcowa,
   Skala[2]=10;
 }
 
-
-
-bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
+bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(double kat)
 {
   ifstream  StrmWe(_NazwaPliku_BrylaWzorcowa);
   ofstream  StrmWy(_NazwaPliku_BrylaRysowana);
@@ -55,10 +51,8 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
   if (StrmWe.fail())return false;
   
   do {
-    for(int i=0; i<3; i++)
-      {
-	Wsp[i]=Wsp[i]*Skala[i]+Polozenie[i];
-      }
+    Wsp = MacRot.RotacjaZ(kat) * Wsp * Skala + Polozenie;
+      
     StrmWy << Wsp<< endl;
     ++Indeks_Wiersza;
     
@@ -77,7 +71,17 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()
  
 }
 
+void ObiektGeom::translacja(double kat, double odleglosc)
+{
+  MacRotacji MacRot;
+   Wektor3D jednosX;
+  jednosX[0]=1;
+  jednosX[1]=0;
+  jednosX[2]=0;
 
+  this->Polozenie = MacRot.RotacjaZ(kat) * jednosX * odleglosc + this->Polozenie;
+				    
+}
 /*void const ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy)
   {} */
 	

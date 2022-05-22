@@ -1,14 +1,14 @@
 #include "MacierzRotacji.hh"
 
-Wektor3D MacRotacji::RotacjaZ(double kat) {
+MacRotacji MacRotacji::RotacjaZ(double kat) {
 
   kat=kat * (M_PI/180);
   MacRotacji MacRot;
-  Wektor3D jednostkowyX;
+  /*Wektor3D jednostkowyX;
   jednostkowyX[0]=1;
   jednostkowyX[1]=0;
   jednostkowyX[2]=0;
-  
+  */
   MacRot(0,0)=cos(kat);
   MacRot(0,1)=-sin(kat);
   MacRot(0,2)=0;
@@ -19,6 +19,6 @@ Wektor3D MacRotacji::RotacjaZ(double kat) {
   MacRot(2,1)=0;
   MacRot(2,2)=1;
 
-       return MacRot*jednostkowyX;
+       return MacRot;
 }
 

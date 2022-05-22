@@ -4,10 +4,10 @@
 #include <fstream>
 #include "lacze_do_gnuplota.hh"
 #include "PowierzchniaMarsa.hh"
-#include "ObiektGeom.hh"
+//#include "ObiektGeom.hh"
 #include "Kolory.hh"
-#include "Lazik.hh"
-#include "MacierzRotacji.hh"
+//#include "Lazik.hh"
+//#include "MacierzRotacji.hh"
 //#include "SWektor.hh"
 
 
@@ -49,7 +49,7 @@ void DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb)
 
 int main()
 {
-  MacRotacji MacRot;
+  
   PzG::LaczeDoGNUPlota  Lacze;
   
   Inicjalizuj_Lacze(Lacze);
@@ -59,7 +59,7 @@ int main()
   Lazik  Ob2("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, 60, 60, 0);
   Lazik  Ob3("bryly_wzorcowe/szescian3.dat","Curiosity",Kolor_Czerwony, -20, 70, 0);  
 
-  Ob2.Polozenie= MacRot.RotacjaZ(90) * 20 + Ob2.Polozenie;
+  //Ob2.Polozenie= MacRot.RotacjaZ(90) * 20 + Ob2.Polozenie;
   cout<<Ob2.Polozenie;
   
   DodajDoListyRysowania(Lacze,Ob1);
@@ -68,8 +68,11 @@ int main()
 
   
   Ob1.Przelicz_i_Zapisz_Wierzcholki();
-  Ob2.Przelicz_i_Zapisz_Wierzcholki();
-  Ob3.Przelicz_i_Zapisz_Wierzcholki();  
+  Ob2.Przelicz_i_Zapisz_Wierzcholki(-90);
+  Ob3.Przelicz_i_Zapisz_Wierzcholki();
+
+
+  
 
   Wektor3D::WyswietlLiczbeObiektow();
   
@@ -77,6 +80,11 @@ int main()
   Lacze.Rysuj();
     cin.ignore(100,'\n');
 
+    Ob2.translacja(-90,60);
+    Ob2.Przelicz_i_Zapisz_Wierzcholki(90);
+      Lacze.Rysuj();
+    cin.ignore(100,'\n');
+    cout << Ob2.Polozenie;
    
     /*
   Ob1.Przelicz_i_Zapisz_Wierzcholki(20,20,10,20,0,0);

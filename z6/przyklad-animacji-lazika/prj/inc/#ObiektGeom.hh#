@@ -2,9 +2,12 @@
 #define OBIEKTGEOM_HH
 
 #include <string>
+#include "SWektor.hh"
+#include "SMacierz.hh"
 
-#include "MacierzRotacji.hh"
+//#include "MacierzRotacji.hh"
 
+h
 
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
 
@@ -12,7 +15,7 @@ class ObiektGeom {
 public:
   Wektor3D Polozenie;
   Wektor3D Skala;
-  MacRotacji MacRot;
+  Macierz3D MacRotacji;
     std::string   _NazwaPliku_BrylaWzorcowa;
     std::string   _NazwaPliku_BrylaRysowana;
     std::string   _NazwaObiektu;
@@ -30,7 +33,6 @@ public:
                  { return _NazwaPliku_BrylaRysowana; }
 
   bool  Przelicz_i_Zapisz_Wierzcholki(double kat=0 );
-  void translacja(double kat, double odleglosc);
   /* void const Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy);*/
 				     
 };
