@@ -1,3 +1,4 @@
+
 #ifndef LAZIK_HH
 #define LAZIK_HH
 
@@ -13,6 +14,8 @@ public:
 
 public:
   Lazik(const char* SNazwaPliku_BrylaWzorcowa, const char* SNazwaObiektu, int KOLORID, double PolozenieX, double PolozenieY, double PolozenieZ);
+  void translacja( double odleglosc);
+  void obrot();
 };
 
 

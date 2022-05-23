@@ -71,17 +71,6 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(double kat)
  
 }
 
-void ObiektGeom::translacja(double kat, double odleglosc)
-{
-  MacRotacji MacRot;
-   Wektor3D jednosX;
-  jednosX[0]=1;
-  jednosX[1]=0;
-  jednosX[2]=0;
-
-  this->Polozenie = MacRot.RotacjaZ(kat) * jednosX * odleglosc + this->Polozenie;
-				    
-}
 /*void const ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy)
   {} */
 	

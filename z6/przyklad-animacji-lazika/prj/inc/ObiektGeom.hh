@@ -30,7 +30,6 @@ public:
                  { return _NazwaPliku_BrylaRysowana; }
 
   bool  Przelicz_i_Zapisz_Wierzcholki(double kat=0 );
-  void translacja(double kat, double odleglosc);
   /* void const Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy);*/
 				     
 };

@@ -68,7 +68,7 @@ int main()
 
   
   Ob1.Przelicz_i_Zapisz_Wierzcholki();
-  Ob2.Przelicz_i_Zapisz_Wierzcholki(-90);
+  Ob2.Przelicz_i_Zapisz_Wierzcholki();
   Ob3.Przelicz_i_Zapisz_Wierzcholki();
 
 
@@ -80,8 +80,9 @@ int main()
   Lacze.Rysuj();
     cin.ignore(100,'\n');
 
-    Ob2.translacja(-90,60);
-    Ob2.Przelicz_i_Zapisz_Wierzcholki(90);
+    Ob2.KatOrientacji_st=60;
+    Ob2.obrot();
+    Ob2.translacja(30);
       Lacze.Rysuj();
     cin.ignore(100,'\n');
     cout << Ob2.Polozenie;
