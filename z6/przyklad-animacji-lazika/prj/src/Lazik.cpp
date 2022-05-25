@@ -1,6 +1,9 @@
-#include "Lazik.hh"
-//#include "ObiektGeom.hh"
 
+#include "Lazik.hh"
+//#include <chrono>
+//#include <thread>
+//#include "ObiektGeom.hh"
+using namespace std::literals::chrono_literals;
 
 Lazik::Lazik( const char*  SNazwaPliku_BrylaWzorcowa,
 		        const char*  SNazwaObiektu,
@@ -16,20 +19,30 @@ Lazik::Lazik( const char*  SNazwaPliku_BrylaWzorcowa,
   OdlegloscDoPrzejechania=0;
 }
 
-void Lazik::translacja( double odleglosc)
+void Lazik::translacja(PzG::LaczeDoGNUPlota  Lacze)
 {
+  Wektor3D polozenie = this->Polozenie;
   MacRotacji MacRot;
    Wektor3D jednosX;
   jednosX[0]=1;
   jednosX[1]=0;
   jednosX[2]=0;
 
-  this->Polozenie = MacRot.RotacjaZ(KatOrientacji_st) * jednosX * odleglosc + this->Polozenie;
-
+  for(int i=1; i<OdlegloscDoPrzejechania + 1; i++)
+    {
+  this->Polozenie = MacRot.RotacjaZ(KatOrientacji_st) * jednosX * i   + polozenie;  
   Przelicz_i_Zapisz_Wierzcholki(KatOrientacji_st);
+  Lacze.Rysuj();
+  std::this_thread::sleep_for(50ms);
+    }
 }
 
-void Lazik::obrot()
+void Lazik::obrot(PzG::LaczeDoGNUPlota  Lacze)
 {
-  Przelicz_i_Zapisz_Wierzcholki(KatOrientacji_st);
+  for(int i=1; i<KatOrientacji_st+1; i++)
+    {
+  Przelicz_i_Zapisz_Wierzcholki(i);
+  Lacze.Rysuj();
+  std::this_thread::sleep_for(50ms);
+    }
 }

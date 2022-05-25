@@ -24,6 +24,7 @@ class SWektor {
     STyp  _Wsp[SWymiar];
   public:
   SWektor<STyp,SWymiar>() { for (STyp &Wsp: _Wsp) Wsp = 0; AktualnaIloscObiektow++; LacznaIloscObiektow++;}
+  //SWektor<STyp,SWymiar>(const SWektor<STyp,SWymiar> &W);
   ~SWektor<STyp,SWymiar>(){AktualnaIloscObiektow--;}
 
   static void WyswietlLiczbeObiektow();
@@ -57,6 +58,17 @@ void SWektor<STyp,SWymiar>::WyswietlLiczbeObiektow()
   std::cout<<"Laczna ilosc obiektow Wektor3D: "   << LacznaIloscObiektow   <<std::endl;
   
 }
+
+
+//konstruktor kopiujacy
+/*template <typename STyp, int SWymiar>
+SWektor<STyp,SWymiar>::SWektor<STyp,SWymiar>(const SWektor<STyp,SWymiar> &W)
+{
+  for (unsinged int i=0; i<3; ++i) _Wsp[i]=W[i];
+
+  SWektor<STyp,SWymiar>::AktualnaIloscObiektow++; SWektor<STyp,SWymiar>::LacznaIloscObiektow++;
+}
+*/
 
 // dodawanie wektorow jako szablon
 /*
