@@ -16,13 +16,13 @@ pliki_do_rysowania:
 	mkdir pliki_do_rysowania
 
 
-./${APP}: obj/main.o obj/lacze_do_gnuplota.o obj/PowierzchniaMarsa.o obj/ObiektGeom.o obj/Lazik.o obj/MacierzRotacji.o
+./${APP}: obj/main.o obj/lacze_do_gnuplota.o obj/PowierzchniaMarsa.o obj/ObiektGeom.o obj/Lazik.o obj/MacierzRotacji.o obj/Scena.o
 	g++ -o ./${APP} obj/main.o obj/lacze_do_gnuplota.o obj/PowierzchniaMarsa.o\
-                        obj/ObiektGeom.o obj/Lazik.o obj/MacierzRotacji.o
+                        obj/ObiektGeom.o obj/Lazik.o obj/MacierzRotacji.o obj/Scena.o
 
 
 obj/main.o: src/main.cpp inc/lacze_do_gnuplota.hh  inc/PowierzchniaMarsa.hh\
-            inc/Kolory.hh 
+            inc/Kolory.hh inc/Scena.hh
 	g++  -Iinc -W -Wall -pedantic -c -o obj/main.o src/main.cpp
 
 obj/lacze_do_gnuplota.o: src/lacze_do_gnuplota.cpp inc/lacze_do_gnuplota.hh
@@ -39,6 +39,9 @@ obj/Lazik.o: src/Lazik.cpp inc/Lazik.hh
 
 obj/MacierzRotacji.o: src/MacierzRotacji.cpp inc/MacierzRotacji.hh 
 	g++  -Iinc -W -Wall -pedantic -c -o obj/MacierzRotacji.o src/MacierzRotacji.cpp
+
+obj/Scena.o: src/Scena.cpp inc/Scena.hh 
+	g++  -Iinc -W -Wall -pedantic -c -o obj/Scena.o src/Scena.cpp
 
 
 clean:
