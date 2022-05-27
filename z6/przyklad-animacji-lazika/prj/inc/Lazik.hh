@@ -12,7 +12,8 @@ class Lazik
 {
 public:
   double KatOrientacji_st;
-  double Szybkosc;
+  double KatZadany; 
+  //double Szybkosc;
   double OdlegloscDoPrzejechania;
 
 public:

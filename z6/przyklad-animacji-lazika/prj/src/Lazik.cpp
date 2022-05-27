@@ -17,6 +17,7 @@ Lazik::Lazik( const char*  SNazwaPliku_BrylaWzorcowa,
   KatOrientacji_st=0;
   Szybkosc=0;
   OdlegloscDoPrzejechania=0;
+  KatZadany=0;
 }
 
 void Lazik::translacja(PzG::LaczeDoGNUPlota  Lacze)
@@ -28,21 +29,53 @@ void Lazik::translacja(PzG::LaczeDoGNUPlota  Lacze)
   jednosX[1]=0;
   jednosX[2]=0;
 
-  for(int i=1; i<OdlegloscDoPrzejechania + 1; i++)
+  if(OdlegloscDoPrzejechania>0)
     {
+  for(int i=1; i<OdlegloscDoPrzejechania + 1; ++i)
+      {
   this->Polozenie = MacRot.RotacjaZ(KatOrientacji_st) * jednosX * i   + polozenie;  
   Przelicz_i_Zapisz_Wierzcholki(KatOrientacji_st);
   Lacze.Rysuj();
   std::this_thread::sleep_for(50ms);
+      }
     }
+
+  if(OdlegloscDoPrzejechania<0)
+    {
+  for(int i=-1; i>OdlegloscDoPrzejechania - 1; --i)
+      {
+  this->Polozenie = MacRot.RotacjaZ(KatOrientacji_st) * jednosX * i   + polozenie;  
+  Przelicz_i_Zapisz_Wierzcholki(KatOrientacji_st);
+  Lacze.Rysuj();
+  std::this_thread::sleep_for(50ms);
+      }
+    }
+
 }
 
-void Lazik::obrot(PzG::LaczeDoGNUPlota  Lacze)
+void Lazik::obrot(PzG::LaczeDoGNUPlota Lacze)
 {
-  for(int i=1; i<KatOrientacji_st+1; i++)
+
+  if(KatZadany>0)
     {
+  for(int i=KatOrientacji_st+1; i<KatZadany+1; ++i)
+      {
   Przelicz_i_Zapisz_Wierzcholki(i);
   Lacze.Rysuj();
   std::this_thread::sleep_for(50ms);
+      }
+  KatOrientacji_st=KatZadany;
     }
+
+  if(KatZadany<0)
+    {
+  for(int i=KatOrientacji_st-1; i>KatZadany-1; --i)
+      {
+  Przelicz_i_Zapisz_Wierzcholki(i);
+  Lacze.Rysuj();
+  std::this_thread::sleep_for(50ms);
+      }
+  KatOrientacji_st=KatZadany;
+    }
+
 }

@@ -79,31 +79,23 @@ int main()
   cout << endl << "Start programu gnuplot" << endl << endl;
   Lacze.Rysuj();
     cin.ignore(100,'\n');
-   
-    Ob2.KatOrientacji_st=90;
-    Ob2.OdlegloscDoPrzejechania=30;
-    /*int kat=Ob2.KatOrientacji_st;
-    for(int i=1; i<kat+1; ++i)
-      {
-	Ob2.KatOrientacji_st=i;
-        Ob2.obrot(Lacze);
-	std::this_thread::sleep_for(20ms);
-	}*/
-    Ob2.obrot(Lacze);
-    /*int odleglosc=Ob2.OdlegloscDoPrzejechania;
-    for(int i=1; i<odleglosc; ++i)
-      {
-	Wektor3D polozenie=Ob2.Polozenie;
-	Ob2.OdlegloscDoPrzejechania=i;
-        Ob2.translacja();
-        Lacze.Rysuj();
-	std::this_thread::sleep_for(20ms);
-	Ob2.Polozenie=polozenie;
-      }
-    cin.ignore(100,'\n');
-    cout << Ob2.Polozenie;
-    */
+
+    Ob2.OdlegloscDoPrzejechania=-30;
     Ob2.translacja(Lacze);
     
+    Ob2.KatZadany=90;
+    cin.ignore(100,'\n');
+    Ob2.obrot(Lacze);
+
+    Ob2.KatZadany=-90;
+    cin.ignore(100,'\n');
+    Ob2.obrot(Lacze);
+    
+    
+    Ob2.translacja(Lacze);
+    cin.ignore(100,'\n');
+
+    cout<<Ob2.Polozenie<<endl;
+    cout<<Ob2.KatOrientacji_st<<endl;
     Wektor3D::WyswietlLiczbeObiektow();
 }

@@ -24,16 +24,17 @@ class SWektor {
     STyp  _Wsp[SWymiar];
   public:
   SWektor<STyp,SWymiar>() { for (STyp &Wsp: _Wsp) Wsp = 0; AktualnaIloscObiektow++; LacznaIloscObiektow++;}
-  //SWektor<STyp,SWymiar>(const SWektor<STyp,SWymiar> &W);
+  SWektor(const SWektor<STyp,SWymiar> &W);
   ~SWektor<STyp,SWymiar>(){AktualnaIloscObiektow--;}
 
   static void WyswietlLiczbeObiektow();
   /*SWektor(double x, double y, double z)
     : ( _Wsp[0] )(x), ( _Wsp[1] )(y), ( _Wsp[2] )(z){}*/
-  
+   
     STyp  operator [] (unsigned int Ind) const { return _Wsp[Ind]; }
     STyp &operator [] (unsigned int Ind)       { return _Wsp[Ind]; }
 
+  SWektor<STyp,SWymiar>& operator = (const SWektor<STyp,SWymiar> &wektor);
     SWektor<STyp,SWymiar> operator + (const SWektor<STyp,SWymiar> &Dodajnik) const;
     SWektor<STyp,SWymiar> operator - (const SWektor<STyp,SWymiar> &Odjemnik) const;
   // SWektor<STyp,SWymiar> operator * (LZespolona Mnoznik) const;
@@ -61,14 +62,29 @@ void SWektor<STyp,SWymiar>::WyswietlLiczbeObiektow()
 
 
 //konstruktor kopiujacy
-/*template <typename STyp, int SWymiar>
-SWektor<STyp,SWymiar>::SWektor<STyp,SWymiar>(const SWektor<STyp,SWymiar> &W)
-{
-  for (unsinged int i=0; i<3; ++i) _Wsp[i]=W[i];
 
-  SWektor<STyp,SWymiar>::AktualnaIloscObiektow++; SWektor<STyp,SWymiar>::LacznaIloscObiektow++;
+template <typename STyp, int SWymiar>
+SWektor<STyp,SWymiar>::SWektor(const SWektor<STyp,SWymiar> &W)
+{
+  for ( int i=0; i<3; ++i) _Wsp[i]=W[i];
+
+  AktualnaIloscObiektow++; LacznaIloscObiektow++;
 }
-*/
+
+
+// przyrownywanie wektorow
+template <typename STyp, int SWymiar>
+SWektor<STyp,SWymiar>& SWektor<STyp,SWymiar>::operator = (const SWektor<STyp,SWymiar> &wektor)
+{
+  for(int i=0; i<SWymiar; i++)
+    {
+      _Wsp[i]=wektor[i];
+    }
+  return *this;
+}
+    
+
+
 
 // dodawanie wektorow jako szablon
 /*
