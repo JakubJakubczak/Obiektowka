@@ -31,6 +31,14 @@ void Scena::DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom
   wInfoPliku->ZmienKolor(rOb.WezKolorID());
 }
 
+/*!
+ * \brief
+ * 
+ * Konstruktor sceny inicjalizuje lacze i powierzchnie marsa. Tworzy wskazniki 
+ * wspoldzielone do obiektow Lazik i dodaje te wskazniki do listy. Nastepnie
+ * dodaje do listy rysowania Laziki i przelicza dla nich wierzcholki.
+ * Ustawia wskaznik AktywnyLazik na Ob1 i rysuje Lacze.
+ */
 
 Scena::Scena()
 {
@@ -61,6 +69,7 @@ Scena::Scena()
 
   Lacze.Rysuj();
 }
+
 
 void Scena::WyborLazika(int i)
 {

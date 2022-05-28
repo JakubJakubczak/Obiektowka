@@ -1,5 +1,12 @@
 #include "MacierzRotacji.hh"
 
+
+/*!
+ * \brief
+ * 
+ * Metoda przyjmuje za argument kat w stopniach. Na jego podstawie oblicza   
+ * macierz rotacji i ja zwraca
+ */
 MacRotacji MacRotacji::RotacjaZ(double kat) {
 
   kat=kat * (M_PI/180);

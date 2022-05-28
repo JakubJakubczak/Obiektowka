@@ -7,24 +7,74 @@
 #include "lacze_do_gnuplota.hh"
 #include "ObiektGeom.hh"
 
+/*!
+ * \brief
+ * 
+ * Klasa modeluje Lazik. Dziedziczy on z klasy ObiektGeom  
+ * Klasa posiada funkcjonalnosc translacji i rotacji Lazika na Laczu
+ */
 class Lazik
      : public ObiektGeom
 {
-  //public:
   double KatOrientacji_st;
   double KatZadany; 
-  //double Szybkosc;
   double OdlegloscDoPrzejechania;
 
 public:
+  /*!
+ * \brief
+ * 
+ * Konstruktor klasy Lazik  
+ *
+ */
   Lazik(const char* SNazwaPliku_BrylaWzorcowa, const char* SNazwaObiektu, int KOLORID, double PolozenieX, double PolozenieY, double PolozenieZ);
+
+  /*!
+ * \brief
+ * 
+ * Metoda pozwalajace na przemieszczenie sie lazika  
+ *
+ */
   void translacja(PzG::LaczeDoGNUPlota  Lacze);
+
+  /*!
+ * \brief
+ * 
+ * Metoda pozwalajaca na obrot lazika  
+ *
+ */
   void obrot(PzG::LaczeDoGNUPlota  Lacze);
 
+  /*!
+ * \brief
+ * 
+ * \return KatZadany do modyfikacji  
+ *
+ */
   double& setKat(){return KatZadany;}
-  double getKat(){return KatZadany;}
+  /*!
+ * \brief
+ * 
+ * \return KatZadany do odczytu  
+ *
+ */
+  double getKat() const{return KatZadany;}
+
+  /*!
+ * \brief
+ * 
+ * \return OdlegloscDoPrzejechania do modyfikacji  
+ *
+ */
   double& setOdleglosc(){return OdlegloscDoPrzejechania;}
-  double getOdleglosc(){return OdlegloscDoPrzejechania;}
+
+  /*!
+ * \brief
+ * 
+ * \return OdlegloscDoPrzejechania do odczytu 
+ *
+ */
+  double getOdleglosc()const{return OdlegloscDoPrzejechania;}
 
 };
 

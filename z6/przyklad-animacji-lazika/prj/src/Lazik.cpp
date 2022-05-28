@@ -1,9 +1,12 @@
 
 #include "Lazik.hh"
-//#include <chrono>
-//#include <thread>
-//#include "ObiektGeom.hh"
 using namespace std::literals::chrono_literals;
+/*!
+ * \brief
+ * 
+ * Konstruktor wywoluje na liscie inicjalizacyjnej konstruktor klasy pochodnej 
+ * ObiektGeom, inicjalizuje swoje dane.
+ */
 
 Lazik::Lazik( const char*  SNazwaPliku_BrylaWzorcowa,
 		        const char*  SNazwaObiektu,
@@ -18,6 +21,14 @@ Lazik::Lazik( const char*  SNazwaPliku_BrylaWzorcowa,
   OdlegloscDoPrzejechania=0;
   KatZadany=0;
 }
+
+/*!
+ * \brief
+ * 
+ * Metoda wyznacza wektor jednostkowy w strone osi x, ktory nastepnie moze byc  * rotowany przez macierz rotacji. Gdy zna kierunek przejazu zmienia polozenie
+ * o OdlegloscDoPrzjechania. Przejazd jest animowany i rozbity na dwie funkcje,
+ * by mogl byc mozliwy przejazd o wartosc minusowa
+ */
 
 void Lazik::translacja(PzG::LaczeDoGNUPlota  Lacze)
 {
@@ -52,6 +63,13 @@ void Lazik::translacja(PzG::LaczeDoGNUPlota  Lacze)
 
 }
 
+/*!
+ * \brief
+ * 
+ * Metoda obraca lazik do stopni o wartosci KatZadany. Obracanie zaczyna sie  
+ * od momentu wczesniejszego polozenia lazika i jest animowane. Zostalo 
+ * rozlozone na dwa przypadki, by lazik mogl sie obracac o minusowa wartosc
+ */
 void Lazik::obrot(PzG::LaczeDoGNUPlota Lacze)
 {
 

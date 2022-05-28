@@ -2,12 +2,17 @@
 #define OBIEKTGEOM_HH
 
 #include <string>
-
 #include "MacierzRotacji.hh"
 
 
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
 
+/*!
+ * \brief
+ * 
+ * Klasa modeluje obiekt geometryczny  
+ *
+ */
 class ObiektGeom {
   //public:
   Wektor3D Polozenie;
@@ -19,22 +24,69 @@ class ObiektGeom {
     int           _KolorID;
   
   public:
-
+  /*!
+ * \brief
+ * 
+ * Konstruktor klasy ObiektGeom  
+ *
+ */ 
   ObiektGeom(const char* sNazwaPliku_BrylaWzorcowa, const char* sNazwaObiektu, int KolorID, double polozenieX, double polozenieY, double polozenieZ);
 
+  /*!
+ * \brief
+ * 
+ * \return kolor  
+ *
+ */
     int WezKolorID() const { return _KolorID; }
-  
+
+  /*!
+ * \brief
+ * 
+ * \return _NazwaObiektu  
+ *
+ */
     const std::string & WezNazweObiektu() const { return _NazwaObiektu; }
-  
+
+  /*!
+ * \brief
+ * 
+ * \return _NazwaPliku_BrylaRysowana  
+ *
+ */
     const std::string & WezNazwePliku_BrylaRysowana() const
                  { return _NazwaPliku_BrylaRysowana; }
-
+/*!
+ * \brief
+ * 
+ * przelicza wierzcholki bryly  
+ *
+ */
   bool  Przelicz_i_Zapisz_Wierzcholki(double kat=0 );
-  /* void const Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy);*/
 
+/*!
+ * \brief
+ * 
+ * \return Polozenie do modyfikacji  
+ *
+ */
   Wektor3D& setPolozenie(){return Polozenie;}
-  Wektor3D getPolozenie(){return Polozenie;}
-  std::string getNazwa(){return _NazwaObiektu;}
+
+  /*!
+ * \brief
+ * 
+ * \return Polozenie do odczytu  
+ *
+ */
+  Wektor3D getPolozenie() const {return Polozenie;}
+
+/*!
+ * \brief
+ * 
+ * \return _NazwaObiektu do odczytu  
+ *
+ */
+  std::string getNazwa() const {return _NazwaObiektu;}
    
 };
 

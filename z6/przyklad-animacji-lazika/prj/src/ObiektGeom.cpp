@@ -1,10 +1,16 @@
 #include <iostream>
 #include <fstream>
 #include "ObiektGeom.hh"
-//#include "MacierzRotacji.hh"
 
 
 using namespace std;
+
+/*!
+ * \brief
+ * 
+ * Konstruktor inicjalizuje obiekty klasy i ustawia wektor klasy na (20,20,10) 
+ *
+ */
 
 ObiektGeom::ObiektGeom( const char*  sNazwaPliku_BrylaWzorcowa,
 		        const char*  sNazwaObiektu,
@@ -30,6 +36,12 @@ ObiektGeom::ObiektGeom( const char*  sNazwaPliku_BrylaWzorcowa,
   Skala[2]=10;
 }
 
+/*!
+ * \brief
+ * 
+ * metoda czyta z pliku wspolrzedne bryly, nastepnie zmienia te wspolrzedne  
+ * wedlug skali, polozenia i podanego kata na nowe i zapisuje do pliku wyjs
+ */
 bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(double kat)
 {
   ifstream  StrmWe(_NazwaPliku_BrylaWzorcowa);
@@ -71,6 +83,4 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(double kat)
  
 }
 
-/*void const ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy)
-  {} */
 	

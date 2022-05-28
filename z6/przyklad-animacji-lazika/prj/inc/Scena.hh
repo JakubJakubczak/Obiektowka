@@ -10,6 +10,12 @@
 #include "PowierzchniaMarsa.hh"
 #include "Kolory.hh"
 
+/*!
+ * \brief
+ * 
+ * Klasa modeluje scene na ktorej beda laziki i obiekty geometryczne  
+ *
+ */
 class Scena{
    std::shared_ptr<Lazik> AktywnyLazik;
    std::list<std::shared_ptr<Lazik>> ObiektySceny;
@@ -20,11 +26,53 @@ class Scena{
   void DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb);
 
 public:
+
+  /*!
+ * \brief
+ * 
+ * Konstruktor klasy  
+ *
+ */
   Scena();
+
+  /*!
+ * \brief
+ * 
+ * Metoda pozwalajaca na wybor Lazika    
+ *
+ */
   void WyborLazika(int i);
+
+  /*!
+ * \brief
+ * 
+ * Metoda wypisujaca laziki na scenie  
+ *
+ */
   void WypiszLaziki() ;
+
+  /*!
+ * \brief
+ * 
+ * Metoda wypisujaca AktywnyLazik na scenie  
+ *
+ */
   void WypiszLazik() const;
+
+  /*!
+ * \brief
+ * 
+ * Obrot AktywnegoLazika o zadany kat  
+ *
+ */
   void menuobrot();
+
+  /*!
+ * \brief
+ * 
+ * Translacja AktywnegoLazika o zadany kat  
+ *
+ */
   void menutranslacja();
 };
 
