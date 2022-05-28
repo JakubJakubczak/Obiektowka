@@ -34,10 +34,6 @@ void Scena::DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom
 
 Scena::Scena()
 {
-
-  
-   PzG::LaczeDoGNUPlota  Lacze;
-  
   Inicjalizuj_Lacze(Lacze);
   Inicjalizuj_PowierzchnieMarsa(Lacze);
 
@@ -66,4 +62,22 @@ Scena::Scena()
   Lacze.Rysuj();
 
   std::cin.ignore(100,'\n');
+}
+
+void Scena::WyborLazika(int i)
+{
+  int n=1;
+  for(std::list<std::shared_ptr<Lazik>>::iterator it = ObiektySceny.begin(); it!= ObiektySceny.end();  ++it)
+    {
+      if(n==i) AktywnyLazik = *it;
+      ++n;
+    }
+}
+
+void Scena::WypiszLaziki()
+{
+  for(std::list<std::shared_ptr<Lazik>>::iterator it = ObiektySceny.begin(); it!= ObiektySceny.end();  ++it)
+    {
+      std::cout<< (*it)->getNazwa()<<std::endl;
+    }
 }

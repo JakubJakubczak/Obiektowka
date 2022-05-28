@@ -12,13 +12,18 @@
 
 class Scena{
    std::shared_ptr<Lazik> AktywnyLazik;
-   std::list<std::shared_ptr<ObiektGeom>> ObiektySceny;
+   std::list<std::shared_ptr<Lazik>> ObiektySceny;
+   PzG::LaczeDoGNUPlota  Lacze;
+  
 
   void Inicjalizuj_Lacze(PzG::LaczeDoGNUPlota  &rLacze);
   void DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb);
 
 public:
   Scena();
+  void WyborLazika(int i);
+  void WypiszLaziki();
+  void WypiszLazik();
 };
 
 

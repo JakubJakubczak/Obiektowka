@@ -10,7 +10,7 @@
 class Lazik
      : public ObiektGeom
 {
-public:
+  //public:
   double KatOrientacji_st;
   double KatZadany; 
   //double Szybkosc;
@@ -20,6 +20,10 @@ public:
   Lazik(const char* SNazwaPliku_BrylaWzorcowa, const char* SNazwaObiektu, int KOLORID, double PolozenieX, double PolozenieY, double PolozenieZ);
   void translacja(PzG::LaczeDoGNUPlota  Lacze);
   void obrot(PzG::LaczeDoGNUPlota  Lacze);
+
+  double& setKat(){return KatZadany;}
+  double getKat(){return KatZadany;}
+
 };
 
 

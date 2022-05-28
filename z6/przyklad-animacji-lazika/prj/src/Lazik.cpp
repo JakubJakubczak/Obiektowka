@@ -21,7 +21,7 @@ Lazik::Lazik( const char*  SNazwaPliku_BrylaWzorcowa,
 
 void Lazik::translacja(PzG::LaczeDoGNUPlota  Lacze)
 {
-  Wektor3D polozenie = this->Polozenie;
+  Wektor3D polozenie = this->getPolozenie();
   MacRotacji MacRot;
    Wektor3D jednosX;
   jednosX[0]=1;
@@ -32,7 +32,7 @@ void Lazik::translacja(PzG::LaczeDoGNUPlota  Lacze)
     {
   for(int i=1; i<OdlegloscDoPrzejechania + 1; ++i)
       {
-  this->Polozenie = MacRot.RotacjaZ(KatOrientacji_st) * jednosX * i   + polozenie;  
+	this->setPolozenie() = MacRot.RotacjaZ(KatOrientacji_st) * jednosX * i   + polozenie;  
   Przelicz_i_Zapisz_Wierzcholki(KatOrientacji_st);
   Lacze.Rysuj();
   std::this_thread::sleep_for(50ms);
@@ -43,7 +43,7 @@ void Lazik::translacja(PzG::LaczeDoGNUPlota  Lacze)
     {
   for(int i=-1; i>OdlegloscDoPrzejechania - 1; --i)
       {
-  this->Polozenie = MacRot.RotacjaZ(KatOrientacji_st) * jednosX * i   + polozenie;  
+	this->setPolozenie() = MacRot.RotacjaZ(KatOrientacji_st) * jednosX * i   + polozenie;  
   Przelicz_i_Zapisz_Wierzcholki(KatOrientacji_st);
   Lacze.Rysuj();
   std::this_thread::sleep_for(50ms);

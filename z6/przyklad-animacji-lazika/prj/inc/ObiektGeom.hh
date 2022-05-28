@@ -9,7 +9,7 @@
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
 
 class ObiektGeom {
-public:
+  //public:
   Wektor3D Polozenie;
   Wektor3D Skala;
   MacRotacji MacRot;
@@ -31,7 +31,11 @@ public:
 
   bool  Przelicz_i_Zapisz_Wierzcholki(double kat=0 );
   /* void const Przelicz_i_Zapisz_Wierzcholki(std::istream& StrmWe, std::ostream &StrmWy);*/
-				     
+
+  Wektor3D& setPolozenie(){return Polozenie;}
+  Wektor3D getPolozenie(){return Polozenie;}
+  std::string getNazwa(){return _NazwaObiektu;}
+   
 };
 
 
