@@ -23,6 +23,8 @@ public:
 
   double& setKat(){return KatZadany;}
   double getKat(){return KatZadany;}
+  double& setOdleglosc(){return OdlegloscDoPrzejechania;}
+  double getOdleglosc(){return OdlegloscDoPrzejechania;}
 
 };
 

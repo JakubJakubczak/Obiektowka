@@ -22,8 +22,10 @@ class Scena{
 public:
   Scena();
   void WyborLazika(int i);
-  void WypiszLaziki();
-  void WypiszLazik();
+  void WypiszLaziki() ;
+  void WypiszLazik() const;
+  void menuobrot();
+  void menutranslacja();
 };
 
 

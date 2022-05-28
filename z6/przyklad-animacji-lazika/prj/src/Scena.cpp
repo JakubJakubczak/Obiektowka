@@ -60,8 +60,6 @@ Scena::Scena()
   AktywnyLazik=Ob1;
 
   Lacze.Rysuj();
-
-  std::cin.ignore(100,'\n');
 }
 
 void Scena::WyborLazika(int i)
@@ -74,10 +72,45 @@ void Scena::WyborLazika(int i)
     }
 }
 
-void Scena::WypiszLaziki()
+void Scena::WypiszLaziki () 
 {
+  int i=1;
   for(std::list<std::shared_ptr<Lazik>>::iterator it = ObiektySceny.begin(); it!= ObiektySceny.end();  ++it)
     {
-      std::cout<< (*it)->getNazwa()<<std::endl;
+      std::cout<<i<<". Nazwa: "<< (*it)->getNazwa()<<std::endl;
+      std::cout<<"   Polozenie: "<< (*it)->getPolozenie()<<std::endl;
+      std::cout<<"   Orientacja[st]: "<< (*it)->getKat()<<std::endl;
+      i++;
     }
+}
+
+void Scena::WypiszLazik () const
+{     std::cout<<"Aktywny Lazik ";     
+      std::cout<<"   Nazwa: "<< AktywnyLazik->getNazwa()<<std::endl;
+      std::cout<<"   Polozenie: "<< AktywnyLazik->getPolozenie()<<std::endl;
+      std::cout<<"   Orientacja[st]: "<< AktywnyLazik->getKat()<<std::endl;
+
+ 
+}
+
+void Scena::menuobrot()
+{
+
+  double kat;
+  std::cout<<"Podaj kat obrotu w stopniach "<<std::endl;
+  std::cout<<"Wartosc Kata>"; std::cin>>kat;
+
+  AktywnyLazik->setKat()=kat;
+  AktywnyLazik->obrot(Lacze);
+}
+
+void Scena::menutranslacja()
+{
+  double odleglosc;
+  std::cout<<"Podaj odleglosc na jaka ma sie przemiescic lazik(w jednostkach sceny) "<<std::endl;
+  std::cout<<"Odleglosc>"; std::cin>>odleglosc;
+
+  AktywnyLazik->setOdleglosc()=odleglosc;
+  AktywnyLazik->translacja(Lacze);
+
 }
