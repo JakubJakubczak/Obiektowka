@@ -18,7 +18,7 @@
  */
 class Scena{
    std::shared_ptr<Lazik> AktywnyLazik;
-   std::list<std::shared_ptr<Lazik>> ObiektySceny;
+   std::list<std::shared_ptr<ObiektGeom>> ObiektySceny;
    PzG::LaczeDoGNUPlota  Lacze;
   
 

@@ -74,9 +74,9 @@ Scena::Scena()
 void Scena::WyborLazika(int i)
 {
   int n=1;
-  for(std::list<std::shared_ptr<Lazik>>::iterator it = ObiektySceny.begin(); it!= ObiektySceny.end();  ++it)
+  for(std::list<std::shared_ptr<ObiektGeom>>::iterator it = ObiektySceny.begin(); it!= ObiektySceny.end();  ++it)
     {
-      if(n==i) AktywnyLazik = *it;
+      if(n==i) static_cast<std::shared_ptr<ObiektGeom>>(AktywnyLazik) = (*it);
       ++n;
     }
 }
@@ -84,7 +84,7 @@ void Scena::WyborLazika(int i)
 void Scena::WypiszLaziki () 
 {
   int i=1;
-  for(std::list<std::shared_ptr<Lazik>>::iterator it = ObiektySceny.begin(); it!= ObiektySceny.end();  ++it)
+  for(std::list<std::shared_ptr<ObiektGeom>>::iterator it = ObiektySceny.begin(); it!= ObiektySceny.end();  ++it)
     {
       std::cout<<i<<". Nazwa: "<< (*it)->getNazwa()<<std::endl;
       std::cout<<"   Polozenie: "<< (*it)->getPolozenie()<<std::endl;

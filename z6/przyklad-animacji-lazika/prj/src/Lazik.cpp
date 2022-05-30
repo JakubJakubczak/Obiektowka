@@ -72,8 +72,9 @@ void Lazik::translacja(PzG::LaczeDoGNUPlota  Lacze)
  */
 void Lazik::obrot(PzG::LaczeDoGNUPlota Lacze)
 {
-
-  if(KatZadany>0)
+  if(KatZadany==KatOrientacji_st) KatOrientacji_st=KatZadany;
+  
+  if(KatZadany>KatOrientacji_st)
     {
   for(int i=KatOrientacji_st+1; i<KatZadany+1; ++i)
       {
@@ -84,7 +85,7 @@ void Lazik::obrot(PzG::LaczeDoGNUPlota Lacze)
   KatOrientacji_st=KatZadany;
     }
 
-  if(KatZadany<0)
+  if(KatZadany<KatOrientacji_st)
     {
   for(int i=KatOrientacji_st-1; i>KatZadany-1; --i)
       {

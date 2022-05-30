@@ -21,6 +21,7 @@ class Lazik
   double OdlegloscDoPrzejechania;
 
 public:
+  int ID() const override {return 1;}
   /*!
  * \brief
  * 
@@ -28,7 +29,7 @@ public:
  *
  */
   Lazik(const char* SNazwaPliku_BrylaWzorcowa, const char* SNazwaObiektu, int KOLORID, double PolozenieX, double PolozenieY, double PolozenieZ);
-
+  virtual ~Lazik(){}
   /*!
  * \brief
  * 
@@ -58,7 +59,7 @@ public:
  * \return KatZadany do odczytu  
  *
  */
-  double getKat() const{return KatZadany;}
+  double getKat() const override{return KatZadany;}
 
   /*!
  * \brief

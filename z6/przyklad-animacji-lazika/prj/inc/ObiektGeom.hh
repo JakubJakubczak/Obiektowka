@@ -3,10 +3,12 @@
 
 #include <string>
 #include "MacierzRotacji.hh"
-
+#include "ObrysXY.hh"
+//class Lazik;
 
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
 
+//class Lazik;
 /*!
  * \brief
  * 
@@ -22,8 +24,12 @@ class ObiektGeom {
     std::string   _NazwaPliku_BrylaRysowana;
     std::string   _NazwaObiektu;
     int           _KolorID;
+  ObrysXY Obrys;
   
   public:
+
+  virtual double getKat() const {return 0;}
+  virtual int ID() const {return 0;}
   /*!
  * \brief
  * 
@@ -31,7 +37,7 @@ class ObiektGeom {
  *
  */ 
   ObiektGeom(const char* sNazwaPliku_BrylaWzorcowa, const char* sNazwaObiektu, int KolorID, double polozenieX, double polozenieY, double polozenieZ);
-
+  virtual ~ObiektGeom(){}
   /*!
  * \brief
  * 

@@ -46,6 +46,8 @@ class SWektor {
 };
 
 typedef SWektor<double,3> Wektor3D;
+typedef SWektor<double,2> Wektor2D;
+
 
 template <typename STyp, int SWymiar>
 int SWektor<STyp,SWymiar>::AktualnaIloscObiektow=0;  // inicjalizacja zmiennej  statycznej
