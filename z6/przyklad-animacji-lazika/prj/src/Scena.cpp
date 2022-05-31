@@ -76,7 +76,7 @@ void Scena::WyborLazika(int i)
   int n=1;
   for(std::list<std::shared_ptr<ObiektGeom>>::iterator it = ObiektySceny.begin(); it!= ObiektySceny.end();  ++it)
     {
-      if(n==i) static_cast<std::shared_ptr<ObiektGeom>>(AktywnyLazik) = (*it);
+      if(n==i) AktywnyLazik = std::static_pointer_cast<Lazik>(*it);
       ++n;
     }
 }
@@ -106,7 +106,7 @@ void Scena::menuobrot()
 {
 
   double kat;
-  std::cout<<"Podaj kat obrotu w stopniach "<<std::endl;
+  std::cout<<"Podaj Orientacje lazika:  "<<std::endl;
   std::cout<<"Wartosc Kata>"; std::cin>>kat;
 
   AktywnyLazik->setKat()=kat;
