@@ -14,13 +14,14 @@
  * Klasa posiada funkcjonalnosc translacji i rotacji Lazika na Laczu
  */
 class Lazik
-     : public ObiektGeom
+  : public ObiektGeom
 {
   double KatOrientacji_st;
   double KatZadany; 
   double OdlegloscDoPrzejechania;
 
 public:
+  TypKolizji CzyKolizja(const std::shared_ptr<Lazik>& Wsk_Lazik) const override;
   int ID() const override {return 1;}
   /*!
  * \brief

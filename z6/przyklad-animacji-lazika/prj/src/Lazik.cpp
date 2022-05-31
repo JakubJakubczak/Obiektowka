@@ -97,3 +97,17 @@ void Lazik::obrot(PzG::LaczeDoGNUPlota Lacze)
     }
 
 }
+
+TypKolizji Lazik::CzyKolizja(const std::shared_ptr<Lazik>& Wsk_Lazik) const 
+ {
+   if( this->getObrys().NakladanieObrysow( Wsk_Lazik->getObrys() ) )
+     {
+       std::cout<<"Kolizja";
+      return TK_Kolizja;
+     }
+   else
+     {
+       std::cout<<"Brak Kolizcji";
+     return TK_BrakKolizji;
+     }
+ }

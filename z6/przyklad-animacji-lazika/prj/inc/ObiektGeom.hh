@@ -4,7 +4,10 @@
 #include <string>
 #include "MacierzRotacji.hh"
 #include "ObrysXY.hh"
-//class Lazik;
+#include "TypKolizji.hh"
+#include <memory>
+
+class Lazik;
 
 #define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    "pliki_do_rysowania"
 
@@ -23,11 +26,13 @@ class ObiektGeom {
     std::string   _NazwaPliku_BrylaWzorcowa;
     std::string   _NazwaPliku_BrylaRysowana;
     std::string   _NazwaObiektu;
-    int           _KolorID;
+   int           _KolorID;
   ObrysXY Obrys;
   
   public:
 
+  virtual TypKolizji CzyKolizja(const std::shared_ptr<Lazik>& Wsk_Lazik) const=0;
+  //{return TK_BrakKolizji;}
   virtual double getKat() const {return 0;}
   virtual int ID() const {return 0;}
   /*!
@@ -38,6 +43,10 @@ class ObiektGeom {
  */ 
   ObiektGeom(const char* sNazwaPliku_BrylaWzorcowa, const char* sNazwaObiektu, int KolorID, double polozenieX, double polozenieY, double polozenieZ);
   virtual ~ObiektGeom(){}
+
+
+  ObrysXY getObrys() const {return Obrys;}
+  ObrysXY& setObrys() {return Obrys;}
   /*!
  * \brief
  * 

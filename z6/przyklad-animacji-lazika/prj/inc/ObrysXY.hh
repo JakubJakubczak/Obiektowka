@@ -5,7 +5,6 @@ class Scena;
 
 class ObrysXY
 {
-public:
   Wektor2D _Wiersz_DolnyLewy;
   Wektor2D _Wiersz_GornyPrawy;
 
@@ -26,11 +25,11 @@ public:
 	  Obrys._Wiersz_DolnyLewy[1] <= this->_Wiersz_GornyPrawy[1] ) 
       )
       {
-	std::cout<<"Przecieie";
+	
     return true;
       }
 
-    else {std::cout<<"Brak Przeciecia"; return false;}
+    else  return false;
   }
   
 };

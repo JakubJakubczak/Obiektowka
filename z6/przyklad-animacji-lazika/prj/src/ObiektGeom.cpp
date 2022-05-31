@@ -57,6 +57,11 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(double kat)
 
   Wektor3D  Wsp;
   int Indeks_Wiersza = 0;
+  Wektor2D Najmniejsze;
+  Wektor2D Najwieksze;
+  // inicjalizacja zmiennych do obrysu
+  Najmniejsze=200;
+  Najwieksze=-200;
   
   StrmWe >> Wsp;
 
@@ -64,7 +69,6 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(double kat)
   
   do {
     Wsp = MacRot.RotacjaZ(kat) * Wsp * Skala + Polozenie;
-      
     StrmWy << Wsp<< endl;
     ++Indeks_Wiersza;
     
@@ -72,11 +76,24 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(double kat)
       StrmWy << endl;
       Indeks_Wiersza = 0;
     }
+
+     //wyliczanie obrysu
+
+    if(Wsp[0] < Najmniejsze[0]) Najmniejsze[0]=Wsp[0];
+    if(Wsp[0] > Najwieksze[0]) Najwieksze[0]=Wsp[0];
+    if(Wsp[1] < Najmniejsze[1]) Najmniejsze[1]=Wsp[1];
+    if(Wsp[1] > Najwieksze[1]) Najwieksze[1]=Wsp[1];
     
     StrmWe >> Wsp;
-    
+
+          
   } while (!StrmWe.fail());
 
+    // przypisywanie wartosci
+  this->setObrys().setDolnyLewy() = Najmniejsze;
+  this->setObrys().setGornyPrawy() = Najwieksze;
+
+  
   if (!StrmWe.eof()) return false;
   
   return Indeks_Wiersza == 0 && !StrmWy.fail();

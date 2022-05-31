@@ -20,32 +20,19 @@ using namespace std;
 
 int main()
 {
-  /*ObrysXY Obrys1,Obrys2;
-
-  Obrys1._Wiersz_DolnyLewy[0]=40;
-  Obrys1._Wiersz_DolnyLewy[1]=40;
-  Obrys1._Wiersz_GornyPrawy[0]=60;
-  Obrys1._Wiersz_GornyPrawy[1]=60;
-
-  Obrys2._Wiersz_DolnyLewy[0]=30;
- Obrys2._Wiersz_DolnyLewy[1]=30;
-Obrys2._Wiersz_GornyPrawy[0]=75;
-Obrys2._Wiersz_GornyPrawy[1]=75;
- 
- Obrys1.NakladanieObrysow(Obrys2);
-  */
-
-
-
 
   
   Scena scena;
   int numer;
-  char znak= 'm'; 
+  char znak= 'm';
+
   while(znak!='k')
   {
     cout<<endl;
     scena.WypiszLazik();
+
+    scena.ObiektySceny.back()->CzyKolizja(scena.AktywnyLazik);
+    
     Wektor3D::WyswietlLiczbeObiektow();
     cout<<endl;
     cin>>znak;
