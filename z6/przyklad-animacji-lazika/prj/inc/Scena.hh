@@ -9,6 +9,7 @@
 #include "lacze_do_gnuplota.hh"
 #include "PowierzchniaMarsa.hh"
 #include "Kolory.hh"
+#include "ProbkaRegolitu.hh"
 
 /*!
  * \brief
@@ -17,16 +18,21 @@
  *
  */
 class Scena{
-public:
+
    std::shared_ptr<Lazik> AktywnyLazik;
    std::list<std::shared_ptr<ObiektGeom>> ObiektySceny;
    PzG::LaczeDoGNUPlota  Lacze;
+   std::shared_ptr<ObiektGeom> ObiektKolidujacy;
+  //  TypKolizji WynikKolizji;
   
-
   void Inicjalizuj_Lacze(PzG::LaczeDoGNUPlota  &rLacze);
   void DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb);
 
 public:
+
+  TypKolizji CzyAktywnyLazikKoliduje(std::shared_ptr<ObiektGeom> & ObKolid) const;
+  void obrot();
+  void translacja();
 
   /*!
  * \brief
@@ -44,6 +50,8 @@ public:
  */
   void WyborLazika(int i);
 
+  void WypiszProbki();
+  
   /*!
  * \brief
  * 

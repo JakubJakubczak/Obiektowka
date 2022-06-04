@@ -21,7 +21,7 @@ class Lazik
   double OdlegloscDoPrzejechania;
 
 public:
-  TypKolizji CzyKolizja(const std::shared_ptr<Lazik>& Wsk_Lazik) const override;
+    TypKolizji CzyKolizja(const std::shared_ptr<Lazik>& Wsk_Lazik) const override;
   int ID() const override {return 1;}
   /*!
  * \brief
@@ -31,21 +31,6 @@ public:
  */
   Lazik(const char* SNazwaPliku_BrylaWzorcowa, const char* SNazwaObiektu, int KOLORID, double PolozenieX, double PolozenieY, double PolozenieZ);
   virtual ~Lazik(){}
-  /*!
- * \brief
- * 
- * Metoda pozwalajace na przemieszczenie sie lazika  
- *
- */
-  void translacja(PzG::LaczeDoGNUPlota  Lacze);
-
-  /*!
- * \brief
- * 
- * Metoda pozwalajaca na obrot lazika  
- *
- */
-  void obrot(PzG::LaczeDoGNUPlota  Lacze);
 
   /*!
  * \brief
@@ -65,9 +50,27 @@ public:
   /*!
  * \brief
  * 
+ * \return KatOrientacji_st do modyfikacji  
+ *
+ */
+
+  double& setOrientacja(){return KatOrientacji_st;}
+  /*!
+ * \brief
+ * 
+ * \return KatOrientacji_st do odczytu  
+ *
+ */
+  double getOrientacja() const {return KatOrientacji_st;}
+
+  /*!
+ * \brief
+ * 
  * \return OdlegloscDoPrzejechania do modyfikacji  
  *
  */
+
+  
   double& setOdleglosc(){return OdlegloscDoPrzejechania;}
 
   /*!

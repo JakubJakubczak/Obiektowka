@@ -36,6 +36,13 @@ ObiektGeom::ObiektGeom( const char*  sNazwaPliku_BrylaWzorcowa,
   Skala[2]=10;
 }
 
+void ObiektGeom::ZmienSkale(int x, int y, int z)
+{
+  Skala[0]=x;
+  Skala[1]=y;
+  Skala[2]=z;
+}
+
 /*!
  * \brief
  * 

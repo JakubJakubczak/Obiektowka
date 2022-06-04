@@ -18,11 +18,11 @@ public:
 
  bool  NakladanieObrysow(ObrysXY Obrys)
   {
-    if( ( this->_Wiersz_DolnyLewy[0] <= Obrys._Wiersz_GornyPrawy[0] &&
-	  Obrys._Wiersz_DolnyLewy[0] <= this->_Wiersz_GornyPrawy[0] )
+    if( ( this->_Wiersz_DolnyLewy[0] < Obrys._Wiersz_GornyPrawy[0] &&
+	  Obrys._Wiersz_DolnyLewy[0] < this->_Wiersz_GornyPrawy[0] )
 	    &&
-	( this->_Wiersz_DolnyLewy[1] <= Obrys._Wiersz_GornyPrawy[1] &&
-	  Obrys._Wiersz_DolnyLewy[1] <= this->_Wiersz_GornyPrawy[1] ) 
+	( this->_Wiersz_DolnyLewy[1] < Obrys._Wiersz_GornyPrawy[1] &&
+	  Obrys._Wiersz_DolnyLewy[1] < this->_Wiersz_GornyPrawy[1] ) 
       )
       {
 	

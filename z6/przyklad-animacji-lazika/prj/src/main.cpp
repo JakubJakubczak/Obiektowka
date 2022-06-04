@@ -31,7 +31,7 @@ int main()
     cout<<endl;
     scena.WypiszLazik();
 
-    scena.ObiektySceny.back()->CzyKolizja(scena.AktywnyLazik);
+    //  scena.ObiektySceny.back()->CzyKolizja(scena.AktywnyLazik);
     
     Wektor3D::WyswietlLiczbeObiektow();
     cout<<endl;
@@ -42,6 +42,7 @@ int main()
     cout<<"j - jazda na wprost"<<endl;
     cout<<"o - zmien orientacje"<<endl;
     cout<<"w - wybor lazika"<<endl;
+    cout<<"d - wyswietl probki na scenie"<<endl;
     cout<<"m - wyswietl menu"<<endl<<endl;
     cout<<"k - koniec dzialania programu"<<endl;
     break;
@@ -59,6 +60,10 @@ int main()
   case 'o':
     scena.menuobrot();
   break;
+
+  case 'd':
+    scena.WypiszProbki();
+    break;
 
   case 'k':
     cout<<"Koniec programu"<<endl;

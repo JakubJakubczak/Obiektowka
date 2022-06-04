@@ -31,6 +31,7 @@ class ObiektGeom {
   
   public:
 
+  void ZmienSkale(int x, int y, int z);
   virtual TypKolizji CzyKolizja(const std::shared_ptr<Lazik>& Wsk_Lazik) const=0;
   //{return TK_BrakKolizji;}
   virtual double getKat() const {return 0;}
