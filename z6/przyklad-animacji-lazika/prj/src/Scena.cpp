@@ -140,11 +140,23 @@ void Scena::WypiszProbki ()
 
 
 void Scena::WypiszLazik () const
-{     std::cout<<"Aktywny Lazik ";     
+{
+  if(AktywnyLazik->ID()==1)
+    {
+      std::cout<<"Aktywny Lazik ";     
+      std::cout<<"   Nazwa: "<< AktywnyLazik->getNazwa()<<std::endl;
+      std::cout<<"   Polozenie: "<< AktywnyLazik->getPolozenie()<<std::endl;
+      std::cout<<"   Orientacja[st]: "<< AktywnyLazik->getOrientacja()<<std::endl;
+    }
+  else
+    {
+       std::cout<<"Aktywny Lazik ";     
       std::cout<<"   Nazwa: "<< AktywnyLazik->getNazwa()<<std::endl;
       std::cout<<"   Polozenie: "<< AktywnyLazik->getPolozenie()<<std::endl;
       std::cout<<"   Orientacja[st]: "<< AktywnyLazik->getOrientacja()<<std::endl;
 
+      AktywnyLazik->WyswietlProbki();
+    }
  
 }
 
@@ -319,8 +331,10 @@ void Scena::PodniesProbke()
   if(AktywnyLazik->ID() != 3)
     {
   std::cout<<"Zwykly Lazik nie moze zebrac probki";
-  break;
     }
+  
+  else
+   {  
   
   if(ObiektKolidujacy->ID() != 2)
     {
@@ -328,8 +342,10 @@ void Scena::PodniesProbke()
     }
   else
     {
-      AktywnyLazik->DodajProbke(ObiektKolidujacy);
+      AktywnyLazik->DodajProbke(std::static_pointer_cast<ProbkaRegolitu>(ObiektKolidujacy));
       UsunZListyRysowania(Lacze, *ObiektKolidujacy);
       ObiektySceny.remove(ObiektKolidujacy);
+      Lacze.Rysuj();
     }
+   }
 }

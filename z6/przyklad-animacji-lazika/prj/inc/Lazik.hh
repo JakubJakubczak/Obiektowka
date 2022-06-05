@@ -7,6 +7,7 @@
 #include "lacze_do_gnuplota.hh"
 #include "ObiektGeom.hh"
 
+class ProbkaRegolitu;
 /*!
  * \brief
  * 
@@ -23,6 +24,9 @@ class Lazik
 public:
     TypKolizji CzyKolizja(const std::shared_ptr<Lazik>& Wsk_Lazik) const override;
   int ID() const override {return 1;}
+
+  virtual void DodajProbke(const std::shared_ptr<ProbkaRegolitu> Probka){;};
+  virtual void WyswietlProbki(){;};    
   /*!
  * \brief
  * 

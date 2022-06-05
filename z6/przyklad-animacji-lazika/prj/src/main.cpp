@@ -43,6 +43,7 @@ int main()
     cout<<"o - zmien orientacje"<<endl;
     cout<<"w - wybor lazika"<<endl;
     cout<<"d - wyswietl probki na scenie"<<endl;
+    cout<<"p - podnies probke(tylko dla SFR) "<<endl;
     cout<<"m - wyswietl menu"<<endl<<endl;
     cout<<"k - koniec dzialania programu"<<endl;
     break;
@@ -51,6 +52,10 @@ int main()
     scena.menutranslacja();
   break;
 
+  case 'p':
+    scena.PodniesProbke();
+    break;
+  
     case 'w':
       scena.WypiszLaziki();
       cin>>numer;
