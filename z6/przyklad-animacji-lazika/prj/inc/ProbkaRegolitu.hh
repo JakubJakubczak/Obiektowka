@@ -17,13 +17,14 @@ ProbkaRegolitu( const char*  SNazwaPliku_BrylaWzorcowa,
   ZmienSkale(2,6,2);
 }
 
+  virtual ~ProbkaRegolitu(){}
   int ID() const override {return 2;}
   virtual TypKolizji CzyKolizja(const std::shared_ptr<Lazik> & Wsk_Lazik) const override
   {
     if( this->getObrys().NakladanieObrysow( Wsk_Lazik->getObrys() ) )
      {
        std::cout<<"Kolizja z probka "<<this->getNazwa()<<std::endl;
-       std::cout<<"Mozliwosc podniesienia  probki";
+       if( Wsk_Lazik->ID() == 3)  std::cout<<"Mozliwosc podniesienia  probki";
       return TK_Kolizja;
      }
    else

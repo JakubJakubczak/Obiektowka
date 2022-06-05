@@ -1,16 +1,15 @@
  #ifndef SCENA_HH
  #define SCENA_HH
 
-#include <list>
 #include <memory>
-#include "Lazik.hh"
+//#include "Lazik.hh"
 #include <iostream>
 #include <fstream>
 #include "lacze_do_gnuplota.hh"
 #include "PowierzchniaMarsa.hh"
 #include "Kolory.hh"
-#include "ProbkaRegolitu.hh"
-
+//#include "ProbkaRegolitu.hh"
+#include "LazikSFR.hh"
 /*!
  * \brief
  * 
@@ -27,12 +26,13 @@ class Scena{
   
   void Inicjalizuj_Lacze(PzG::LaczeDoGNUPlota  &rLacze);
   void DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb);
-
+  void UsunZListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb);
 public:
 
   TypKolizji CzyAktywnyLazikKoliduje(std::shared_ptr<ObiektGeom> & ObKolid) const;
   void obrot();
   void translacja();
+  void PodniesProbke();  
 
   /*!
  * \brief

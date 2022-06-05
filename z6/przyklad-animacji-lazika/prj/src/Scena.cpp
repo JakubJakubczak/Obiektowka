@@ -47,7 +47,7 @@ Scena::Scena()
   Inicjalizuj_PowierzchnieMarsa(Lacze);
 
 
-  std::shared_ptr<Lazik> Ob1 = std::make_shared<Lazik> ("bryly_wzorcowe/szescian3.dat","FSR",Kolor_JasnoNiebieski, 0, 0, 0);
+  std::shared_ptr<LazikSFR> Ob1 = std::make_shared<LazikSFR> ("bryly_wzorcowe/szescian3.dat","SFR",Kolor_JasnoNiebieski, 0, 0, 0);
   ObiektySceny.push_back(Ob1);
 
   std::shared_ptr<Lazik> Ob2 = std::make_shared<Lazik> ("bryly_wzorcowe/szescian3.dat","Perseverance",Kolor_Czerwony, 60, 60, 0);
@@ -76,7 +76,6 @@ Scena::Scena()
   DodajDoListyRysowania(Lacze,*Ob5);
   DodajDoListyRysowania(Lacze,*Ob6);
   DodajDoListyRysowania(Lacze,*Ob7);
-
   
   Ob1->Przelicz_i_Zapisz_Wierzcholki();
   Ob2->Przelicz_i_Zapisz_Wierzcholki();
@@ -99,7 +98,7 @@ void Scena::WyborLazika(int i)
 
   for(std::list<std::shared_ptr<ObiektGeom>>::iterator it = ObiektySceny.begin(); it!= ObiektySceny.end();  ++it)
     {
-      if((*it)->ID()==1)
+      if((*it)->ID()==1 || (*it)->ID()==3)
 	{
       if(n==i) AktywnyLazik = std::static_pointer_cast<Lazik>(*it);
       ++n;
@@ -113,7 +112,7 @@ void Scena::WypiszLaziki ()
 	
   for(std::list<std::shared_ptr<ObiektGeom>>::iterator it = ObiektySceny.begin(); it!= ObiektySceny.end();  ++it)
     {
-       if((*it)->ID()==1)
+      if((*it)->ID()==1 || (*it)->ID()==3)
 	 {
       std::cout<<i<<". Nazwa: "<< (*it)->getNazwa()<<std::endl;
       std::cout<<"   Polozenie: "<< (*it)->getPolozenie()<<std::endl;
@@ -304,4 +303,33 @@ TypKolizji Scena::CzyAktywnyLazikKoliduje(std::shared_ptr<ObiektGeom>& ObKolid) 
 	  } 	
     }
   return WynikKolizji;
+}
+
+
+void Scena::UsunZListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb)
+{
+  // PzG::InfoPlikuDoRysowania *wInfoPliku;
+  
+   rLacze.UsunNazwePliku(rOb.WezNazwePliku_BrylaRysowana());
+  //wInfoPliku->ZmienKolor(rOb.WezKolorID());
+}
+
+void Scena::PodniesProbke()
+{
+  if(AktywnyLazik->ID() != 3)
+    {
+  std::cout<<"Zwykly Lazik nie moze zebrac probki";
+  break;
+    }
+  
+  if(ObiektKolidujacy->ID() != 2)
+    {
+      std::cout<<"Obiekt kolidujacy nie jest probka";
+    }
+  else
+    {
+      AktywnyLazik->DodajProbke(ObiektKolidujacy);
+      UsunZListyRysowania(Lacze, *ObiektKolidujacy);
+      ObiektySceny.remove(ObiektKolidujacy);
+    }
 }
