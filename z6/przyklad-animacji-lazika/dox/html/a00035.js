@@ -1,5 +1,7 @@
 var a00035 =
 [
-    [ "ObiektGeom", "a00084.html", "a00084" ],
-    [ "NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA", "a00035.html#ae595890bce7c6c764f6ff1ef7e549443", null ]
+    [ "Kolory", "a00035.html#a42bef2edd1524f656445643a32d446fb", [
+      [ "Kolor_JasnoNiebieski", "a00035.html#a42bef2edd1524f656445643a32d446fbad4b67c4e88062d95c31dcd413c7690af", null ],
+      [ "Kolor_Czerwony", "a00035.html#a42bef2edd1524f656445643a32d446fba11d3812a41bb2e648c9db1ac4e1f11e3", null ]
+    ] ]
 ];

@@ -1,0 +1,13 @@
+digraph "/home/kubiospro/Obiektowka" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_1f9d1c0669510ad4fc0cb635f4e7c5e8 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="kubiospro" fontname="FreeSans", fontsize="10", URL="dir_1f9d1c0669510ad4fc0cb635f4e7c5e8.html"]
+  subgraph clusterdir_4549e3b25dabb291326812e3d3809b40 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_4549e3b25dabb291326812e3d3809b40.html"];
+    dir_4549e3b25dabb291326812e3d3809b40 [shape=plaintext label="Obiektowka"];
+    dir_d72e83c949c9e085232ecf6185ece81b [shape=box label="z6" color="red" fillcolor="white" style="filled" URL="dir_d72e83c949c9e085232ecf6185ece81b.html"];
+  }
+  }
+}

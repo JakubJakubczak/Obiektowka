@@ -1,7 +1,8 @@
 var a00062 =
 [
-    [ "NAZWA_PLIKU__POWIERZCHNIA_PLANETY", "a00062.html#a1e6e82d06f2d76815dc6eba9527104f5", null ],
-    [ "Inicjalizuj_PowierzchnieMarsa", "a00062.html#a4ea2370930491646c4519a1f689f117c", null ],
-    [ "UtworzPowierzchnie_ZapiszDoPliku", "a00062.html#a90f8388bf4b0322ca71017caae3e0d73", null ],
-    [ "UtworzPowierzchnie_ZapiszDoPliku", "a00062.html#a4eefeb43e7c6727fb4e262012df87ad2", null ]
+    [ "SMacierz", "a00125.html", "a00125" ],
+    [ "Macierz3D", "a00062.html#a8fdcc84d7860623c8b93f7025048c415", null ],
+    [ "operator*", "a00062.html#abb36aab5ca34860fa2a32daa984b6a70", null ],
+    [ "operator<<", "a00062.html#aedcc1fe54e283ebea9eddbd87cfc4241", null ],
+    [ "operator>>", "a00062.html#a1f313c8cccf65a7fb9805a143f62eef8", null ]
 ];

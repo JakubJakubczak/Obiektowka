@@ -32,9 +32,21 @@ class ObiektGeom {
   public:
 
   void ZmienSkale(int x, int y, int z);
+/*!
+ * \brief
+ * 
+ * Metoda czysto wirtualna sluzaca do sprawdzania kolizji w dziedziczonych klasach
+ *
+ */
   virtual TypKolizji CzyKolizja(const std::shared_ptr<Lazik>& Wsk_Lazik) const=0;
   //{return TK_BrakKolizji;}
   virtual double getKat() const {return 0;}
+  /*!
+ * \brief
+ * 
+ * Metoda wirtualna wyznaczajaca ID dla kazdej klasy dziedziczonej z ObiektGeom
+ *
+ */
   virtual int ID() const {return 0;}
   /*!
  * \brief

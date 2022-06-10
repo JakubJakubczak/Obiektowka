@@ -1,0 +1,10 @@
+digraph "/home" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_43e0a1f539e00dcfa1a6bc4d4fee4fc2 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html"];
+    dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2 [shape=plaintext label="home"];
+    dir_1f9d1c0669510ad4fc0cb635f4e7c5e8 [shape=box label="kubiospro" color="red" fillcolor="white" style="filled" URL="dir_1f9d1c0669510ad4fc0cb635f4e7c5e8.html"];
+  }
+}

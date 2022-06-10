@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MSR: Plik źródłowy /home/jjakubcz/Obiektowka/z6/przyklad-animacji-lazika/prj/inc/ObiektGeom.hh</title>
+<title>MSR: Plik źródłowy /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/prj/inc/Kolory.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
@@ -61,75 +61,30 @@ $(document).ready(function(){initNavTree('a00035_source.html',''); initResizable
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">ObiektGeom.hh</div>  </div>
+<div class="title">Kolory.hh</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00035.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef OBIEKTGEOM_HH</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OBIEKTGEOM_HH</span></div>
+<a href="a00035.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef KOLORY_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define KOLORY_HH</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00032.html">MacierzRotacji.hh</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="a00035.html#ae595890bce7c6c764f6ff1ef7e549443">    8</a></span>&#160;<span class="preprocessor">#define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA    &quot;pliki_do_rysowania&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="a00084.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00084.html">ObiektGeom</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="comment">//public:</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="a00084.html#a77998b06e15392918a969a56c0d678ef">   18</a></span>&#160;  <a class="code" href="a00096.html">Wektor3D</a> <a class="code" href="a00084.html#a77998b06e15392918a969a56c0d678ef">Polozenie</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="a00084.html#a62b48b3b8a810889bc2955a671dc33a9">   19</a></span>&#160;  <a class="code" href="a00096.html">Wektor3D</a> <a class="code" href="a00084.html#a62b48b3b8a810889bc2955a671dc33a9">Skala</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="a00084.html#a8f2441f774c7914615c167ff9d4fccfc">   20</a></span>&#160;  <a class="code" href="a00080.html">MacRotacji</a> <a class="code" href="a00084.html#a8f2441f774c7914615c167ff9d4fccfc">MacRot</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="a00084.html#a826722f3c7da3cec1f675ade0c13564c">   21</a></span>&#160;    std::string   <a class="code" href="a00084.html#a826722f3c7da3cec1f675ade0c13564c">_NazwaPliku_BrylaWzorcowa</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="a00084.html#a7a914f88e2659917cd175f5b79639e8b">   22</a></span>&#160;    std::string   <a class="code" href="a00084.html#a7a914f88e2659917cd175f5b79639e8b">_NazwaPliku_BrylaRysowana</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="a00084.html#aacc908cf9790acc9044932893a910c2e">   23</a></span>&#160;    std::string   <a class="code" href="a00084.html#aacc908cf9790acc9044932893a910c2e">_NazwaObiektu</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="a00084.html#a231891cae034085462791310e2b94d57">   24</a></span>&#160;    <span class="keywordtype">int</span>           <a class="code" href="a00084.html#a231891cae034085462791310e2b94d57">_KolorID</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="a00084.html#a21815370c0870abb1661dc811901a9f8">ObiektGeom</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* sNazwaPliku_BrylaWzorcowa, <span class="keyword">const</span> <span class="keywordtype">char</span>* sNazwaObiektu, <span class="keywordtype">int</span> KolorID, <span class="keywordtype">double</span> polozenieX, <span class="keywordtype">double</span> polozenieY, <span class="keywordtype">double</span> polozenieZ);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="a00084.html#a7d2459f8346277154a88a0e05bf7a08a">   41</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="a00084.html#a7d2459f8346277154a88a0e05bf7a08a">WezKolorID</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="a00084.html#a231891cae034085462791310e2b94d57">_KolorID</a>; }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="a00084.html#adad1663bd767290abe2603247c6c4100">   49</a></span>&#160;    <span class="keyword">const</span> std::string &amp; <a class="code" href="a00084.html#adad1663bd767290abe2603247c6c4100">WezNazweObiektu</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="a00084.html#aacc908cf9790acc9044932893a910c2e">_NazwaObiektu</a>; }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="a00084.html#a22e77af279ca2fb3543eebb4de37f69a">   57</a></span>&#160;    <span class="keyword">const</span> std::string &amp; <a class="code" href="a00084.html#a22e77af279ca2fb3543eebb4de37f69a">WezNazwePliku_BrylaRysowana</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">                 </span>{ <span class="keywordflow">return</span> <a class="code" href="a00084.html#a7a914f88e2659917cd175f5b79639e8b">_NazwaPliku_BrylaRysowana</a>; }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">bool</span>  <a class="code" href="a00084.html#a1c646f0971f0b9460cdfa0fd5438efe1">Przelicz_i_Zapisz_Wierzcholki</a>(<span class="keywordtype">double</span> kat=0 );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="a00084.html#a61aede2fdbd3dcbb6e59b72528b5437c">   73</a></span>&#160;  <a class="code" href="a00096.html">Wektor3D</a>&amp; <a class="code" href="a00084.html#a61aede2fdbd3dcbb6e59b72528b5437c">setPolozenie</a>(){<span class="keywordflow">return</span> <a class="code" href="a00084.html#a77998b06e15392918a969a56c0d678ef">Polozenie</a>;}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="a00084.html#afe68386b8c0aeac07a164193e08c8a4c">   81</a></span>&#160;  <a class="code" href="a00096.html">Wektor3D</a> <a class="code" href="a00084.html#afe68386b8c0aeac07a164193e08c8a4c">getPolozenie</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="a00084.html#a77998b06e15392918a969a56c0d678ef">Polozenie</a>;}</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="a00084.html#aa175b24870696a6fc4816b58daa5881e">   89</a></span>&#160;  std::string <a class="code" href="a00084.html#aa175b24870696a6fc4816b58daa5881e">getNazwa</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="a00084.html#aacc908cf9790acc9044932893a910c2e">_NazwaObiektu</a>;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;   </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aa00032_html"><div class="ttname"><a href="a00032.html">MacierzRotacji.hh</a></div></div>
-<div class="ttc" id="aa00080_html"><div class="ttname"><a href="a00080.html">MacRotacji</a></div><div class="ttdoc">Klasa modeluje pojecie Macierzy Rotacji.   Dziedzczy ona z klasy Macierz3D.</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00014">MacierzRotacji.hh:16</a></div></div>
-<div class="ttc" id="aa00084_html"><div class="ttname"><a href="a00084.html">ObiektGeom</a></div><div class="ttdoc">Klasa modeluje obiekt geometryczny</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00016">ObiektGeom.hh:16</a></div></div>
-<div class="ttc" id="aa00084_html_a1c646f0971f0b9460cdfa0fd5438efe1"><div class="ttname"><a href="a00084.html#a1c646f0971f0b9460cdfa0fd5438efe1">ObiektGeom::Przelicz_i_Zapisz_Wierzcholki</a></div><div class="ttdeci">bool Przelicz_i_Zapisz_Wierzcholki(double kat=0)</div><div class="ttdoc">przelicza wierzcholki bryly</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00045">ObiektGeom.cpp:45</a></div></div>
-<div class="ttc" id="aa00084_html_a21815370c0870abb1661dc811901a9f8"><div class="ttname"><a href="a00084.html#a21815370c0870abb1661dc811901a9f8">ObiektGeom::ObiektGeom</a></div><div class="ttdeci">ObiektGeom(const char *sNazwaPliku_BrylaWzorcowa, const char *sNazwaObiektu, int KolorID, double polozenieX, double polozenieY, double polozenieZ)</div><div class="ttdoc">Konstruktor klasy ObiektGeom</div><div class="ttdef"><b>Definition:</b> <a href="a00059_source.html#l00015">ObiektGeom.cpp:15</a></div></div>
-<div class="ttc" id="aa00084_html_a22e77af279ca2fb3543eebb4de37f69a"><div class="ttname"><a href="a00084.html#a22e77af279ca2fb3543eebb4de37f69a">ObiektGeom::WezNazwePliku_BrylaRysowana</a></div><div class="ttdeci">const std::string &amp; WezNazwePliku_BrylaRysowana() const</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00057">ObiektGeom.hh:57</a></div></div>
-<div class="ttc" id="aa00084_html_a231891cae034085462791310e2b94d57"><div class="ttname"><a href="a00084.html#a231891cae034085462791310e2b94d57">ObiektGeom::_KolorID</a></div><div class="ttdeci">int _KolorID</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00024">ObiektGeom.hh:24</a></div></div>
-<div class="ttc" id="aa00084_html_a61aede2fdbd3dcbb6e59b72528b5437c"><div class="ttname"><a href="a00084.html#a61aede2fdbd3dcbb6e59b72528b5437c">ObiektGeom::setPolozenie</a></div><div class="ttdeci">Wektor3D &amp; setPolozenie()</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00073">ObiektGeom.hh:73</a></div></div>
-<div class="ttc" id="aa00084_html_a62b48b3b8a810889bc2955a671dc33a9"><div class="ttname"><a href="a00084.html#a62b48b3b8a810889bc2955a671dc33a9">ObiektGeom::Skala</a></div><div class="ttdeci">Wektor3D Skala</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00019">ObiektGeom.hh:19</a></div></div>
-<div class="ttc" id="aa00084_html_a77998b06e15392918a969a56c0d678ef"><div class="ttname"><a href="a00084.html#a77998b06e15392918a969a56c0d678ef">ObiektGeom::Polozenie</a></div><div class="ttdeci">Wektor3D Polozenie</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00018">ObiektGeom.hh:18</a></div></div>
-<div class="ttc" id="aa00084_html_a7a914f88e2659917cd175f5b79639e8b"><div class="ttname"><a href="a00084.html#a7a914f88e2659917cd175f5b79639e8b">ObiektGeom::_NazwaPliku_BrylaRysowana</a></div><div class="ttdeci">std::string _NazwaPliku_BrylaRysowana</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00022">ObiektGeom.hh:22</a></div></div>
-<div class="ttc" id="aa00084_html_a7d2459f8346277154a88a0e05bf7a08a"><div class="ttname"><a href="a00084.html#a7d2459f8346277154a88a0e05bf7a08a">ObiektGeom::WezKolorID</a></div><div class="ttdeci">int WezKolorID() const</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00041">ObiektGeom.hh:41</a></div></div>
-<div class="ttc" id="aa00084_html_a826722f3c7da3cec1f675ade0c13564c"><div class="ttname"><a href="a00084.html#a826722f3c7da3cec1f675ade0c13564c">ObiektGeom::_NazwaPliku_BrylaWzorcowa</a></div><div class="ttdeci">std::string _NazwaPliku_BrylaWzorcowa</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00021">ObiektGeom.hh:21</a></div></div>
-<div class="ttc" id="aa00084_html_a8f2441f774c7914615c167ff9d4fccfc"><div class="ttname"><a href="a00084.html#a8f2441f774c7914615c167ff9d4fccfc">ObiektGeom::MacRot</a></div><div class="ttdeci">MacRotacji MacRot</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00020">ObiektGeom.hh:20</a></div></div>
-<div class="ttc" id="aa00084_html_aa175b24870696a6fc4816b58daa5881e"><div class="ttname"><a href="a00084.html#aa175b24870696a6fc4816b58daa5881e">ObiektGeom::getNazwa</a></div><div class="ttdeci">std::string getNazwa() const</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00089">ObiektGeom.hh:89</a></div></div>
-<div class="ttc" id="aa00084_html_aacc908cf9790acc9044932893a910c2e"><div class="ttname"><a href="a00084.html#aacc908cf9790acc9044932893a910c2e">ObiektGeom::_NazwaObiektu</a></div><div class="ttdeci">std::string _NazwaObiektu</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00023">ObiektGeom.hh:23</a></div></div>
-<div class="ttc" id="aa00084_html_adad1663bd767290abe2603247c6c4100"><div class="ttname"><a href="a00084.html#adad1663bd767290abe2603247c6c4100">ObiektGeom::WezNazweObiektu</a></div><div class="ttdeci">const std::string &amp; WezNazweObiektu() const</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00049">ObiektGeom.hh:49</a></div></div>
-<div class="ttc" id="aa00084_html_afe68386b8c0aeac07a164193e08c8a4c"><div class="ttname"><a href="a00084.html#afe68386b8c0aeac07a164193e08c8a4c">ObiektGeom::getPolozenie</a></div><div class="ttdeci">Wektor3D getPolozenie() const</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00081">ObiektGeom.hh:81</a></div></div>
-<div class="ttc" id="aa00096_html"><div class="ttname"><a href="a00096.html">SWektor&lt; double, 3 &gt;</a></div></div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="a00035.html#a42bef2edd1524f656445643a32d446fb">    4</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="a00035.html#a42bef2edd1524f656445643a32d446fb">Kolory</a> {</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="a00035.html#a42bef2edd1524f656445643a32d446fbad4b67c4e88062d95c31dcd413c7690af">    5</a></span>&#160;             <a class="code" href="a00035.html#a42bef2edd1524f656445643a32d446fbad4b67c4e88062d95c31dcd413c7690af">Kolor_JasnoNiebieski</a> = 3,</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="a00035.html#a42bef2edd1524f656445643a32d446fba11d3812a41bb2e648c9db1ac4e1f11e3">    6</a></span>&#160;             <a class="code" href="a00035.html#a42bef2edd1524f656445643a32d446fba11d3812a41bb2e648c9db1ac4e1f11e3">Kolor_Czerwony</a> = 15</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;};</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa00035_html_a42bef2edd1524f656445643a32d446fba11d3812a41bb2e648c9db1ac4e1f11e3"><div class="ttname"><a href="a00035.html#a42bef2edd1524f656445643a32d446fba11d3812a41bb2e648c9db1ac4e1f11e3">Kolor_Czerwony</a></div><div class="ttdeci">@ Kolor_Czerwony</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00006">Kolory.hh:6</a></div></div>
+<div class="ttc" id="aa00035_html_a42bef2edd1524f656445643a32d446fbad4b67c4e88062d95c31dcd413c7690af"><div class="ttname"><a href="a00035.html#a42bef2edd1524f656445643a32d446fbad4b67c4e88062d95c31dcd413c7690af">Kolor_JasnoNiebieski</a></div><div class="ttdeci">@ Kolor_JasnoNiebieski</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00005">Kolory.hh:5</a></div></div>
+<div class="ttc" id="aa00035_html_a42bef2edd1524f656445643a32d446fb"><div class="ttname"><a href="a00035.html#a42bef2edd1524f656445643a32d446fb">Kolory</a></div><div class="ttdeci">Kolory</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00004">Kolory.hh:4</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_07555f826a1cb527f309b3864a2afada.html">jjakubcz</a></li><li class="navelem"><a class="el" href="dir_88cb7bcad63a2a1ff646d442cae043cd.html">Obiektowka</a></li><li class="navelem"><a class="el" href="dir_9fdb1b9d3f0d111fc5a41bf4417edb41.html">z6</a></li><li class="navelem"><a class="el" href="dir_38ebd12167a51f0b1a4d41d9c89afa7f.html">przyklad-animacji-lazika</a></li><li class="navelem"><a class="el" href="dir_3eec292d5810db59a50fa72a8e5a41c5.html">prj</a></li><li class="navelem"><a class="el" href="dir_184675865d9c9edfa49d5d3ca20c8f5a.html">inc</a></li><li class="navelem"><a class="el" href="a00035.html">ObiektGeom.hh</a></li>
-    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_1f9d1c0669510ad4fc0cb635f4e7c5e8.html">kubiospro</a></li><li class="navelem"><a class="el" href="dir_4549e3b25dabb291326812e3d3809b40.html">Obiektowka</a></li><li class="navelem"><a class="el" href="dir_d72e83c949c9e085232ecf6185ece81b.html">z6</a></li><li class="navelem"><a class="el" href="dir_874a2cfed3c977319d14fc3b9b4404d4.html">przyklad-animacji-lazika</a></li><li class="navelem"><a class="el" href="dir_8236ecd5a2074ccec1ebe5678e493f4a.html">prj</a></li><li class="navelem"><a class="el" href="dir_c9d6c45f103ea59ecc14c082c3ed040f.html">inc</a></li><li class="navelem"><a class="el" href="a00035.html">Kolory.hh</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

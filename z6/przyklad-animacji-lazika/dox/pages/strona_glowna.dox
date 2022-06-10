@@ -2,8 +2,8 @@
  \mainpage Wizualizacja niektórych elementów misji MSR
 
  \author Jakub Jakubczak
- \date   2022.05.28
- \version 1.0
+ \date   2022.06.10
+ \version 2.0
 
  \section charakterystyka Charakterystyka misji MSR (Mars sample-return)
 
@@ -43,7 +43,7 @@ Diagram użycia w tym zadaniu obrazuje operacja jakie użytkownik może żądać
 Może on też pokazywać jakie dodatkwe operacje są niezbędne do realizacji danego żądania.
 Zestaw operacji, które może żądać użytkownik, w tym przypadku odpowiadają pozycjom menu aplikacji.
 
- \image html  inkscape-diagram_przypadkow_uzycia-mars.svg "Diagram przypadków użycia dla aplikacji"
+ \image html  Diagram_przypadkowuzycia.png  "Diagram przypadków użycia dla aplikacji"
 
  \section class-diagram  Diagram podstawowych klas
 
@@ -53,7 +53,7 @@ aplikacji. Interfejsy poszczególnych klas zostały ograniczone tylko do najważ
 metod. Nie należy więc traktować jako kompletnego diagramu.
 
 
- \image html  inkscape-diagram_klas-faza1.svg  "Diagram klas z ważniejszymi metodami"
+ \image html  diagram_klas-faza2.svg  "Diagram klas z ważniejszymi metodami"
 
 
  \section activity-diagram  Diagramy czynności dla wybranych metod
@@ -93,6 +93,9 @@ Diagramy czynności dla tych metod są przedstawione na poniższych diagramach.
  ponowne przeliczenie i przejście do układu współrzędnych globalnych sceny.
 
  \image html  inkscape-diagram-czynnosci-obliczanie_wspolrzednych_wierzcholkow-1.svg "Diagram czynności dla metody ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::istream &, std::ostream &)"
+
+ Idea dzialania metody TypKolizji CzyAktywnyLazikKoliduje(std::shared_ptr<ObiektGeom> & ObKolid) const
+\image  html  kolizja.png "Diagram czynnosci dla metody TypKolizji CzyAktywnyLazikKoliduje(std::shared_ptr<ObiektGeom> & ObKolid) const"
 
 */
 

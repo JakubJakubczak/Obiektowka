@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MSR: Plik źródłowy /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/prj/src/ObiektGeom.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="FSR-icon.jpg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MSR
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj');
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('a00080_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">ObiektGeom.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00080.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00047.html">ObiektGeom.hh</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="a00109.html#a21815370c0870abb1661dc811901a9f8">   15</a></span>&#160;<a class="code" href="a00109.html#a21815370c0870abb1661dc811901a9f8">ObiektGeom::ObiektGeom</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>*  sNazwaPliku_BrylaWzorcowa,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                        <span class="keyword">const</span> <span class="keywordtype">char</span>*  sNazwaObiektu,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                        <span class="keywordtype">int</span>          KolorID,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                        <span class="keywordtype">double</span>       polozenieX,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                        <span class="keywordtype">double</span>       polozenieY,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                        <span class="keywordtype">double</span>       polozenieZ  </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                       ):</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  _NazwaPliku_BrylaWzorcowa(sNazwaPliku_BrylaWzorcowa), _KolorID(KolorID)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="a00109.html#aacc908cf9790acc9044932893a910c2e">_NazwaObiektu</a> = sNazwaObiektu;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="a00109.html#a7a914f88e2659917cd175f5b79639e8b">_NazwaPliku_BrylaRysowana</a> = <a class="code" href="a00047.html#ae595890bce7c6c764f6ff1ef7e549443">NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="a00109.html#a7a914f88e2659917cd175f5b79639e8b">_NazwaPliku_BrylaRysowana</a> += <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="a00109.html#a7a914f88e2659917cd175f5b79639e8b">_NazwaPliku_BrylaRysowana</a> += sNazwaObiektu;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="a00109.html#a7a914f88e2659917cd175f5b79639e8b">_NazwaPliku_BrylaRysowana</a> += <span class="stringliteral">&quot;.dat&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="a00109.html#a77998b06e15392918a969a56c0d678ef">Polozenie</a>[0]=polozenieX;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="a00109.html#a77998b06e15392918a969a56c0d678ef">Polozenie</a>[1]=polozenieY;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="a00109.html#a77998b06e15392918a969a56c0d678ef">Polozenie</a>[2]=polozenieZ;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="a00109.html#a62b48b3b8a810889bc2955a671dc33a9">Skala</a>[0]=20;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="a00109.html#a62b48b3b8a810889bc2955a671dc33a9">Skala</a>[1]=20;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="a00109.html#a62b48b3b8a810889bc2955a671dc33a9">Skala</a>[2]=10;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="a00109.html#ac754851f596fa554312351f2e5103bf0">   39</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00109.html#ac754851f596fa554312351f2e5103bf0">ObiektGeom::ZmienSkale</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> z)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="a00109.html#a62b48b3b8a810889bc2955a671dc33a9">Skala</a>[0]=x;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="a00109.html#a62b48b3b8a810889bc2955a671dc33a9">Skala</a>[1]=y;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="a00109.html#a62b48b3b8a810889bc2955a671dc33a9">Skala</a>[2]=z;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="a00109.html#a1c646f0971f0b9460cdfa0fd5438efe1">   53</a></span>&#160;<span class="keywordtype">bool</span>  <a class="code" href="a00109.html#a1c646f0971f0b9460cdfa0fd5438efe1">ObiektGeom::Przelicz_i_Zapisz_Wierzcholki</a>(<span class="keywordtype">double</span> kat)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  ifstream  StrmWe(<a class="code" href="a00109.html#a826722f3c7da3cec1f675ade0c13564c">_NazwaPliku_BrylaWzorcowa</a>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  ofstream  StrmWy(<a class="code" href="a00109.html#a7a914f88e2659917cd175f5b79639e8b">_NazwaPliku_BrylaRysowana</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">if</span> (!(StrmWe.is_open() &amp;&amp; StrmWy.is_open())) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    cerr &lt;&lt; endl &lt;&lt; <span class="stringliteral">&quot;Nie mozna otworzyc jednego z plikow:&quot;</span> &lt;&lt; endl</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;         &lt;&lt; <span class="stringliteral">&quot;    &quot;</span> &lt;&lt; <a class="code" href="a00109.html#a826722f3c7da3cec1f675ade0c13564c">_NazwaPliku_BrylaWzorcowa</a> &lt;&lt; endl</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;         &lt;&lt; <span class="stringliteral">&quot;    &quot;</span> &lt;&lt; <a class="code" href="a00109.html#a7a914f88e2659917cd175f5b79639e8b">_NazwaPliku_BrylaRysowana</a> &lt;&lt; endl</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;         &lt;&lt; endl;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="a00129.html">Wektor3D</a>  Wsp;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">int</span> Indeks_Wiersza = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="a00129.html">Wektor2D</a> Najmniejsze;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="a00129.html">Wektor2D</a> Najwieksze;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">// inicjalizacja zmiennych do obrysu</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  Najmniejsze=200;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  Najwieksze=-200;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  StrmWe &gt;&gt; Wsp;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordflow">if</span> (StrmWe.fail())<span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    Wsp = <a class="code" href="a00109.html#a8f2441f774c7914615c167ff9d4fccfc">MacRot</a>.<a class="code" href="a00105.html#aeca9b2828c0eb725373d7a084798abc7">RotacjaZ</a>(kat) * Wsp * <a class="code" href="a00109.html#a62b48b3b8a810889bc2955a671dc33a9">Skala</a> + <a class="code" href="a00109.html#a77998b06e15392918a969a56c0d678ef">Polozenie</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    StrmWy &lt;&lt; Wsp&lt;&lt; endl;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    ++Indeks_Wiersza;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (Indeks_Wiersza &gt;= 4) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      StrmWy &lt;&lt; endl;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      Indeks_Wiersza = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;     <span class="comment">//wyliczanie obrysu</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span>(Wsp[0] &lt; Najmniejsze[0]) Najmniejsze[0]=Wsp[0];</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span>(Wsp[0] &gt; Najwieksze[0]) Najwieksze[0]=Wsp[0];</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span>(Wsp[1] &lt; Najmniejsze[1]) Najmniejsze[1]=Wsp[1];</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span>(Wsp[1] &gt; Najwieksze[1]) Najwieksze[1]=Wsp[1];</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    StrmWe &gt;&gt; Wsp;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;          </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  } <span class="keywordflow">while</span> (!StrmWe.fail());</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">// przypisywanie wartosci</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  this-&gt;<a class="code" href="a00109.html#a366e66ac5230a46a16f325bf3531b391">setObrys</a>().<a class="code" href="a00113.html#a8991584f38a8c5c02bf739e14f568699">setDolnyLewy</a>() = Najmniejsze;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  this-&gt;<a class="code" href="a00109.html#a366e66ac5230a46a16f325bf3531b391">setObrys</a>().<a class="code" href="a00113.html#a77963527057da3213442a72a03ddd680">setGornyPrawy</a>() = Najwieksze;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">if</span> (!StrmWe.eof()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">return</span> Indeks_Wiersza == 0 &amp;&amp; !StrmWy.fail();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        </div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aa00113_html_a77963527057da3213442a72a03ddd680"><div class="ttname"><a href="a00113.html#a77963527057da3213442a72a03ddd680">ObrysXY::setGornyPrawy</a></div><div class="ttdeci">Wektor2D &amp; setGornyPrawy()</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00020">ObrysXY.hh:20</a></div></div>
+<div class="ttc" id="aa00105_html_aeca9b2828c0eb725373d7a084798abc7"><div class="ttname"><a href="a00105.html#aeca9b2828c0eb725373d7a084798abc7">MacRotacji::RotacjaZ</a></div><div class="ttdeci">MacRotacji RotacjaZ(double kat)</div><div class="ttdoc">Macierz Rotacji wzgledem osi Z</div><div class="ttdef"><b>Definition:</b> <a href="a00074_source.html#l00010">MacierzRotacji.cpp:10</a></div></div>
+<div class="ttc" id="aa00129_html"><div class="ttname"><a href="a00129.html">SWektor&lt; double, 3 &gt;</a></div></div>
+<div class="ttc" id="aa00113_html_a8991584f38a8c5c02bf739e14f568699"><div class="ttname"><a href="a00113.html#a8991584f38a8c5c02bf739e14f568699">ObrysXY::setDolnyLewy</a></div><div class="ttdeci">Wektor2D &amp; setDolnyLewy()</div><div class="ttdef"><b>Definition:</b> <a href="a00050_source.html#l00018">ObrysXY.hh:18</a></div></div>
+<div class="ttc" id="aa00109_html_a8f2441f774c7914615c167ff9d4fccfc"><div class="ttname"><a href="a00109.html#a8f2441f774c7914615c167ff9d4fccfc">ObiektGeom::MacRot</a></div><div class="ttdeci">MacRotacji MacRot</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00025">ObiektGeom.hh:25</a></div></div>
+<div class="ttc" id="aa00109_html_a7a914f88e2659917cd175f5b79639e8b"><div class="ttname"><a href="a00109.html#a7a914f88e2659917cd175f5b79639e8b">ObiektGeom::_NazwaPliku_BrylaRysowana</a></div><div class="ttdeci">std::string _NazwaPliku_BrylaRysowana</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00027">ObiektGeom.hh:27</a></div></div>
+<div class="ttc" id="aa00109_html_aacc908cf9790acc9044932893a910c2e"><div class="ttname"><a href="a00109.html#aacc908cf9790acc9044932893a910c2e">ObiektGeom::_NazwaObiektu</a></div><div class="ttdeci">std::string _NazwaObiektu</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00028">ObiektGeom.hh:28</a></div></div>
+<div class="ttc" id="aa00047_html_ae595890bce7c6c764f6ff1ef7e549443"><div class="ttname"><a href="a00047.html#ae595890bce7c6c764f6ff1ef7e549443">NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA</a></div><div class="ttdeci">#define NAZWA_KARTOTEKI_PLIKOW_DO_RYSOWANIA</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00012">ObiektGeom.hh:12</a></div></div>
+<div class="ttc" id="aa00109_html_ac754851f596fa554312351f2e5103bf0"><div class="ttname"><a href="a00109.html#ac754851f596fa554312351f2e5103bf0">ObiektGeom::ZmienSkale</a></div><div class="ttdeci">void ZmienSkale(int x, int y, int z)</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00039">ObiektGeom.cpp:39</a></div></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">ObiektGeom.hh</a></div></div>
+<div class="ttc" id="aa00109_html_a1c646f0971f0b9460cdfa0fd5438efe1"><div class="ttname"><a href="a00109.html#a1c646f0971f0b9460cdfa0fd5438efe1">ObiektGeom::Przelicz_i_Zapisz_Wierzcholki</a></div><div class="ttdeci">bool Przelicz_i_Zapisz_Wierzcholki(double kat=0)</div><div class="ttdoc">przelicza wierzcholki bryly</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00053">ObiektGeom.cpp:53</a></div></div>
+<div class="ttc" id="aa00109_html_a21815370c0870abb1661dc811901a9f8"><div class="ttname"><a href="a00109.html#a21815370c0870abb1661dc811901a9f8">ObiektGeom::ObiektGeom</a></div><div class="ttdeci">ObiektGeom(const char *sNazwaPliku_BrylaWzorcowa, const char *sNazwaObiektu, int KolorID, double polozenieX, double polozenieY, double polozenieZ)</div><div class="ttdoc">Konstruktor klasy ObiektGeom</div><div class="ttdef"><b>Definition:</b> <a href="a00080_source.html#l00015">ObiektGeom.cpp:15</a></div></div>
+<div class="ttc" id="aa00109_html_a826722f3c7da3cec1f675ade0c13564c"><div class="ttname"><a href="a00109.html#a826722f3c7da3cec1f675ade0c13564c">ObiektGeom::_NazwaPliku_BrylaWzorcowa</a></div><div class="ttdeci">std::string _NazwaPliku_BrylaWzorcowa</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00026">ObiektGeom.hh:26</a></div></div>
+<div class="ttc" id="aa00109_html_a77998b06e15392918a969a56c0d678ef"><div class="ttname"><a href="a00109.html#a77998b06e15392918a969a56c0d678ef">ObiektGeom::Polozenie</a></div><div class="ttdeci">Wektor3D Polozenie</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00023">ObiektGeom.hh:23</a></div></div>
+<div class="ttc" id="aa00109_html_a62b48b3b8a810889bc2955a671dc33a9"><div class="ttname"><a href="a00109.html#a62b48b3b8a810889bc2955a671dc33a9">ObiektGeom::Skala</a></div><div class="ttdeci">Wektor3D Skala</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00024">ObiektGeom.hh:24</a></div></div>
+<div class="ttc" id="aa00109_html_a366e66ac5230a46a16f325bf3531b391"><div class="ttname"><a href="a00109.html#a366e66ac5230a46a16f325bf3531b391">ObiektGeom::setObrys</a></div><div class="ttdeci">ObrysXY &amp; setObrys()</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00062">ObiektGeom.hh:62</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_1f9d1c0669510ad4fc0cb635f4e7c5e8.html">kubiospro</a></li><li class="navelem"><a class="el" href="dir_4549e3b25dabb291326812e3d3809b40.html">Obiektowka</a></li><li class="navelem"><a class="el" href="dir_d72e83c949c9e085232ecf6185ece81b.html">z6</a></li><li class="navelem"><a class="el" href="dir_874a2cfed3c977319d14fc3b9b4404d4.html">przyklad-animacji-lazika</a></li><li class="navelem"><a class="el" href="dir_8236ecd5a2074ccec1ebe5678e493f4a.html">prj</a></li><li class="navelem"><a class="el" href="dir_039ba0b620ff94877d5ccb54b1c4cccc.html">src</a></li><li class="navelem"><a class="el" href="a00080.html">ObiektGeom.cpp</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

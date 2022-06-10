@@ -3,6 +3,11 @@
 
 class Scena;
 
+/*!
+ * \brief
+ * 
+ * Klasa ObryXY sluzy do wyznaczania obrysow obiektow i sprawdzania czy sie one nakladaja czy nie
+ */
 class ObrysXY
 {
   Wektor2D _Wiersz_DolnyLewy;
@@ -16,6 +21,13 @@ public:
 
   ObrysXY(){_Wiersz_DolnyLewy=0; _Wiersz_GornyPrawy=0;}
 
+/*!
+ * \brief
+ * 
+ * Metoda sprawdza czy obrysy dwoch obiektow sie nakladaja. Jesli tak to zwraca true,
+ * jesli nie to zwraca false
+ *
+ */
  bool  NakladanieObrysow(ObrysXY Obrys)
   {
     if( ( this->_Wiersz_DolnyLewy[0] < Obrys._Wiersz_GornyPrawy[0] &&

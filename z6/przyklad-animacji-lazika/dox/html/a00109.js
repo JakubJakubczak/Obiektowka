@@ -1,0 +1,26 @@
+var a00109 =
+[
+    [ "ObiektGeom", "a00109.html#a21815370c0870abb1661dc811901a9f8", null ],
+    [ "~ObiektGeom", "a00109.html#a18186ba8920ccd2ccb91d63814e0c81b", null ],
+    [ "CzyKolizja", "a00109.html#a7422b970e9a9f49f8d7e563961517158", null ],
+    [ "getKat", "a00109.html#a2a623f5fb26b90c58ed43f9373973aa2", null ],
+    [ "getNazwa", "a00109.html#aa175b24870696a6fc4816b58daa5881e", null ],
+    [ "getObrys", "a00109.html#a645477d56b2efb9f37092d22b2e1bcab", null ],
+    [ "getPolozenie", "a00109.html#afe68386b8c0aeac07a164193e08c8a4c", null ],
+    [ "ID", "a00109.html#a5af241801e584a719334267718088d9d", null ],
+    [ "Przelicz_i_Zapisz_Wierzcholki", "a00109.html#a1c646f0971f0b9460cdfa0fd5438efe1", null ],
+    [ "setObrys", "a00109.html#a366e66ac5230a46a16f325bf3531b391", null ],
+    [ "setPolozenie", "a00109.html#a61aede2fdbd3dcbb6e59b72528b5437c", null ],
+    [ "WezKolorID", "a00109.html#a7d2459f8346277154a88a0e05bf7a08a", null ],
+    [ "WezNazweObiektu", "a00109.html#adad1663bd767290abe2603247c6c4100", null ],
+    [ "WezNazwePliku_BrylaRysowana", "a00109.html#a22e77af279ca2fb3543eebb4de37f69a", null ],
+    [ "ZmienSkale", "a00109.html#ac754851f596fa554312351f2e5103bf0", null ],
+    [ "_KolorID", "a00109.html#a231891cae034085462791310e2b94d57", null ],
+    [ "_NazwaObiektu", "a00109.html#aacc908cf9790acc9044932893a910c2e", null ],
+    [ "_NazwaPliku_BrylaRysowana", "a00109.html#a7a914f88e2659917cd175f5b79639e8b", null ],
+    [ "_NazwaPliku_BrylaWzorcowa", "a00109.html#a826722f3c7da3cec1f675ade0c13564c", null ],
+    [ "MacRot", "a00109.html#a8f2441f774c7914615c167ff9d4fccfc", null ],
+    [ "Obrys", "a00109.html#a6a9086cb48693858cb34dc6f2ef5ec9f", null ],
+    [ "Polozenie", "a00109.html#a77998b06e15392918a969a56c0d678ef", null ],
+    [ "Skala", "a00109.html#a62b48b3b8a810889bc2955a671dc33a9", null ]
+];

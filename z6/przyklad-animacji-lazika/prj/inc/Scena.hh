@@ -29,9 +29,31 @@ class Scena{
   void UsunZListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  &rOb);
 public:
 
+/*!
+ * \brief
+ * 
+ * Metoda sprawdza czy aktywny lazik koliduje z obiektami sceny
+ *
+ */
   TypKolizji CzyAktywnyLazikKoliduje(std::shared_ptr<ObiektGeom> & ObKolid) const;
+  /*!
+ * \brief
+ * 
+ * Obrot lazika razem z animacja
+ *
+ */
   void obrot();
+  /*!
+ * \brief
+ * 
+ * translacja lazika razem z animacja
+ */
   void translacja();
+  /*!
+ * \brief
+ * 
+ * Podnoszenie probki przez lazikSFR
+ */
   void PodniesProbke();  
 
   /*!
@@ -50,6 +72,12 @@ public:
  */
   void WyborLazika(int i);
 
+/*!
+ * \brief
+ * 
+ * Wypisywanie probek na scenie
+ *
+ */
   void WypiszProbki();
   
   /*!

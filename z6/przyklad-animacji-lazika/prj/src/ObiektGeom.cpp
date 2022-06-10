@@ -47,7 +47,8 @@ void ObiektGeom::ZmienSkale(int x, int y, int z)
  * \brief
  * 
  * metoda czyta z pliku wspolrzedne bryly, nastepnie zmienia te wspolrzedne  
- * wedlug skali, polozenia i podanego kata na nowe i zapisuje do pliku wyjs
+ * wedlug skali, polozenia i podanego kata na nowe i zapisuje do pliku wyjs.
+ * Metoda rowniez wylicza obrys obiektu.
  */
 bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(double kat)
 {

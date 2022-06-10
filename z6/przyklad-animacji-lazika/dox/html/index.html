@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>MSR: Wizualizacja niektórych elementów misji MSR</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -32,7 +32,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
@@ -65,8 +65,8 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="section author"><dt>Autor</dt><dd>Jakub Jakubczak </dd></dl>
-<dl class="section date"><dt>Data</dt><dd>2022.05.28 </dd></dl>
-<dl class="section version"><dt>Wersja</dt><dd>1.0</dd></dl>
+<dl class="section date"><dt>Data</dt><dd>2022.06.10 </dd></dl>
+<dl class="section version"><dt>Wersja</dt><dd>2.0</dd></dl>
 <h1><a class="anchor" id="charakterystyka"></a>
 Charakterystyka misji MSR (Mars sample-return)</h1>
 <p>Obecnie trwają przygotowania prowadzone przez NASA i ESA (tzn. amerykańskiej i europejskiej agencji kosmicznej) wspólnej misji mającej na celu przetransportowanie na Ziemię próbek regolitu, które aktualnie pobiera łazik Perseverance.</p>
@@ -84,20 +84,20 @@ FSR w trakcie zbierania tubek z próbkami</div></div>
 Diagram przypadków użycia</h1>
 <p>Diagram użycia w tym zadaniu obrazuje operacja jakie użytkownik może żądać od aplikacji. Może on też pokazywać jakie dodatkwe operacje są niezbędne do realizacji danego żądania. Zestaw operacji, które może żądać użytkownik, w tym przypadku odpowiadają pozycjom menu aplikacji.</p>
 <div class="image">
-<object type="image/svg+xml" data="inkscape-diagram_przypadkow_uzycia-mars.svg" style="pointer-events: none;"></object>
+<img src="Diagram_przypadkowuzycia.png" alt=""/>
 <div class="caption">
 Diagram przypadków użycia dla aplikacji</div></div>
 <h1><a class="anchor" id="class-diagram"></a>
 Diagram podstawowych klas</h1>
 <p>Poniżej przedstawiony jest diagram klas, który traktowany jest jako punkt wyjścia dla tworzonej aplikacji. Interfejsy poszczególnych klas zostały ograniczone tylko do najważniejszego zestawu metod. Nie należy więc traktować jako kompletnego diagramu.</p>
 <div class="image">
-<object type="image/svg+xml" data="inkscape-diagram_klas-faza1.svg" style="pointer-events: none;"></object>
+<object type="image/svg+xml" data="diagram_klas-faza2.svg" style="pointer-events: none;"></object>
 <div class="caption">
 Diagram klas z ważniejszymi metodami</div></div>
 <h1><a class="anchor" id="activity-diagram"></a>
 Diagramy czynności dla wybranych metod</h1>
 <p>Kluczowym elementem odpowiedniej wizualizacji jest przeliczanie współrzędnych brył, które modelują poszczególne łaziki i zapisania ich w osobnym pliku odpowiadającej każdej bryle. Te pliki wykorzystywane są przez dostarczony moduł <code>lacze_do_gnuplota</code> do właściwego rysowania. W celu uniknięcia kumulacji błędów obliczeń, przeliczenia trzeba wykonywać zawsze dysponując obiektami/bryłami wzorcowymi. Tak więc w tym konkretnym przypadku wygenerowanie rysunku bryły sprowadza się do przeczytania z pliku bryły wzorcowej współrzędnych kolejnych wierzchołków, a następnie po uwzględnieniu skali docelowego obiektu, jego orientacji i położenia, wyliczenia nowych wartości wierzchołków i zapisanie ich do pliku odpowiadającemu bryle docelowej. To znaczy tej, która będzie narysowana. Ważne jest, aby zapisywać współrzędne wierzchołków w osobnych liniach. Ponadto po każdych czterech zapisanych współrzędnych wierzchołków należy dodać dodatkową wolną linię. Wynika to ze sposobu rysowania powierzchni bryły, który zostanie wyjaśniony na wykładzie. Zapis przedstawionego algorytmu został zdekomponowany na dwie operacje tzn.% </p><ul>
-<li><a class="el" href="a00084.html#a1c646f0971f0b9460cdfa0fd5438efe1" title="przelicza wierzcholki bryly">ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()</a>, </li>
+<li><a class="el" href="a00109.html#a1c646f0971f0b9460cdfa0fd5438efe1" title="przelicza wierzcholki bryly">ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()</a>, </li>
 <li>ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::istream &amp;, std::ostream &amp;).</li>
 </ul>
 <p>Pozwala to osiągnąć lepszą czytelność zarówno na poziomie diagramów, jak też w kodzie. Tym samym minimalizuje źródła błędów. Dlatego też jest to bardzo ważne. Diagramy czynności dla tych metod są przedstawione na poniższych diagramach.</p>
@@ -110,13 +110,19 @@ Diagram czynności dla metody ObiektGeom::Przelicz_i_Zapisz_Wierzcholki()</div><
 <object type="image/svg+xml" data="inkscape-diagram-czynnosci-obliczanie_wspolrzednych_wierzcholkow-1.svg" style="pointer-events: none;"></object>
 <div class="caption">
 Diagram czynności dla metody ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(std::istream &amp;, std::ostream &amp;)</div></div>
+<p>Idea dzialania metody TypKolizji CzyAktywnyLazikKoliduje(std::shared_ptr&lt;ObiektGeom&gt; &amp; ObKolid) const </p><div class="image">
+<img src="kolizja.png" alt=""/>
+<div class="caption">
+Diagram czynnosci dla metody TypKolizji CzyAktywnyLazikKoliduje(std::shared_ptr&lt;ObiektGeom&gt; &amp; ObKolid) const</div></div>
  </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

@@ -1,12 +1,503 @@
-warning: Tag 'TCL_SUBST' at line 270 of file 'Doxyfile' has become obsolete.
-         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
-warning: Tag 'COLS_IN_ALPHA_INDEX' at line 1148 of file 'Doxyfile' has become obsolete.
-         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
-warning: argument 'a4wide' for option PAPER_TYPE is not a valid enum value
-Using the default: a4!
 warning: doxygen no longer ships with the FreeSans font.
 You may want to clear or change DOT_FONTNAME.
 Otherwise you run the risk that the wrong font is being used for dot generated graphs.
 warning: The selected output language "polish" has not been updated
 since release 1.8.2.  As a result some sentences may appear in English.
 
+sh: 1: sh: 1: dot: not founddot: not found
+
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_5.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_5.png"'
+sh: 1: error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00125_a7303cf357a1e069c8effdf276e963fd1_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00125_a7303cf357a1e069c8effdf276e963fd1_icgraph.png"'
+dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00072.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00072.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a1c646f0971f0b9460cdfa0fd5438efe1_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a1c646f0971f0b9460cdfa0fd5438efe1_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00087.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00087.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00060.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00060.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00115.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00115.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_4.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_4.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00105_aeca9b2828c0eb725373d7a084798abc7_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00105_aeca9b2828c0eb725373d7a084798abc7_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_aa665c59c926209c9bb51137e2ffaf2a2_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_aa665c59c926209c9bb51137e2ffaf2a2_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a87886bfb1d620bb367cb75ecd09d0c71_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a87886bfb1d620bb367cb75ecd09d0c71_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a366e66ac5230a46a16f325bf3531b391_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a366e66ac5230a46a16f325bf3531b391_icgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_3.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_3.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00078.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00078.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00061.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00061.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abcc6f974118f170a30057b0d02d624ee_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abcc6f974118f170a30057b0d02d624ee_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00100.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00100.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00053_a4ea2370930491646c4519a1f689f117c_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00053_a4ea2370930491646c4519a1f689f117c_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00125_a63ac73a0056c53ad94b810155015653c_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00125_a63ac73a0056c53ad94b810155015653c_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00040.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00040.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_2.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_2.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00064.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00064.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_ac30b413196b457aa811f64499fafc01b_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_ac30b413196b457aa811f64499fafc01b_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8a498687358ae8d29f880941edc124ec_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8a498687358ae8d29f880941edc124ec_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a70f78bcad711135290f622f3c8f2fafe_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a70f78bcad711135290f622f3c8f2fafe_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_4549e3b25dabb291326812e3d3809b40_dep.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_4549e3b25dabb291326812e3d3809b40_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00053_a4ea2370930491646c4519a1f689f117c_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00053_a4ea2370930491646c4519a1f689f117c_icgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00116.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00116.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/graph_legend.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/graph_legend.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8f9fe11b4cfef890123a2acc94672e17_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8f9fe11b4cfef890123a2acc94672e17_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00104.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00104.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_8236ecd5a2074ccec1ebe5678e493f4a_dep.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_8236ecd5a2074ccec1ebe5678e493f4a_dep.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a4ea2370930491646c4519a1f689f117c_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a4ea2370930491646c4519a1f689f117c_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00051.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00051.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8a498687358ae8d29f880941edc124ec_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8a498687358ae8d29f880941edc124ec_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abdbd13ab7a7efa23a23cb8b291bbad31_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abdbd13ab7a7efa23a23cb8b291bbad31_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00045.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00045.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a90f8388bf4b0322ca71017caae3e0d73_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a90f8388bf4b0322ca71017caae3e0d73_cgraph.png"'
+sh: 1: dot: not foundsh: 1: 
+dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00063.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00063.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00095.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00095.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_aa175b24870696a6fc4816b58daa5881e_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_aa175b24870696a6fc4816b58daa5881e_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_ac754851f596fa554312351f2e5103bf0_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_ac754851f596fa554312351f2e5103bf0_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00042.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00042.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00054.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00054.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00103.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00103.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00113_a8991584f38a8c5c02bf739e14f568699_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00113_a8991584f38a8c5c02bf739e14f568699_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_1f9d1c0669510ad4fc0cb635f4e7c5e8_dep.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_1f9d1c0669510ad4fc0cb635f4e7c5e8_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00055.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00055.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abcc6f974118f170a30057b0d02d624ee_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abcc6f974118f170a30057b0d02d624ee_icgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00108.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00108.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00043.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00043.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_039ba0b620ff94877d5ccb54b1c4cccc_dep.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_039ba0b620ff94877d5ccb54b1c4cccc_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00117_ae5ba8598a3ee8c3e2ef4d0d2eec69fd0_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00117_ae5ba8598a3ee8c3e2ef4d0d2eec69fd0_cgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00066.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00066.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a0858f2556ded1e4d4d7eb889e1b41cf5_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a0858f2556ded1e4d4d7eb889e1b41cf5_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00048.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00048.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00081.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00081.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00101_a952eabfd15f58655cc7b8693b84b0ef7_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00101_a952eabfd15f58655cc7b8693b84b0ef7_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a4eefeb43e7c6727fb4e262012df87ad2_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a4eefeb43e7c6727fb4e262012df87ad2_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00052.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00052.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8bee22f6f46108ef0aca400570c03b62_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8bee22f6f46108ef0aca400570c03b62_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00067.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00067.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_6.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_6.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_ae5d2a57324933ebf8af481de2fc12f0b_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_ae5d2a57324933ebf8af481de2fc12f0b_icgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00049.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00049.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00099.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00099.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a4ea2370930491646c4519a1f689f117c_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a4ea2370930491646c4519a1f689f117c_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00096.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00096.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_ac75cb4be5a5729e69bca78ccc10a9ada_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_ac75cb4be5a5729e69bca78ccc10a9ada_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00107.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00107.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a87886bfb1d620bb367cb75ecd09d0c71_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a87886bfb1d620bb367cb75ecd09d0c71_cgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00113_a77963527057da3213442a72a03ddd680_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00113_a77963527057da3213442a72a03ddd680_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00046.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00046.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00058.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00058.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8bee22f6f46108ef0aca400570c03b62_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8bee22f6f46108ef0aca400570c03b62_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abdbd13ab7a7efa23a23cb8b291bbad31_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abdbd13ab7a7efa23a23cb8b291bbad31_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_d72e83c949c9e085232ecf6185ece81b_dep.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_d72e83c949c9e085232ecf6185ece81b_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00084.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00084.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00070.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00070.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_874a2cfed3c977319d14fc3b9b4404d4_dep.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_874a2cfed3c977319d14fc3b9b4404d4_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a70f78bcad711135290f622f3c8f2fafe_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a70f78bcad711135290f622f3c8f2fafe_icgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a51e17d68aa0a353c24f2aab1a62900b3_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a51e17d68aa0a353c24f2aab1a62900b3_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00124.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00124.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00097_a6c127ecaad9ebd3f62bd4a5b42bf1d0e_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00097_a6c127ecaad9ebd3f62bd4a5b42bf1d0e_cgraph.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_1.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_1.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00057.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00057.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a7d2459f8346277154a88a0e05bf7a08a_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a7d2459f8346277154a88a0e05bf7a08a_icgraph.png"'
+sh: 1: sh: 1: dot: not founddot: not found
+
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a22e77af279ca2fb3543eebb4de37f69a_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a22e77af279ca2fb3543eebb4de37f69a_icgraph.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00111.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00111.png"'
+sh: 1: dot: not found
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a0858f2556ded1e4d4d7eb889e1b41cf5_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a0858f2556ded1e4d4d7eb889e1b41cf5_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a53b9a11754f65ce8174a3e61bc328442_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a53b9a11754f65ce8174a3e61bc328442_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00077_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00077_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00039.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00039.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_0.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_0.png"'
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2_dep.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2_dep.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00117_a6f2b3b93e7b4d240eebe7992c0451c06_cgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00117_a6f2b3b93e7b4d240eebe7992c0451c06_cgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00128.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00128.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00037.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00037.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a645477d56b2efb9f37092d22b2e1bcab_icgraph.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a645477d56b2efb9f37092d22b2e1bcab_icgraph.png"'
+sh: 1: dot: not found
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00075.dot" -Tpng -o "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00075.png"'
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00037.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00039.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00040.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00042.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00043.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00045.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00046.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00048.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00049.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00051.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00052.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00054.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00055.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00053_a4ea2370930491646c4519a1f689f117c_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00053_a4ea2370930491646c4519a1f689f117c_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00057.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00058.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00060.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00061.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00063.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00064.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00066.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00067.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00070.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00072.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00075.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00078.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00077_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00081.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00084.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a4ea2370930491646c4519a1f689f117c_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a4ea2370930491646c4519a1f689f117c_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a90f8388bf4b0322ca71017caae3e0d73_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00083_a4eefeb43e7c6727fb4e262012df87ad2_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00087.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00096.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00095.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00097_a6c127ecaad9ebd3f62bd4a5b42bf1d0e_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00100.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00099.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00101_a952eabfd15f58655cc7b8693b84b0ef7_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00104.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00103.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00105_aeca9b2828c0eb725373d7a084798abc7_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00108.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00107.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_aa175b24870696a6fc4816b58daa5881e_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a645477d56b2efb9f37092d22b2e1bcab_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a1c646f0971f0b9460cdfa0fd5438efe1_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a366e66ac5230a46a16f325bf3531b391_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a7d2459f8346277154a88a0e05bf7a08a_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_a22e77af279ca2fb3543eebb4de37f69a_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00109_ac754851f596fa554312351f2e5103bf0_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00111.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00113_a8991584f38a8c5c02bf739e14f568699_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00113_a77963527057da3213442a72a03ddd680_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00116.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00115.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00117_ae5ba8598a3ee8c3e2ef4d0d2eec69fd0_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00117_a6f2b3b93e7b4d240eebe7992c0451c06_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8f9fe11b4cfef890123a2acc94672e17_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a51e17d68aa0a353c24f2aab1a62900b3_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8bee22f6f46108ef0aca400570c03b62_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8bee22f6f46108ef0aca400570c03b62_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a53b9a11754f65ce8174a3e61bc328442_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abdbd13ab7a7efa23a23cb8b291bbad31_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abdbd13ab7a7efa23a23cb8b291bbad31_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a87886bfb1d620bb367cb75ecd09d0c71_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a87886bfb1d620bb367cb75ecd09d0c71_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8a498687358ae8d29f880941edc124ec_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a8a498687358ae8d29f880941edc124ec_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a70f78bcad711135290f622f3c8f2fafe_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a70f78bcad711135290f622f3c8f2fafe_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abcc6f974118f170a30057b0d02d624ee_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_abcc6f974118f170a30057b0d02d624ee_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a0858f2556ded1e4d4d7eb889e1b41cf5_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_a0858f2556ded1e4d4d7eb889e1b41cf5_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_aa665c59c926209c9bb51137e2ffaf2a2_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_ae5d2a57324933ebf8af481de2fc12f0b_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_ac75cb4be5a5729e69bca78ccc10a9ada_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00121_ac30b413196b457aa811f64499fafc01b_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00124.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00125_a63ac73a0056c53ad94b810155015653c_cgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00125_a7303cf357a1e069c8effdf276e963fd1_icgraph.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/a00128.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_1f9d1c0669510ad4fc0cb635f4e7c5e8_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_4549e3b25dabb291326812e3d3809b40_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_8236ecd5a2074ccec1ebe5678e493f4a_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_874a2cfed3c977319d14fc3b9b4404d4_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_039ba0b620ff94877d5ccb54b1c4cccc_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/dir_d72e83c949c9e085232ecf6185ece81b_dep.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_0.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_1.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_2.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_3.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_4.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_5.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.
+error: problems opening map file /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/dox/html/inherit_graph_6.map for inclusion in the docs!
+If you installed Graphviz/dot after a previous failing run, 
+try deleting the output directory and rerun doxygen.

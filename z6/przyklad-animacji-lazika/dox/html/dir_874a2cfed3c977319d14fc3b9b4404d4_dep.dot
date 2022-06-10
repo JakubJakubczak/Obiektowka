@@ -1,0 +1,14 @@
+digraph "/home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_d72e83c949c9e085232ecf6185ece81b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="z6" fontname="FreeSans", fontsize="10", URL="dir_d72e83c949c9e085232ecf6185ece81b.html"]
+  subgraph clusterdir_874a2cfed3c977319d14fc3b9b4404d4 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_874a2cfed3c977319d14fc3b9b4404d4.html"];
+    dir_874a2cfed3c977319d14fc3b9b4404d4 [shape=plaintext label="przyklad-animacji-lazika"];
+    dir_bc2dc60cdbf3010cf0af12be6a2bf38a [shape=box label="dox" color="red" fillcolor="white" style="filled" URL="dir_bc2dc60cdbf3010cf0af12be6a2bf38a.html"];
+    dir_8236ecd5a2074ccec1ebe5678e493f4a [shape=box label="prj" color="red" fillcolor="white" style="filled" URL="dir_8236ecd5a2074ccec1ebe5678e493f4a.html"];
+  }
+  }
+}

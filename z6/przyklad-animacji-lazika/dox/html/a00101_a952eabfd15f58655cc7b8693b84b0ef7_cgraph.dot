@@ -1,0 +1,12 @@
+digraph "LazikSFR::CzyKolizja"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="LazikSFR::CzyKolizja",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Metoda sprawdzajaca czy lazik koliduje z aktywnym lazikiem."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="ObiektGeom::getNazwa",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00109.html#aa175b24870696a6fc4816b58daa5881e",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="ObiektGeom::getObrys",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00109.html#a645477d56b2efb9f37092d22b2e1bcab",tooltip=" "];
+}

@@ -1,0 +1,14 @@
+digraph "Graficzna hierarchia klas"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="ObiektGeom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00109.html",tooltip="Klasa modeluje obiekt geometryczny"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 [label="Lazik",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00097.html",tooltip="Klasa modeluje Lazik. Dziedziczy on z klasy ObiektGeom   Klasa posiada funkcjonalnosc sprawdzania kol..."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="LazikSFR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00101.html",tooltip="Klasa LazikSFR dziedziczy klasy Lazik. Pozwala ona na dodoatkowe funkcjonalnosci takie jak dodawanie ..."];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="ProbkaRegolitu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00117.html",tooltip="Klasa dziedziczy z ObiekGeom i ma opcjonalnosc sprawdzania, czy aktywnylazik nie koliduje z jej obiek..."];
+}

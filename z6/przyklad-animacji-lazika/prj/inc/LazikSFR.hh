@@ -5,6 +5,13 @@
 #include "ProbkaRegolitu.hh"
 #include <list>
 
+/*!
+ * \brief
+ * 
+ * Klasa LazikSFR dziedziczy klasy Lazik. Pozwala ona na dodoatkowe funkcjonalnosci takie jak
+ * dodawanie probek do listy i pozniejsze ich wyswietlanie. 
+ *
+ */
 class LazikSFR : public Lazik
 {
   std::list<std::shared_ptr<ProbkaRegolitu>> ListaProbek;
@@ -35,7 +42,7 @@ public:
      }
   }
 
-  void WyswietlProbki()
+  void WyswietlProbki() 
     {
       int i=1;
 

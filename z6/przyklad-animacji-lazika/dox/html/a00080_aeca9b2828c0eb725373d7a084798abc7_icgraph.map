@@ -1,6 +1,0 @@
-<map id="MacRotacji::RotacjaZ" name="MacRotacji::RotacjaZ">
-<area shape="rect" id="node1" title="Macierz Rotacji wzgledem osi Z" alt="" coords="367,42,512,69"/>
-<area shape="rect" id="node2" href="$a00084.html#a1c646f0971f0b9460cdfa0fd5438efe1" title="przelicza wierzcholki bryly" alt="" coords="168,5,319,47"/>
-<area shape="rect" id="node4" href="$a00076.html#afc9feba3f092d6a1f085745a572305ca" title="Metoda pozwalajace na przemieszczenie sie lazika" alt="" coords="5,67,120,94"/>
-<area shape="rect" id="node3" href="$a00076.html#aa7c153cf94c229dccb8e03ba995ab21d" title="Metoda pozwalajaca na obrot lazika" alt="" coords="19,13,107,39"/>
-</map>

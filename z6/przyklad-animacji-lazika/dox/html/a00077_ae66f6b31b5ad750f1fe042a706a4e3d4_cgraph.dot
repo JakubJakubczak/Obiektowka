@@ -1,0 +1,37 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Scena::menuobrot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00121.html#abdbd13ab7a7efa23a23cb8b291bbad31",tooltip="Obrot AktywnegoLazika o zadany kat"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Scena::obrot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00121.html#a8a498687358ae8d29f880941edc124ec",tooltip="Obrot lazika razem z animacja."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="Scena::CzyAktywnyLazikKoliduje",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00121.html#a51e17d68aa0a353c24f2aab1a62900b3",tooltip="Metoda sprawdza czy aktywny lazik koliduje z obiektami sceny."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="Scena::menutranslacja",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00121.html#a87886bfb1d620bb367cb75ecd09d0c71",tooltip="Translacja AktywnegoLazika o zadany kat"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="Scena::translacja",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00121.html#abcc6f974118f170a30057b0d02d624ee",tooltip="translacja lazika razem z animacja"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="MacRotacji::RotacjaZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00105.html#aeca9b2828c0eb725373d7a084798abc7",tooltip="Macierz Rotacji wzgledem osi Z"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="Scena::PodniesProbke",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00121.html#a70f78bcad711135290f622f3c8f2fafe",tooltip="Podnoszenie probki przez lazikSFR."];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="Scena::UsunZListyRysowania",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00121.html#a0858f2556ded1e4d4d7eb889e1b41cf5",tooltip=" "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="ObiektGeom::WezNazwePliku\l_BrylaRysowana",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00109.html#a22e77af279ca2fb3543eebb4de37f69a",tooltip=" "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="Scena::WyborLazika",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00121.html#aa665c59c926209c9bb51137e2ffaf2a2",tooltip="Metoda pozwalajaca na wybor Lazika"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="Scena::WypiszLazik",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00121.html#ae5d2a57324933ebf8af481de2fc12f0b",tooltip="Metoda wypisujaca AktywnyLazik na scenie"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="Scena::WypiszLaziki",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00121.html#ac75cb4be5a5729e69bca78ccc10a9ada",tooltip="Metoda wypisujaca laziki na scenie"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 [label="Scena::WypiszProbki",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00121.html#ac30b413196b457aa811f64499fafc01b",tooltip="Wypisywanie probek na scenie."];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node15 [label="SWektor\< double, 3\l \>::WyswietlLiczbeObiektow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00129.html#ae6b9467dda767f4047f62b0f7e66de09",tooltip=" "];
+}

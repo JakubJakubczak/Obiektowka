@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MSR: Plik źródłowy /home/jjakubcz/Obiektowka/z6/przyklad-animacji-lazika/prj/inc/PowierzchniaMarsa.hh</title>
+<title>MSR: Plik źródłowy /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/prj/inc/Lazik.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
@@ -61,38 +61,77 @@ $(document).ready(function(){initNavTree('a00038_source.html',''); initResizable
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">PowierzchniaMarsa.hh</div>  </div>
+<div class="title">Lazik.hh</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00038.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef POWIERZCHNIAMARSA_HH</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define POWIERZCHNIAMARSA_HH</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//#include &quot;ObiektGeom.hh&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//#include &quot;Lazik.hh&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;lacze_do_gnuplota.hh&quot;</span></div>
+<a href="a00038.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef LAZIK_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define LAZIK_HH</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;lacze_do_gnuplota.hh&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00047.html">ObiektGeom.hh</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="a00038.html#a0e22612848696b13661669accc112c0a">   11</a></span>&#160;<span class="preprocessor">#define ROMIAR_POWIERZCHNI_X    200</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="a00038.html#aa8d616943ddb06335b5ca63e6a90fd46">   12</a></span>&#160;<span class="preprocessor">#define ROMIAR_POWIERZCHNI_Y    200</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="a00038.html#afb8adcd16d39ff705ad0f90a77988013">   13</a></span>&#160;<span class="preprocessor">#define ROZMIAR_OCZKA_KRATY     10</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="a00038.html#a4ea2370930491646c4519a1f689f117c">Inicjalizuj_PowierzchnieMarsa</a>(</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                    PzG::LaczeDoGNUPlota  &amp;rLacze</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                  );</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aa00038_html_a4ea2370930491646c4519a1f689f117c"><div class="ttname"><a href="a00038.html#a4ea2370930491646c4519a1f689f117c">Inicjalizuj_PowierzchnieMarsa</a></div><div class="ttdeci">bool Inicjalizuj_PowierzchnieMarsa(PzG::LaczeDoGNUPlota &amp;rLacze)</div><div class="ttdoc">Inicjalizuje model powierzchni Marsa.</div><div class="ttdef"><b>Definition:</b> <a href="a00062_source.html#l00077">PowierzchniaMarsa.cpp:77</a></div></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class </span><a class="code" href="a00117.html">ProbkaRegolitu</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="a00097.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00097.html">Lazik</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  : <span class="keyword">public</span> <a class="code" href="a00109.html">ObiektGeom</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="a00097.html#aa73f791eada0591c80d30a38840e0dfa">   20</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="a00097.html#aa73f791eada0591c80d30a38840e0dfa">KatOrientacji_st</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="a00097.html#a50fca54c5b35943b884952445bf8b6d4">   21</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="a00097.html#a50fca54c5b35943b884952445bf8b6d4">KatZadany</a>; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="a00097.html#a17290030c6992d1efd0123046432c80f">   22</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="a00097.html#a17290030c6992d1efd0123046432c80f">OdlegloscDoPrzejechania</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="a00068.html#a23331f89664c4cd6c3ca86abdcc50576">TypKolizji</a> <a class="code" href="a00097.html#a6c127ecaad9ebd3f62bd4a5b42bf1d0e">CzyKolizja</a>(<span class="keyword">const</span> std::shared_ptr&lt;Lazik&gt;&amp; Wsk_Lazik) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="a00097.html#a26de6adfe68a0ff55f01debb62d52603">   32</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="a00097.html#a26de6adfe68a0ff55f01debb62d52603">ID</a>()<span class="keyword"> const override </span>{<span class="keywordflow">return</span> 1;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="a00097.html#a8a16bd0dd81ca220411fffc476af4f4a">   40</a></span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00097.html#a8a16bd0dd81ca220411fffc476af4f4a">WyswietlProbki</a>(){;};    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="a00097.html#ad6564964c66c76914fb0c204c15c5cfd">Lazik</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* SNazwaPliku_BrylaWzorcowa, <span class="keyword">const</span> <span class="keywordtype">char</span>* SNazwaObiektu, <span class="keywordtype">int</span> KOLORID, <span class="keywordtype">double</span> PolozenieX, <span class="keywordtype">double</span> PolozenieY, <span class="keywordtype">double</span> PolozenieZ);</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="a00097.html#ace039b675340a61e35069d05e1f64762">   48</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="a00097.html#ace039b675340a61e35069d05e1f64762">~Lazik</a>(){}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="a00097.html#a1176b9d14bd026c88e19fece1f60b1a7">   56</a></span>&#160;  <span class="keywordtype">double</span>&amp; <a class="code" href="a00097.html#a1176b9d14bd026c88e19fece1f60b1a7">setKat</a>(){<span class="keywordflow">return</span> <a class="code" href="a00097.html#a50fca54c5b35943b884952445bf8b6d4">KatZadany</a>;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="a00097.html#a7c93d34a12478c169f2f9752b13d9660">   63</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="a00097.html#a7c93d34a12478c169f2f9752b13d9660">getKat</a>()<span class="keyword"> const override</span>{<span class="keywordflow">return</span> <a class="code" href="a00097.html#a50fca54c5b35943b884952445bf8b6d4">KatZadany</a>;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="a00097.html#a689604d6995cba692c1eefd68a40c2b7">   72</a></span>&#160;  <span class="keywordtype">double</span>&amp; <a class="code" href="a00097.html#a689604d6995cba692c1eefd68a40c2b7">setOrientacja</a>(){<span class="keywordflow">return</span> <a class="code" href="a00097.html#aa73f791eada0591c80d30a38840e0dfa">KatOrientacji_st</a>;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="a00097.html#aae8793f57894bba5d89419d73318275c">   79</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="a00097.html#aae8793f57894bba5d89419d73318275c">getOrientacja</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code" href="a00097.html#aa73f791eada0591c80d30a38840e0dfa">KatOrientacji_st</a>;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="a00097.html#a39a51ae7da8a38047c533c26290a021c">   89</a></span>&#160;  <span class="keywordtype">double</span>&amp; <a class="code" href="a00097.html#a39a51ae7da8a38047c533c26290a021c">setOdleglosc</a>(){<span class="keywordflow">return</span> <a class="code" href="a00097.html#a17290030c6992d1efd0123046432c80f">OdlegloscDoPrzejechania</a>;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="a00097.html#af452ccec75693d41153a673433bf1abc">   97</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="a00097.html#af452ccec75693d41153a673433bf1abc">getOdleglosc</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00097.html#a17290030c6992d1efd0123046432c80f">OdlegloscDoPrzejechania</a>;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa00097_html_a26de6adfe68a0ff55f01debb62d52603"><div class="ttname"><a href="a00097.html#a26de6adfe68a0ff55f01debb62d52603">Lazik::ID</a></div><div class="ttdeci">int ID() const override</div><div class="ttdoc">Metoda wirtualna wyznaczajaca ID dla kazdej klasy dziedziczonej z ObiektGeom.</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00032">Lazik.hh:32</a></div></div>
+<div class="ttc" id="aa00097_html_aae8793f57894bba5d89419d73318275c"><div class="ttname"><a href="a00097.html#aae8793f57894bba5d89419d73318275c">Lazik::getOrientacja</a></div><div class="ttdeci">double getOrientacja() const</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00079">Lazik.hh:79</a></div></div>
+<div class="ttc" id="aa00097_html_ad6564964c66c76914fb0c204c15c5cfd"><div class="ttname"><a href="a00097.html#ad6564964c66c76914fb0c204c15c5cfd">Lazik::Lazik</a></div><div class="ttdeci">Lazik(const char *SNazwaPliku_BrylaWzorcowa, const char *SNazwaObiektu, int KOLORID, double PolozenieX, double PolozenieY, double PolozenieZ)</div><div class="ttdoc">Konstruktor klasy Lazik</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00013">Lazik.cpp:13</a></div></div>
+<div class="ttc" id="aa00068_html_a23331f89664c4cd6c3ca86abdcc50576"><div class="ttname"><a href="a00068.html#a23331f89664c4cd6c3ca86abdcc50576">TypKolizji</a></div><div class="ttdeci">TypKolizji</div><div class="ttdoc">Enumeracja dla mozliwych skutkow ruchu lazika.</div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00009">TypKolizji.hh:9</a></div></div>
+<div class="ttc" id="aa00117_html"><div class="ttname"><a href="a00117.html">ProbkaRegolitu</a></div><div class="ttdoc">Klasa dziedziczy z ObiekGeom i ma opcjonalnosc sprawdzania, czy aktywnylazik nie koliduje z jej obiek...</div><div class="ttdef"><b>Definition:</b> <a href="a00056_source.html#l00012">ProbkaRegolitu.hh:12</a></div></div>
+<div class="ttc" id="aa00109_html"><div class="ttname"><a href="a00109.html">ObiektGeom</a></div><div class="ttdoc">Klasa modeluje obiekt geometryczny</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00021">ObiektGeom.hh:21</a></div></div>
+<div class="ttc" id="aa00097_html_a1176b9d14bd026c88e19fece1f60b1a7"><div class="ttname"><a href="a00097.html#a1176b9d14bd026c88e19fece1f60b1a7">Lazik::setKat</a></div><div class="ttdeci">double &amp; setKat()</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00056">Lazik.hh:56</a></div></div>
+<div class="ttc" id="aa00097_html_a6c127ecaad9ebd3f62bd4a5b42bf1d0e"><div class="ttname"><a href="a00097.html#a6c127ecaad9ebd3f62bd4a5b42bf1d0e">Lazik::CzyKolizja</a></div><div class="ttdeci">TypKolizji CzyKolizja(const std::shared_ptr&lt; Lazik &gt; &amp;Wsk_Lazik) const override</div><div class="ttdoc">Metoda sprawdzajaca czy lazik koliduje z aktywnym lazikiem.</div><div class="ttdef"><b>Definition:</b> <a href="a00071_source.html#l00034">Lazik.cpp:34</a></div></div>
+<div class="ttc" id="aa00097_html_a689604d6995cba692c1eefd68a40c2b7"><div class="ttname"><a href="a00097.html#a689604d6995cba692c1eefd68a40c2b7">Lazik::setOrientacja</a></div><div class="ttdeci">double &amp; setOrientacja()</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00072">Lazik.hh:72</a></div></div>
+<div class="ttc" id="aa00097_html_a8a16bd0dd81ca220411fffc476af4f4a"><div class="ttname"><a href="a00097.html#a8a16bd0dd81ca220411fffc476af4f4a">Lazik::WyswietlProbki</a></div><div class="ttdeci">virtual void WyswietlProbki()</div><div class="ttdoc">Metoda wirtualna lazika, ktora sluzy do wyswietlania obiektow klasy LazikSFR, gdyz AktywnyLazik jest ...</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00040">Lazik.hh:40</a></div></div>
+<div class="ttc" id="aa00097_html_a50fca54c5b35943b884952445bf8b6d4"><div class="ttname"><a href="a00097.html#a50fca54c5b35943b884952445bf8b6d4">Lazik::KatZadany</a></div><div class="ttdeci">double KatZadany</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00021">Lazik.hh:21</a></div></div>
+<div class="ttc" id="aa00097_html_a17290030c6992d1efd0123046432c80f"><div class="ttname"><a href="a00097.html#a17290030c6992d1efd0123046432c80f">Lazik::OdlegloscDoPrzejechania</a></div><div class="ttdeci">double OdlegloscDoPrzejechania</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00022">Lazik.hh:22</a></div></div>
+<div class="ttc" id="aa00097_html_aa73f791eada0591c80d30a38840e0dfa"><div class="ttname"><a href="a00097.html#aa73f791eada0591c80d30a38840e0dfa">Lazik::KatOrientacji_st</a></div><div class="ttdeci">double KatOrientacji_st</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00020">Lazik.hh:20</a></div></div>
+<div class="ttc" id="aa00097_html"><div class="ttname"><a href="a00097.html">Lazik</a></div><div class="ttdoc">Klasa modeluje Lazik. Dziedziczy on z klasy ObiektGeom   Klasa posiada funkcjonalnosc sprawdzania kol...</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00017">Lazik.hh:17</a></div></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">ObiektGeom.hh</a></div></div>
+<div class="ttc" id="aa00097_html_af452ccec75693d41153a673433bf1abc"><div class="ttname"><a href="a00097.html#af452ccec75693d41153a673433bf1abc">Lazik::getOdleglosc</a></div><div class="ttdeci">double getOdleglosc() const</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00097">Lazik.hh:97</a></div></div>
+<div class="ttc" id="aa00097_html_a39a51ae7da8a38047c533c26290a021c"><div class="ttname"><a href="a00097.html#a39a51ae7da8a38047c533c26290a021c">Lazik::setOdleglosc</a></div><div class="ttdeci">double &amp; setOdleglosc()</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00089">Lazik.hh:89</a></div></div>
+<div class="ttc" id="aa00097_html_ace039b675340a61e35069d05e1f64762"><div class="ttname"><a href="a00097.html#ace039b675340a61e35069d05e1f64762">Lazik::~Lazik</a></div><div class="ttdeci">virtual ~Lazik()</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00048">Lazik.hh:48</a></div></div>
+<div class="ttc" id="aa00097_html_a7c93d34a12478c169f2f9752b13d9660"><div class="ttname"><a href="a00097.html#a7c93d34a12478c169f2f9752b13d9660">Lazik::getKat</a></div><div class="ttdeci">double getKat() const override</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00063">Lazik.hh:63</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_07555f826a1cb527f309b3864a2afada.html">jjakubcz</a></li><li class="navelem"><a class="el" href="dir_88cb7bcad63a2a1ff646d442cae043cd.html">Obiektowka</a></li><li class="navelem"><a class="el" href="dir_9fdb1b9d3f0d111fc5a41bf4417edb41.html">z6</a></li><li class="navelem"><a class="el" href="dir_38ebd12167a51f0b1a4d41d9c89afa7f.html">przyklad-animacji-lazika</a></li><li class="navelem"><a class="el" href="dir_3eec292d5810db59a50fa72a8e5a41c5.html">prj</a></li><li class="navelem"><a class="el" href="dir_184675865d9c9edfa49d5d3ca20c8f5a.html">inc</a></li><li class="navelem"><a class="el" href="a00038.html">PowierzchniaMarsa.hh</a></li>
-    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_1f9d1c0669510ad4fc0cb635f4e7c5e8.html">kubiospro</a></li><li class="navelem"><a class="el" href="dir_4549e3b25dabb291326812e3d3809b40.html">Obiektowka</a></li><li class="navelem"><a class="el" href="dir_d72e83c949c9e085232ecf6185ece81b.html">z6</a></li><li class="navelem"><a class="el" href="dir_874a2cfed3c977319d14fc3b9b4404d4.html">przyklad-animacji-lazika</a></li><li class="navelem"><a class="el" href="dir_8236ecd5a2074ccec1ebe5678e493f4a.html">prj</a></li><li class="navelem"><a class="el" href="dir_c9d6c45f103ea59ecc14c082c3ed040f.html">inc</a></li><li class="navelem"><a class="el" href="a00038.html">Lazik.hh</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

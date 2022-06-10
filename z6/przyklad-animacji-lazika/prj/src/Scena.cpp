@@ -36,8 +36,8 @@ void Scena::DodajDoListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom
  * \brief
  * 
  * Konstruktor sceny inicjalizuje lacze i powierzchnie marsa. Tworzy wskazniki 
- * wspoldzielone do obiektow Lazik i dodaje te wskazniki do listy. Nastepnie
- * dodaje do listy rysowania Laziki i przelicza dla nich wierzcholki.
+ * wspoldzielone do obiektow Lazik i ProbkaRegolitu i dodaje te wskazniki do listy. Nastepnie
+ * dodaje do listy rysowania te obiekty i przelicza dla nich wierzcholki.
  * Ustawia wskaznik AktywnyLazik na Ob1 i rysuje Lacze.
  */
 
@@ -295,7 +295,13 @@ void Scena::menutranslacja()
 
 }
 
-
+/*!
+ * \brief
+ * 
+ * Metoda ustawia WynikKolizcji na jej brak, ObKolid na nullptr. Sprawdza czy aktywny Lazik koliduje z ktoryms
+ * obiektem sceny. Jesli koliduje zwraca wynik kolizji.
+ *
+ */
 TypKolizji Scena::CzyAktywnyLazikKoliduje(std::shared_ptr<ObiektGeom>& ObKolid) const
 {
   
@@ -325,7 +331,14 @@ void Scena::UsunZListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  
    rLacze.UsunNazwePliku(rOb.WezNazwePliku_BrylaRysowana());
   //wInfoPliku->ZmienKolor(rOb.WezKolorID());
 }
-
+/*!
+ * \brief
+ * 
+ * Jesli AktywnyLazik jest obiektem klasy LazikSFR i ObiektKolidujacy jest ProbkaRegolitu to jest mozliwosc
+ * podniesienia probki. Wtedy zostaje dodana probka na liste lazika, probka  zostaje usunieta z listy do rysownia
+ * i z listy obiektow sceny, a nastepnie Lacze jest ponownie rysowane.
+ *
+ */
 void Scena::PodniesProbke()
 {
   if(AktywnyLazik->ID() != 3)

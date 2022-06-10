@@ -1,0 +1,22 @@
+digraph "Lazik"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Lazik",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Klasa modeluje Lazik. Dziedziczy on z klasy ObiektGeom   Klasa posiada funkcjonalnosc sprawdzania kol..."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="ObiektGeom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00109.html",tooltip="Klasa modeluje obiekt geometryczny"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Skala\nPolozenie" ,fontname="FreeSans"];
+  Node3 [label="SWektor\< double, 3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00129.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< double, 3 \>" ,fontname="FreeSans"];
+  Node4 [label="SWektor\< STyp, SWymiar \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00129.html",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" MacRot" ,fontname="FreeSans"];
+  Node5 [label="MacRotacji",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00105.html",tooltip="Klasa modeluje pojecie Macierzy Rotacji.   Dziedzczy ona z klasy Macierz3D."];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="Macierz3D",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00125.html",tooltip=" "];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Obrys" ,fontname="FreeSans"];
+  Node7 [label="ObrysXY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00113.html",tooltip="Klasa ObryXY sluzy do wyznaczania obrysow obiektow i sprawdzania czy sie one nakladaja czy nie."];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _Wiersz_GornyPrawy\n_Wiersz_DolnyLewy" ,fontname="FreeSans"];
+  Node8 [label="SWektor\< double, 2 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a00129.html",tooltip=" "];
+  Node4 -> Node8 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< double, 2 \>" ,fontname="FreeSans"];
+}

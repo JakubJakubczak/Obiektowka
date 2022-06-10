@@ -12,7 +12,7 @@ class ProbkaRegolitu;
  * \brief
  * 
  * Klasa modeluje Lazik. Dziedziczy on z klasy ObiektGeom  
- * Klasa posiada funkcjonalnosc translacji i rotacji Lazika na Laczu
+ * Klasa posiada funkcjonalnosc sprawdzania kolizji
  */
 class Lazik
   : public ObiektGeom
@@ -22,10 +22,21 @@ class Lazik
   double OdlegloscDoPrzejechania;
 
 public:
+/*!
+ * \brief
+ * 
+ * Metoda sprawdzajaca czy lazik koliduje z aktywnym lazikiem
+ *
+ */
     TypKolizji CzyKolizja(const std::shared_ptr<Lazik>& Wsk_Lazik) const override;
   int ID() const override {return 1;}
 
-  //virtual void DodajProbke(const std::shared_ptr<ProbkaRegolitu> Probka){;};
+  /*!
+ * \brief
+ * 
+ * Metoda wirtualna lazika, ktora sluzy do wyswietlania obiektow klasy LazikSFR, gdyz AktywnyLazik jest klasy Lazik
+ *
+ */
   virtual void WyswietlProbki(){;};    
   /*!
  * \brief

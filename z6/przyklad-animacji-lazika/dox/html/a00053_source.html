@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MSR: Plik źródłowy /home/jjakubcz/Obiektowka/z6/przyklad-animacji-lazika/prj/src/MacierzRotacji.cpp</title>
+<title>MSR: Plik źródłowy /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/prj/inc/PowierzchniaMarsa.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
@@ -61,44 +61,40 @@ $(document).ready(function(){initNavTree('a00053_source.html',''); initResizable
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">MacierzRotacji.cpp</div>  </div>
+<div class="title">PowierzchniaMarsa.hh</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00053.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00032.html">MacierzRotacji.hh</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<a href="a00053.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef POWIERZCHNIAMARSA_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define POWIERZCHNIAMARSA_HH</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="a00080.html#aeca9b2828c0eb725373d7a084798abc7">   10</a></span>&#160;<a class="code" href="a00080.html">MacRotacji</a> <a class="code" href="a00080.html#aeca9b2828c0eb725373d7a084798abc7">MacRotacji::RotacjaZ</a>(<span class="keywordtype">double</span> kat) {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  kat=kat * (M_PI/180);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="a00080.html">MacRotacji</a> MacRot;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">/*Wektor3D jednostkowyX;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">  jednostkowyX[0]=1;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">  jednostkowyX[1]=0;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">  jednostkowyX[2]=0;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">  */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  MacRot(0,0)=cos(kat);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  MacRot(0,1)=-sin(kat);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  MacRot(0,2)=0;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  MacRot(1,0)=sin(kat);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  MacRot(1,1)=cos(kat);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  MacRot(1,2)=0;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  MacRot(2,0)=0;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  MacRot(2,1)=0;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  MacRot(2,2)=1;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;       <span class="keywordflow">return</span> MacRot;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="ttc" id="aa00032_html"><div class="ttname"><a href="a00032.html">MacierzRotacji.hh</a></div></div>
-<div class="ttc" id="aa00080_html"><div class="ttname"><a href="a00080.html">MacRotacji</a></div><div class="ttdoc">Klasa modeluje pojecie Macierzy Rotacji.   Dziedzczy ona z klasy Macierz3D.</div><div class="ttdef"><b>Definition:</b> <a href="a00032_source.html#l00014">MacierzRotacji.hh:16</a></div></div>
-<div class="ttc" id="aa00080_html_aeca9b2828c0eb725373d7a084798abc7"><div class="ttname"><a href="a00080.html#aeca9b2828c0eb725373d7a084798abc7">MacRotacji::RotacjaZ</a></div><div class="ttdeci">MacRotacji RotacjaZ(double kat)</div><div class="ttdoc">Macierz Rotacji wzgledem osi Z</div><div class="ttdef"><b>Definition:</b> <a href="a00053_source.html#l00010">MacierzRotacji.cpp:10</a></div></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//#include &quot;ObiektGeom.hh&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//#include &quot;Lazik.hh&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;lacze_do_gnuplota.hh&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="a00053.html#a0e22612848696b13661669accc112c0a">   11</a></span>&#160;<span class="preprocessor">#define ROMIAR_POWIERZCHNI_X    200</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="a00053.html#aa8d616943ddb06335b5ca63e6a90fd46">   12</a></span>&#160;<span class="preprocessor">#define ROMIAR_POWIERZCHNI_Y    200</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="a00053.html#afb8adcd16d39ff705ad0f90a77988013">   13</a></span>&#160;<span class="preprocessor">#define ROZMIAR_OCZKA_KRATY     10</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="a00053.html#a4ea2370930491646c4519a1f689f117c">Inicjalizuj_PowierzchnieMarsa</a>(</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                                    PzG::LaczeDoGNUPlota  &amp;rLacze</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                  );</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa00053_html_a4ea2370930491646c4519a1f689f117c"><div class="ttname"><a href="a00053.html#a4ea2370930491646c4519a1f689f117c">Inicjalizuj_PowierzchnieMarsa</a></div><div class="ttdeci">bool Inicjalizuj_PowierzchnieMarsa(PzG::LaczeDoGNUPlota &amp;rLacze)</div><div class="ttdoc">Inicjalizuje model powierzchni Marsa.</div><div class="ttdef"><b>Definition:</b> <a href="a00083_source.html#l00077">PowierzchniaMarsa.cpp:77</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_07555f826a1cb527f309b3864a2afada.html">jjakubcz</a></li><li class="navelem"><a class="el" href="dir_88cb7bcad63a2a1ff646d442cae043cd.html">Obiektowka</a></li><li class="navelem"><a class="el" href="dir_9fdb1b9d3f0d111fc5a41bf4417edb41.html">z6</a></li><li class="navelem"><a class="el" href="dir_38ebd12167a51f0b1a4d41d9c89afa7f.html">przyklad-animacji-lazika</a></li><li class="navelem"><a class="el" href="dir_3eec292d5810db59a50fa72a8e5a41c5.html">prj</a></li><li class="navelem"><a class="el" href="dir_9460674299148e76cd79348420b14488.html">src</a></li><li class="navelem"><a class="el" href="a00053.html">MacierzRotacji.cpp</a></li>
-    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_1f9d1c0669510ad4fc0cb635f4e7c5e8.html">kubiospro</a></li><li class="navelem"><a class="el" href="dir_4549e3b25dabb291326812e3d3809b40.html">Obiektowka</a></li><li class="navelem"><a class="el" href="dir_d72e83c949c9e085232ecf6185ece81b.html">z6</a></li><li class="navelem"><a class="el" href="dir_874a2cfed3c977319d14fc3b9b4404d4.html">przyklad-animacji-lazika</a></li><li class="navelem"><a class="el" href="dir_8236ecd5a2074ccec1ebe5678e493f4a.html">prj</a></li><li class="navelem"><a class="el" href="dir_c9d6c45f103ea59ecc14c082c3ed040f.html">inc</a></li><li class="navelem"><a class="el" href="a00053.html">PowierzchniaMarsa.hh</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>

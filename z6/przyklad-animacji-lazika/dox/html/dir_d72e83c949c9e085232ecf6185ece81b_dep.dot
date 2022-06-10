@@ -1,0 +1,13 @@
+digraph "/home/kubiospro/Obiektowka/z6" {
+  compound=true
+  node [ fontsize="10", fontname="FreeSans"];
+  edge [ labelfontsize="10", labelfontname="FreeSans"];
+  subgraph clusterdir_4549e3b25dabb291326812e3d3809b40 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Obiektowka" fontname="FreeSans", fontsize="10", URL="dir_4549e3b25dabb291326812e3d3809b40.html"]
+  subgraph clusterdir_d72e83c949c9e085232ecf6185ece81b {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_d72e83c949c9e085232ecf6185ece81b.html"];
+    dir_d72e83c949c9e085232ecf6185ece81b [shape=plaintext label="z6"];
+    dir_874a2cfed3c977319d14fc3b9b4404d4 [shape=box label="przyklad-animacji-lazika" color="red" fillcolor="white" style="filled" URL="dir_874a2cfed3c977319d14fc3b9b4404d4.html"];
+  }
+  }
+}

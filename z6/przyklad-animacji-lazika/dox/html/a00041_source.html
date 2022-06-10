@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MSR: Plik źródłowy /home/jjakubcz/Obiektowka/z6/przyklad-animacji-lazika/prj/inc/Scena.hh</title>
+<title>MSR: Plik źródłowy /home/kubiospro/Obiektowka/z6/przyklad-animacji-lazika/prj/inc/LazikSFR.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<!-- Wygenerowano przez Doxygen 1.8.17 -->
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
@@ -61,70 +61,93 @@ $(document).ready(function(){initNavTree('a00041_source.html',''); initResizable
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">Scena.hh</div>  </div>
+<div class="title">LazikSFR.hh</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00041.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor"> #ifndef SCENA_HH</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"> #define SCENA_HH</span></div>
+<a href="a00041.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LAZIKSFR_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LAZIKSFR_HH</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00029.html">Lazik.hh</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;lacze_do_gnuplota.hh&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00038.html">PowierzchniaMarsa.hh</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00026.html">Kolory.hh</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="a00088.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00088.html">Scena</a>{</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="a00088.html#a147fe93e8cfb8438ac167db287e6e23d">   20</a></span>&#160;   std::shared_ptr&lt;Lazik&gt; <a class="code" href="a00088.html#a147fe93e8cfb8438ac167db287e6e23d">AktywnyLazik</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="a00088.html#a0a6b188ccbe5a46a34606db49c619f75">   21</a></span>&#160;   std::list&lt;std::shared_ptr&lt;Lazik&gt;&gt; <a class="code" href="a00088.html#a0a6b188ccbe5a46a34606db49c619f75">ObiektySceny</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="a00088.html#ae8d7d121ba09af12c456a6dfe6da316b">   22</a></span>&#160;   PzG::LaczeDoGNUPlota  <a class="code" href="a00088.html#ae8d7d121ba09af12c456a6dfe6da316b">Lacze</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00088.html#a53b9a11754f65ce8174a3e61bc328442">Inicjalizuj_Lacze</a>(PzG::LaczeDoGNUPlota  &amp;rLacze);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00088.html#a8bee22f6f46108ef0aca400570c03b62">DodajDoListyRysowania</a>(PzG::LaczeDoGNUPlota &amp;rLacze, <span class="keyword">const</span> <a class="code" href="a00084.html">ObiektGeom</a>  &amp;rOb);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="a00088.html#a8f9fe11b4cfef890123a2acc94672e17">Scena</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00088.html#aa665c59c926209c9bb51137e2ffaf2a2">WyborLazika</a>(<span class="keywordtype">int</span> i);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00088.html#ac75cb4be5a5729e69bca78ccc10a9ada">WypiszLaziki</a>() ;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00088.html#ae5d2a57324933ebf8af481de2fc12f0b">WypiszLazik</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00088.html#abdbd13ab7a7efa23a23cb8b291bbad31">menuobrot</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00088.html#a87886bfb1d620bb367cb75ecd09d0c71">menutranslacja</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aa00026_html"><div class="ttname"><a href="a00026.html">Kolory.hh</a></div></div>
-<div class="ttc" id="aa00029_html"><div class="ttname"><a href="a00029.html">Lazik.hh</a></div></div>
-<div class="ttc" id="aa00038_html"><div class="ttname"><a href="a00038.html">PowierzchniaMarsa.hh</a></div></div>
-<div class="ttc" id="aa00084_html"><div class="ttname"><a href="a00084.html">ObiektGeom</a></div><div class="ttdoc">Klasa modeluje obiekt geometryczny</div><div class="ttdef"><b>Definition:</b> <a href="a00035_source.html#l00016">ObiektGeom.hh:16</a></div></div>
-<div class="ttc" id="aa00088_html"><div class="ttname"><a href="a00088.html">Scena</a></div><div class="ttdoc">Klasa modeluje scene na ktorej beda laziki i obiekty geometryczne</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00019">Scena.hh:19</a></div></div>
-<div class="ttc" id="aa00088_html_a0a6b188ccbe5a46a34606db49c619f75"><div class="ttname"><a href="a00088.html#a0a6b188ccbe5a46a34606db49c619f75">Scena::ObiektySceny</a></div><div class="ttdeci">std::list&lt; std::shared_ptr&lt; Lazik &gt; &gt; ObiektySceny</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00021">Scena.hh:21</a></div></div>
-<div class="ttc" id="aa00088_html_a147fe93e8cfb8438ac167db287e6e23d"><div class="ttname"><a href="a00088.html#a147fe93e8cfb8438ac167db287e6e23d">Scena::AktywnyLazik</a></div><div class="ttdeci">std::shared_ptr&lt; Lazik &gt; AktywnyLazik</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00020">Scena.hh:20</a></div></div>
-<div class="ttc" id="aa00088_html_a53b9a11754f65ce8174a3e61bc328442"><div class="ttname"><a href="a00088.html#a53b9a11754f65ce8174a3e61bc328442">Scena::Inicjalizuj_Lacze</a></div><div class="ttdeci">void Inicjalizuj_Lacze(PzG::LaczeDoGNUPlota &amp;rLacze)</div><div class="ttdoc">Inicjalizuje połączenie z programem gnuplot oraz rozmiar świata.</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00013">Scena.cpp:13</a></div></div>
-<div class="ttc" id="aa00088_html_a87886bfb1d620bb367cb75ecd09d0c71"><div class="ttname"><a href="a00088.html#a87886bfb1d620bb367cb75ecd09d0c71">Scena::menutranslacja</a></div><div class="ttdeci">void menutranslacja()</div><div class="ttdoc">Translacja AktywnegoLazika o zadany kat</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00116">Scena.cpp:116</a></div></div>
-<div class="ttc" id="aa00088_html_a8bee22f6f46108ef0aca400570c03b62"><div class="ttname"><a href="a00088.html#a8bee22f6f46108ef0aca400570c03b62">Scena::DodajDoListyRysowania</a></div><div class="ttdeci">void DodajDoListyRysowania(PzG::LaczeDoGNUPlota &amp;rLacze, const ObiektGeom &amp;rOb)</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00026">Scena.cpp:26</a></div></div>
-<div class="ttc" id="aa00088_html_a8f9fe11b4cfef890123a2acc94672e17"><div class="ttname"><a href="a00088.html#a8f9fe11b4cfef890123a2acc94672e17">Scena::Scena</a></div><div class="ttdeci">Scena()</div><div class="ttdoc">Konstruktor klasy</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00043">Scena.cpp:43</a></div></div>
-<div class="ttc" id="aa00088_html_aa665c59c926209c9bb51137e2ffaf2a2"><div class="ttname"><a href="a00088.html#aa665c59c926209c9bb51137e2ffaf2a2">Scena::WyborLazika</a></div><div class="ttdeci">void WyborLazika(int i)</div><div class="ttdoc">Metoda pozwalajaca na wybor Lazika</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00074">Scena.cpp:74</a></div></div>
-<div class="ttc" id="aa00088_html_abdbd13ab7a7efa23a23cb8b291bbad31"><div class="ttname"><a href="a00088.html#abdbd13ab7a7efa23a23cb8b291bbad31">Scena::menuobrot</a></div><div class="ttdeci">void menuobrot()</div><div class="ttdoc">Obrot AktywnegoLazika o zadany kat</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00105">Scena.cpp:105</a></div></div>
-<div class="ttc" id="aa00088_html_ac75cb4be5a5729e69bca78ccc10a9ada"><div class="ttname"><a href="a00088.html#ac75cb4be5a5729e69bca78ccc10a9ada">Scena::WypiszLaziki</a></div><div class="ttdeci">void WypiszLaziki()</div><div class="ttdoc">Metoda wypisujaca laziki na scenie</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00084">Scena.cpp:84</a></div></div>
-<div class="ttc" id="aa00088_html_ae5d2a57324933ebf8af481de2fc12f0b"><div class="ttname"><a href="a00088.html#ae5d2a57324933ebf8af481de2fc12f0b">Scena::WypiszLazik</a></div><div class="ttdeci">void WypiszLazik() const</div><div class="ttdoc">Metoda wypisujaca AktywnyLazik na scenie</div><div class="ttdef"><b>Definition:</b> <a href="a00065_source.html#l00096">Scena.cpp:96</a></div></div>
-<div class="ttc" id="aa00088_html_ae8d7d121ba09af12c456a6dfe6da316b"><div class="ttname"><a href="a00088.html#ae8d7d121ba09af12c456a6dfe6da316b">Scena::Lacze</a></div><div class="ttdeci">PzG::LaczeDoGNUPlota Lacze</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00022">Scena.hh:22</a></div></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00038.html">Lazik.hh</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00056.html">ProbkaRegolitu.hh</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="a00101.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00101.html">LazikSFR</a> : <span class="keyword">public</span> <a class="code" href="a00097.html">Lazik</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="a00101.html#a45face3ae0c633eca0ce741051502055">   17</a></span>&#160;  std::list&lt;std::shared_ptr&lt;ProbkaRegolitu&gt;&gt; <a class="code" href="a00101.html#a45face3ae0c633eca0ce741051502055">ListaProbek</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="a00101.html#af62fe7f04e5860d99eebe807a24276e3">   21</a></span>&#160;  <a class="code" href="a00101.html#af62fe7f04e5860d99eebe807a24276e3">LazikSFR</a>( <span class="keyword">const</span> <span class="keywordtype">char</span>*  SNazwaPliku_BrylaWzorcowa,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                        <span class="keyword">const</span> <span class="keywordtype">char</span>*  SNazwaObiektu,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                        <span class="keywordtype">int</span>          KOLORID,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                        <span class="keywordtype">double</span>       PolozenieX,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                        <span class="keywordtype">double</span>       PolozenieY,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                        <span class="keywordtype">double</span>       PolozenieZ </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                       ):</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="a00097.html">Lazik</a>(SNazwaPliku_BrylaWzorcowa, SNazwaObiektu, KOLORID, PolozenieX, PolozenieY,PolozenieZ){}</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="a00101.html#aca5f178c35d9a43056991e9695dca082">   29</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="a00101.html#aca5f178c35d9a43056991e9695dca082">~LazikSFR</a>(){}</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="a00101.html#a452f883e020adcd02bacf8be48a27f7f">   30</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="a00101.html#a452f883e020adcd02bacf8be48a27f7f">ID</a>()<span class="keyword"> const override </span>{<span class="keywordflow">return</span> 3;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="a00101.html#a952eabfd15f58655cc7b8693b84b0ef7">   31</a></span>&#160;  <a class="code" href="a00068.html#a23331f89664c4cd6c3ca86abdcc50576">TypKolizji</a> <a class="code" href="a00101.html#a952eabfd15f58655cc7b8693b84b0ef7">CzyKolizja</a>(<span class="keyword">const</span> std::shared_ptr&lt;Lazik&gt;&amp; Wsk_Lazik)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;     <span class="keywordflow">if</span>( this-&gt;<a class="code" href="a00109.html#a645477d56b2efb9f37092d22b2e1bcab">getObrys</a>().NakladanieObrysow( Wsk_Lazik-&gt;getObrys() ) )</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;     {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;       std::cout&lt;&lt;<span class="stringliteral">&quot;Kolizja z LazikiemSRF &quot;</span>&lt;&lt;this-&gt;<a class="code" href="a00109.html#aa175b24870696a6fc4816b58daa5881e">getNazwa</a>()&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="a00068.html#a23331f89664c4cd6c3ca86abdcc50576aa121366d41128657d73b4a06187ea6d9">TK_Kolizja</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;     }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;     {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;       <span class="comment">// std::cout&lt;&lt;&quot;Brak Kolizcji z lazikiem&quot;;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;     <span class="keywordflow">return</span> <a class="code" href="a00068.html#a23331f89664c4cd6c3ca86abdcc50576a689c6dbc6832834d9ab54367204da23f">TK_BrakKolizji</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;     }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="a00101.html#a8973d53176fdff782da3e71e5d53f335">   45</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00101.html#a8973d53176fdff782da3e71e5d53f335">WyswietlProbki</a>() </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordtype">int</span> i=1;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      std::cout&lt;&lt;<span class="stringliteral">&quot;Lista probek: &quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">for</span>(std::list&lt;std::shared_ptr&lt;ProbkaRegolitu&gt;&gt;::iterator it = <a class="code" href="a00101.html#a45face3ae0c633eca0ce741051502055">ListaProbek</a>.begin(); it!= <a class="code" href="a00101.html#a45face3ae0c633eca0ce741051502055">ListaProbek</a>.end();  ++it)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      std::cout&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;. Nazwa: &quot;</span>&lt;&lt; (*it)-&gt;getNazwa()&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="comment">// std::cout&lt;&lt;&quot;   Polozenie: &quot;&lt;&lt; (*it)-&gt;getPolozenie()&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="comment">//std::cout&lt;&lt;&quot;   Orientacja[st]: &quot;&lt;&lt; (*it)-&gt;getKat()&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      i++;         </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="a00101.html#a1748d0f54d8ceff2a662eff63e63a58c">   58</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="a00101.html#a1748d0f54d8ceff2a662eff63e63a58c">DodajProbke</a>(<span class="keyword">const</span> std::shared_ptr&lt;ProbkaRegolitu&gt; Probka) </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="a00101.html#a45face3ae0c633eca0ce741051502055">ListaProbek</a>.push_back(Probka);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aa00101_html"><div class="ttname"><a href="a00101.html">LazikSFR</a></div><div class="ttdoc">Klasa LazikSFR dziedziczy klasy Lazik. Pozwala ona na dodoatkowe funkcjonalnosci takie jak dodawanie ...</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00015">LazikSFR.hh:15</a></div></div>
+<div class="ttc" id="aa00068_html_a23331f89664c4cd6c3ca86abdcc50576a689c6dbc6832834d9ab54367204da23f"><div class="ttname"><a href="a00068.html#a23331f89664c4cd6c3ca86abdcc50576a689c6dbc6832834d9ab54367204da23f">TK_BrakKolizji</a></div><div class="ttdeci">@ TK_BrakKolizji</div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00011">TypKolizji.hh:11</a></div></div>
+<div class="ttc" id="aa00068_html_a23331f89664c4cd6c3ca86abdcc50576"><div class="ttname"><a href="a00068.html#a23331f89664c4cd6c3ca86abdcc50576">TypKolizji</a></div><div class="ttdeci">TypKolizji</div><div class="ttdoc">Enumeracja dla mozliwych skutkow ruchu lazika.</div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00009">TypKolizji.hh:9</a></div></div>
+<div class="ttc" id="aa00038_html"><div class="ttname"><a href="a00038.html">Lazik.hh</a></div></div>
+<div class="ttc" id="aa00068_html_a23331f89664c4cd6c3ca86abdcc50576aa121366d41128657d73b4a06187ea6d9"><div class="ttname"><a href="a00068.html#a23331f89664c4cd6c3ca86abdcc50576aa121366d41128657d73b4a06187ea6d9">TK_Kolizja</a></div><div class="ttdeci">@ TK_Kolizja</div><div class="ttdef"><b>Definition:</b> <a href="a00068_source.html#l00013">TypKolizji.hh:13</a></div></div>
+<div class="ttc" id="aa00101_html_a952eabfd15f58655cc7b8693b84b0ef7"><div class="ttname"><a href="a00101.html#a952eabfd15f58655cc7b8693b84b0ef7">LazikSFR::CzyKolizja</a></div><div class="ttdeci">TypKolizji CzyKolizja(const std::shared_ptr&lt; Lazik &gt; &amp;Wsk_Lazik) const override</div><div class="ttdoc">Metoda sprawdzajaca czy lazik koliduje z aktywnym lazikiem.</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00031">LazikSFR.hh:31</a></div></div>
+<div class="ttc" id="aa00056_html"><div class="ttname"><a href="a00056.html">ProbkaRegolitu.hh</a></div></div>
+<div class="ttc" id="aa00097_html"><div class="ttname"><a href="a00097.html">Lazik</a></div><div class="ttdoc">Klasa modeluje Lazik. Dziedziczy on z klasy ObiektGeom   Klasa posiada funkcjonalnosc sprawdzania kol...</div><div class="ttdef"><b>Definition:</b> <a href="a00038_source.html#l00017">Lazik.hh:17</a></div></div>
+<div class="ttc" id="aa00101_html_a1748d0f54d8ceff2a662eff63e63a58c"><div class="ttname"><a href="a00101.html#a1748d0f54d8ceff2a662eff63e63a58c">LazikSFR::DodajProbke</a></div><div class="ttdeci">void DodajProbke(const std::shared_ptr&lt; ProbkaRegolitu &gt; Probka)</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00058">LazikSFR.hh:58</a></div></div>
+<div class="ttc" id="aa00101_html_a452f883e020adcd02bacf8be48a27f7f"><div class="ttname"><a href="a00101.html#a452f883e020adcd02bacf8be48a27f7f">LazikSFR::ID</a></div><div class="ttdeci">int ID() const override</div><div class="ttdoc">Metoda wirtualna wyznaczajaca ID dla kazdej klasy dziedziczonej z ObiektGeom.</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00030">LazikSFR.hh:30</a></div></div>
+<div class="ttc" id="aa00101_html_aca5f178c35d9a43056991e9695dca082"><div class="ttname"><a href="a00101.html#aca5f178c35d9a43056991e9695dca082">LazikSFR::~LazikSFR</a></div><div class="ttdeci">virtual ~LazikSFR()</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00029">LazikSFR.hh:29</a></div></div>
+<div class="ttc" id="aa00101_html_a8973d53176fdff782da3e71e5d53f335"><div class="ttname"><a href="a00101.html#a8973d53176fdff782da3e71e5d53f335">LazikSFR::WyswietlProbki</a></div><div class="ttdeci">void WyswietlProbki()</div><div class="ttdoc">Metoda wirtualna lazika, ktora sluzy do wyswietlania obiektow klasy LazikSFR, gdyz AktywnyLazik jest ...</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00045">LazikSFR.hh:45</a></div></div>
+<div class="ttc" id="aa00109_html_aa175b24870696a6fc4816b58daa5881e"><div class="ttname"><a href="a00109.html#aa175b24870696a6fc4816b58daa5881e">ObiektGeom::getNazwa</a></div><div class="ttdeci">std::string getNazwa() const</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00117">ObiektGeom.hh:117</a></div></div>
+<div class="ttc" id="aa00101_html_a45face3ae0c633eca0ce741051502055"><div class="ttname"><a href="a00101.html#a45face3ae0c633eca0ce741051502055">LazikSFR::ListaProbek</a></div><div class="ttdeci">std::list&lt; std::shared_ptr&lt; ProbkaRegolitu &gt; &gt; ListaProbek</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00017">LazikSFR.hh:17</a></div></div>
+<div class="ttc" id="aa00101_html_af62fe7f04e5860d99eebe807a24276e3"><div class="ttname"><a href="a00101.html#af62fe7f04e5860d99eebe807a24276e3">LazikSFR::LazikSFR</a></div><div class="ttdeci">LazikSFR(const char *SNazwaPliku_BrylaWzorcowa, const char *SNazwaObiektu, int KOLORID, double PolozenieX, double PolozenieY, double PolozenieZ)</div><div class="ttdef"><b>Definition:</b> <a href="a00041_source.html#l00021">LazikSFR.hh:21</a></div></div>
+<div class="ttc" id="aa00109_html_a645477d56b2efb9f37092d22b2e1bcab"><div class="ttname"><a href="a00109.html#a645477d56b2efb9f37092d22b2e1bcab">ObiektGeom::getObrys</a></div><div class="ttdeci">ObrysXY getObrys() const</div><div class="ttdef"><b>Definition:</b> <a href="a00047_source.html#l00061">ObiektGeom.hh:61</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_07555f826a1cb527f309b3864a2afada.html">jjakubcz</a></li><li class="navelem"><a class="el" href="dir_88cb7bcad63a2a1ff646d442cae043cd.html">Obiektowka</a></li><li class="navelem"><a class="el" href="dir_9fdb1b9d3f0d111fc5a41bf4417edb41.html">z6</a></li><li class="navelem"><a class="el" href="dir_38ebd12167a51f0b1a4d41d9c89afa7f.html">przyklad-animacji-lazika</a></li><li class="navelem"><a class="el" href="dir_3eec292d5810db59a50fa72a8e5a41c5.html">prj</a></li><li class="navelem"><a class="el" href="dir_184675865d9c9edfa49d5d3ca20c8f5a.html">inc</a></li><li class="navelem"><a class="el" href="a00041.html">Scena.hh</a></li>
-    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_1f9d1c0669510ad4fc0cb635f4e7c5e8.html">kubiospro</a></li><li class="navelem"><a class="el" href="dir_4549e3b25dabb291326812e3d3809b40.html">Obiektowka</a></li><li class="navelem"><a class="el" href="dir_d72e83c949c9e085232ecf6185ece81b.html">z6</a></li><li class="navelem"><a class="el" href="dir_874a2cfed3c977319d14fc3b9b4404d4.html">przyklad-animacji-lazika</a></li><li class="navelem"><a class="el" href="dir_8236ecd5a2074ccec1ebe5678e493f4a.html">prj</a></li><li class="navelem"><a class="el" href="dir_c9d6c45f103ea59ecc14c082c3ed040f.html">inc</a></li><li class="navelem"><a class="el" href="a00041.html">LazikSFR.hh</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>
