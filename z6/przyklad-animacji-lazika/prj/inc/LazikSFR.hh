@@ -48,7 +48,7 @@ public:
       i++;         
       }
     }
-  virtual void DodajProbke(const std::shared_ptr<ProbkaRegolitu> Probka) override
+   void DodajProbke(const std::shared_ptr<ProbkaRegolitu> Probka) 
   {
     ListaProbek.push_back(Probka);
   }

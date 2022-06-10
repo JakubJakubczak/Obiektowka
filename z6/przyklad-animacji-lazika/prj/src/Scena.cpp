@@ -342,7 +342,7 @@ void Scena::PodniesProbke()
     }
   else
     {
-      AktywnyLazik->DodajProbke(std::static_pointer_cast<ProbkaRegolitu>(ObiektKolidujacy));
+      std::static_pointer_cast<LazikSFR>(AktywnyLazik)->DodajProbke(std::static_pointer_cast<ProbkaRegolitu>(ObiektKolidujacy));
       UsunZListyRysowania(Lacze, *ObiektKolidujacy);
       ObiektySceny.remove(ObiektKolidujacy);
       Lacze.Rysuj();
