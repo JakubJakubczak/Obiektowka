@@ -19,7 +19,7 @@ Lazik::Lazik( const char*  SNazwaPliku_BrylaWzorcowa,
 		       ):
   ObiektGeom(SNazwaPliku_BrylaWzorcowa, SNazwaObiektu, KOLORID, PolozenieX, PolozenieY,PolozenieZ)
 {
-  KatOrientacji_st=0;
+  
   OdlegloscDoPrzejechania=0;
   KatZadany=0;
 }

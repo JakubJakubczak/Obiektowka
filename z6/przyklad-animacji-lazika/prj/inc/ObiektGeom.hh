@@ -23,6 +23,7 @@ class ObiektGeom {
   Wektor3D Polozenie;
   Wektor3D Skala;
   MacRotacji MacRot;
+  double KatOrientacji_st;
     std::string   _NazwaPliku_BrylaWzorcowa;
     std::string   _NazwaPliku_BrylaRysowana;
     std::string   _NazwaObiektu;
@@ -57,6 +58,21 @@ class ObiektGeom {
   ObiektGeom(const char* sNazwaPliku_BrylaWzorcowa, const char* sNazwaObiektu, int KolorID, double polozenieX, double polozenieY, double polozenieZ);
   virtual ~ObiektGeom(){}
 
+/*!
+ * \brief
+ * 
+ * \return KatOrientacji_st do modyfikacji  
+ *
+ */
+
+  double& setOrientacja(){return KatOrientacji_st;}
+  /*!
+ * \brief
+ * 
+ * \return KatOrientacji_st do odczytu  
+ *
+ */
+  double getOrientacja() const {return KatOrientacji_st;}
 
   ObrysXY getObrys() const {return Obrys;}
   ObrysXY& setObrys() {return Obrys;}

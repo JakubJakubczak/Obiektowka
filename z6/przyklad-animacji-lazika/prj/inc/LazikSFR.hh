@@ -26,7 +26,7 @@ public:
 		        double       PolozenieZ 
 		       ):
     Lazik(SNazwaPliku_BrylaWzorcowa, SNazwaObiektu, KOLORID, PolozenieX, PolozenieY,PolozenieZ){}
-  virtual ~LazikSFR(){}
+  virtual ~LazikSFR(){;}
   int ID() const override {return 3;}
   TypKolizji CzyKolizja(const std::shared_ptr<Lazik>& Wsk_Lazik) const override
   {
@@ -58,6 +58,30 @@ public:
    void DodajProbke(const std::shared_ptr<ProbkaRegolitu> Probka) 
   {
     ListaProbek.push_back(Probka);
+  }
+
+  void SprzezProbki(std::shared_ptr<LazikSFR> Wsk_lazik)
+  {
+    double l=0;
+   for(std::list<std::shared_ptr<ProbkaRegolitu>>::iterator it = ListaProbek.begin(); it!= ListaProbek.end();  ++it)
+   { 
+     
+     (*it)->setPolozenie()[0]=Wsk_lazik->getPolozenie()[0];
+     (*it)->setPolozenie()[1]=Wsk_lazik->getPolozenie()[1];
+     (*it)->setPolozenie()[2]=10 + 2 * l;
+     (*it)->setOrientacja()=Wsk_lazik->getOrientacja();
+     (*it)->Przelicz_i_Zapisz_Wierzcholki((*it)->getOrientacja());
+     l=l+1;
+   }
+  }
+
+
+  void PrzeliczanieWierzDlaProbek(double i)
+  {
+     for(std::list<std::shared_ptr<ProbkaRegolitu>>::iterator it = ListaProbek.begin(); it!= ListaProbek.end();  ++it)
+     {
+       (*it)->Przelicz_i_Zapisz_Wierzcholki(i);
+     }
   }
 };
 

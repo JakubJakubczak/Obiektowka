@@ -36,6 +36,25 @@ ProbkaRegolitu( const char*  SNazwaPliku_BrylaWzorcowa,
   {
     if( this->getObrys().NakladanieObrysow( Wsk_Lazik->getObrys() ) )
      {
+       // metoda sprawdzajacy czy lazik NIE SFR może przejechac nad probka
+       if(Wsk_Lazik->ID()==1)
+       {
+         Wektor3D OdlegloscPL; // odleglosc probki od lazika
+         double Odleglosc;   // odleglosc probki od osi symetrii lazika jako skalar
+         double kat; // kat orientacji wyrazony w radianach
+
+         kat = Wsk_Lazik->getOrientacja() * (M_PI/180);
+         OdlegloscPL = this->getPolozenie() - Wsk_Lazik->getPolozenie();
+         Odleglosc = sqrt( OdlegloscPL[0] * OdlegloscPL[0] + 
+                           OdlegloscPL[1] * OdlegloscPL[1] + 
+                           OdlegloscPL[2] * OdlegloscPL[2] )   * sin(kat);
+         if(Odleglosc<4)
+         {
+            std::cout<<"Przejazd nad probka "<<this->getNazwa()<<std::endl;
+
+           return TK_PrzejazdNadProbka;
+         }
+       }
        std::cout<<"Kolizja z probka "<<this->getNazwa()<<std::endl;
        if( Wsk_Lazik->ID() == 3)  std::cout<<"Mozliwosc podniesienia  probki";
       return TK_Kolizja;

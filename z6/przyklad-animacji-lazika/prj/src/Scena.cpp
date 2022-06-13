@@ -183,8 +183,14 @@ void Scena::translacja()
       {
 	AktywnyLazik->setPolozenie() = MacRot.RotacjaZ(AktywnyLazik->getOrientacja()) * jednosX * i   + polozenie;
 	AktywnyLazik->Przelicz_i_Zapisz_Wierzcholki(AktywnyLazik->getOrientacja());
+  
+  if(AktywnyLazik->ID()==3) // rysowanie probek sprzezonych z lazikiem
+  {
+     
+     std::static_pointer_cast<LazikSFR>(AktywnyLazik)->SprzezProbki(std::static_pointer_cast<LazikSFR>(AktywnyLazik));  
+  }
 
-        if(this->CzyAktywnyLazikKoliduje(ObiektKolidujacy) != TK_BrakKolizji) // sprawdzanie kolizji
+        if(this->CzyAktywnyLazikKoliduje(ObiektKolidujacy) == TK_Kolizja) // sprawdzanie kolizji
 	  {
 	    //  std::cout<<"Kolizja";
 	    AktywnyLazik->setPolozenie() = MacRot.RotacjaZ(AktywnyLazik->getOrientacja()) * jednosX * (i-1)   + polozenie;
@@ -204,7 +210,13 @@ void Scena::translacja()
       {
 	AktywnyLazik->setPolozenie() = MacRot.RotacjaZ(AktywnyLazik->getOrientacja()) * jednosX * i   + polozenie;
 	AktywnyLazik->Przelicz_i_Zapisz_Wierzcholki(AktywnyLazik->getOrientacja());
-        if(this->CzyAktywnyLazikKoliduje(ObiektKolidujacy) != TK_BrakKolizji) // sprawdzanie kolizji
+
+  if(AktywnyLazik->ID()==3) // rysowanie probek sprzezonych z lazikiem
+  {
+     
+     std::static_pointer_cast<LazikSFR>(AktywnyLazik)->SprzezProbki(std::static_pointer_cast<LazikSFR>(AktywnyLazik));  
+  }
+        if(this->CzyAktywnyLazikKoliduje(ObiektKolidujacy) == TK_Kolizja) // sprawdzanie kolizji
 	  {
 	    //std::cout<<"Kolizja";
 	    AktywnyLazik->setPolozenie() = MacRot.RotacjaZ(AktywnyLazik->getOrientacja()) * jednosX * (i+1)   + polozenie;
@@ -236,8 +248,10 @@ void Scena::obrot()
   for(int i=AktywnyLazik->getOrientacja()+1; i<AktywnyLazik->getKat()+1; ++i)
       {
 	 AktywnyLazik->Przelicz_i_Zapisz_Wierzcholki(i);
-	
-	if(this->CzyAktywnyLazikKoliduje(ObiektKolidujacy) != TK_BrakKolizji) // sprawdzanie kolizji
+
+  
+	    
+	if(this->CzyAktywnyLazikKoliduje(ObiektKolidujacy) == TK_Kolizja) // sprawdzanie kolizji
 	  {
 	    // std::cout<<"Kolizja";
 	      AktywnyLazik->setOrientacja()=i-1;
@@ -245,9 +259,17 @@ void Scena::obrot()
 	    break;
 	  }
 
+  AktywnyLazik->setOrientacja()++; // AktywnyLazik->getKat();
+  
+ /*if(AktywnyLazik->ID()==3) // rysowanie probek sprzezonych z lazikiem
+  {
+     
+     std::static_pointer_cast<LazikSFR>(AktywnyLazik)->SprzezProbki(std::static_pointer_cast<LazikSFR>(AktywnyLazik));  
+  }*/
+
   Lacze.Rysuj();
   std::this_thread::sleep_for(50ms);
-    AktywnyLazik->setOrientacja()=AktywnyLazik->getKat();
+    
       }
           }
 
@@ -256,8 +278,10 @@ void Scena::obrot()
       for(int i=AktywnyLazik->getOrientacja()-1; i>AktywnyLazik->getKat()-1; --i)
       {
 	 AktywnyLazik->Przelicz_i_Zapisz_Wierzcholki(i);
+
+   
        
-	if(this->CzyAktywnyLazikKoliduje(ObiektKolidujacy) != TK_BrakKolizji) // sprawdzanie kolizji
+	if(this->CzyAktywnyLazikKoliduje(ObiektKolidujacy) == TK_Kolizja) // sprawdzanie kolizji
 	  {
 	    // std::cout<<"Kolizja";
 	    AktywnyLazik->setOrientacja()=i+1;
@@ -265,9 +289,18 @@ void Scena::obrot()
 
 	    break;
 	  }
+
+    AktywnyLazik->setOrientacja()--;//AktywnyLazik->getKat();
+
+   /* if(AktywnyLazik->ID()==3) // rysowanie probek sprzezonych z lazikiem
+  {
+     
+     std::static_pointer_cast<LazikSFR>(AktywnyLazik)->SprzezProbki(std::static_pointer_cast<LazikSFR>(AktywnyLazik));  
+  }*/
+
    Lacze.Rysuj();
   std::this_thread::sleep_for(50ms);
-  AktywnyLazik->setOrientacja()=AktywnyLazik->getKat();
+ 
       }
             }
 
@@ -292,7 +325,6 @@ void Scena::menutranslacja()
 
   AktywnyLazik->setOdleglosc()=odleglosc;
   this->translacja();
-
 }
 
 /*!
@@ -314,7 +346,7 @@ TypKolizji Scena::CzyAktywnyLazikKoliduje(std::shared_ptr<ObiektGeom>& ObKolid) 
 
       WynikKolizji = Ob->CzyKolizja(AktywnyLazik);
 
-	if(WynikKolizji != TK_BrakKolizji)
+	if(WynikKolizji == TK_Kolizja)
 	  {
             ObKolid = Ob;
 	    return WynikKolizji;
@@ -341,6 +373,13 @@ void Scena::UsunZListyRysowania(PzG::LaczeDoGNUPlota &rLacze, const ObiektGeom  
  */
 void Scena::PodniesProbke()
 {
+  if(ObiektKolidujacy==nullptr) 
+  {
+    std::cout<<"Nie ma zadnej kolizji";
+    
+  }
+  else
+  {
   if(AktywnyLazik->ID() != 3)
     {
   std::cout<<"Zwykly Lazik nie moze zebrac probki";
@@ -356,9 +395,13 @@ void Scena::PodniesProbke()
   else
     {
       std::static_pointer_cast<LazikSFR>(AktywnyLazik)->DodajProbke(std::static_pointer_cast<ProbkaRegolitu>(ObiektKolidujacy));
-      UsunZListyRysowania(Lacze, *ObiektKolidujacy);
+      // UsunZListyRysowania(Lacze, *ObiektKoN
+      std::static_pointer_cast<LazikSFR>(AktywnyLazik)->SprzezProbki(
+                                                                std::static_pointer_cast<LazikSFR>(AktywnyLazik));
       ObiektySceny.remove(ObiektKolidujacy);
       Lacze.Rysuj();
+      ObiektKolidujacy==nullptr;
     }
    }
+  }
 }

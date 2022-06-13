@@ -31,6 +31,8 @@ ObiektGeom::ObiektGeom( const char*  sNazwaPliku_BrylaWzorcowa,
   Polozenie[1]=polozenieY;
   Polozenie[2]=polozenieZ;
   
+   KatOrientacji_st=0;
+
   Skala[0]=20;
   Skala[1]=20;
   Skala[2]=10;

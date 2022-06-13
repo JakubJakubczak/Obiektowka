@@ -17,7 +17,6 @@ class ProbkaRegolitu;
 class Lazik
   : public ObiektGeom
 {
-  double KatOrientacji_st;
   double KatZadany; 
   double OdlegloscDoPrzejechania;
 
@@ -62,22 +61,7 @@ public:
  */
   double getKat() const override{return KatZadany;}
 
-  /*!
- * \brief
- * 
- * \return KatOrientacji_st do modyfikacji  
- *
- */
-
-  double& setOrientacja(){return KatOrientacji_st;}
-  /*!
- * \brief
- * 
- * \return KatOrientacji_st do odczytu  
- *
- */
-  double getOrientacja() const {return KatOrientacji_st;}
-
+  
   /*!
  * \brief
  * 
