@@ -70,7 +70,7 @@ public:
      (*it)->setPolozenie()[1]=Wsk_lazik->getPolozenie()[1];
      (*it)->setPolozenie()[2]=10 + 2 * l;
      (*it)->setOrientacja()=Wsk_lazik->getOrientacja();
-     (*it)->Przelicz_i_Zapisz_Wierzcholki((*it)->getOrientacja());
+     (*it)->Przelicz_i_Zapisz_Wierzcholki((Wsk_lazik)->getOrientacja());
      l=l+1;
    }
   }
@@ -81,6 +81,7 @@ public:
      for(std::list<std::shared_ptr<ProbkaRegolitu>>::iterator it = ListaProbek.begin(); it!= ListaProbek.end();  ++it)
      {
        (*it)->Przelicz_i_Zapisz_Wierzcholki(i);
+       (*it)->setOrientacja()=i;
      }
   }
 };

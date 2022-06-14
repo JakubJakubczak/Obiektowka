@@ -261,11 +261,11 @@ void Scena::obrot()
 
   AktywnyLazik->setOrientacja()++; // AktywnyLazik->getKat();
   
- /*if(AktywnyLazik->ID()==3) // rysowanie probek sprzezonych z lazikiem
+ if(AktywnyLazik->ID()==3) // rysowanie probek sprzezonych z lazikiem
   {
      
-     std::static_pointer_cast<LazikSFR>(AktywnyLazik)->SprzezProbki(std::static_pointer_cast<LazikSFR>(AktywnyLazik));  
-  }*/
+     std::static_pointer_cast<LazikSFR>(AktywnyLazik)->PrzeliczanieWierzDlaProbek(i);  
+  }
 
   Lacze.Rysuj();
   std::this_thread::sleep_for(50ms);
@@ -292,11 +292,11 @@ void Scena::obrot()
 
     AktywnyLazik->setOrientacja()--;//AktywnyLazik->getKat();
 
-   /* if(AktywnyLazik->ID()==3) // rysowanie probek sprzezonych z lazikiem
+    if(AktywnyLazik->ID()==3) // rysowanie probek sprzezonych z lazikiem
   {
      
      std::static_pointer_cast<LazikSFR>(AktywnyLazik)->SprzezProbki(std::static_pointer_cast<LazikSFR>(AktywnyLazik));  
-  }*/
+  }
 
    Lacze.Rysuj();
   std::this_thread::sleep_for(50ms);

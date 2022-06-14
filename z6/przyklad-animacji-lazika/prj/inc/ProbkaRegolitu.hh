@@ -20,7 +20,7 @@ ProbkaRegolitu( const char*  SNazwaPliku_BrylaWzorcowa,
 		       ):
   ObiektGeom(SNazwaPliku_BrylaWzorcowa, SNazwaObiektu, KOLORID, PolozenieX, PolozenieY,PolozenieZ)
 {
-  ZmienSkale(2,6,2);
+  ZmienSkale(3,3,2);
 }
 
   virtual ~ProbkaRegolitu(){}
@@ -39,16 +39,30 @@ ProbkaRegolitu( const char*  SNazwaPliku_BrylaWzorcowa,
        // metoda sprawdzajacy czy lazik NIE SFR może przejechac nad probka
        if(Wsk_Lazik->ID()==1)
        {
+         MacRotacji MacRot;
+         Wektor3D WektorJednostkowy; // wektor wzdluz osi lazika
          Wektor3D OdlegloscPL; // odleglosc probki od lazika
          double Odleglosc;   // odleglosc probki od osi symetrii lazika jako skalar
-         double kat; // kat orientacji wyrazony w radianach
+         double sinkat; // kat orientacji wyrazony w radianach
+         double IloczynSkalarny; // iloczyn skalarny OdleglosciPL i Wektora jednostkowego
 
-         kat = Wsk_Lazik->getOrientacja() * (M_PI/180);
+         WektorJednostkowy[0] = 1;
+         WektorJednostkowy[1] = 0;
+         WektorJednostkowy[2] = 0;
+
+         WektorJednostkowy = MacRot.RotacjaZ(Wsk_Lazik->getOrientacja()) * WektorJednostkowy;
+
+          
+
          OdlegloscPL = this->getPolozenie() - Wsk_Lazik->getPolozenie();
          Odleglosc = sqrt( OdlegloscPL[0] * OdlegloscPL[0] + 
                            OdlegloscPL[1] * OdlegloscPL[1] + 
-                           OdlegloscPL[2] * OdlegloscPL[2] )   * sin(kat);
-         if(Odleglosc<4)
+                           OdlegloscPL[2] * OdlegloscPL[2] ) ;
+        IloczynSkalarny = OdlegloscPL[0] * WektorJednostkowy[0]  + OdlegloscPL[1] * WektorJednostkowy[1]  + OdlegloscPL[2] * WektorJednostkowy[2]; 
+
+         sinkat = sqrt( 1 -   pow(IloczynSkalarny / Odleglosc, 2)
+                      );
+         if(Odleglosc * sinkat < 4 )
          {
             std::cout<<"Przejazd nad probka "<<this->getNazwa()<<std::endl;
 

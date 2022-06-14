@@ -78,7 +78,7 @@ bool  ObiektGeom::Przelicz_i_Zapisz_Wierzcholki(double kat)
   if (StrmWe.fail())return false;
   
   do {
-    Wsp = MacRot.RotacjaZ(kat) * Wsp * Skala + Polozenie;
+    Wsp = MacRot.RotacjaZ(kat) * Wsp * Skala  + Polozenie;
     StrmWy << Wsp<< endl;
     ++Indeks_Wiersza;
     
